@@ -16,7 +16,38 @@
     <title>Document</title>
   </head>
   <body>
+    <header>
+      <div class="container">
+        <input
+          type="image"
+          src="../assets/images/A-Del-logo.png"
+          alt="A-Del Construction"
+          width="80"
+          height="48"
+        />
+        <!-- <a href="#" class="logo">A-Del Construction</a> -->
+        <nav>
+          <ul>
+            <li><a href="#" routerLink="/">Home</a></li>
+            <li><a href="#" routerLink="/industries">Industries</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
     <h1>{{ title }}</h1>
-    <video>Orientation Video Not Visible</video>
+    <p>testting 123456 testing</p>
+    <video
+      height="240"
+      width="400"
+      src="../assets/videos/construction-vid.mp4"
+      type="video/mp4"
+      controls
+    >
+      Orientation Video Not Visible
+    </video>
+    <p>testing testingn 123 ...</p>
+    <div class="container">
+      <router-outlet></router-outlet>
+    </div>
   </body>
 </html>
