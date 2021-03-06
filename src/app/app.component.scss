@@ -1,6 +1,15 @@
+$primary: rgb(87, 3, 24);
+
+body {
+  background-color: rgb(247, 158, 26);
+  height: 100vh;
+}
+
 h1 {
+  padding: 1em;
   font-size: xx-large;
   text-align: center;
+  color: $primary;
 }
 
 video {
