@@ -5,6 +5,11 @@
 // SCSS Variable
 $primary: rgb(87, 3, 24);
 
+html {
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
 body {
   margin: 0;
   font-family: "Nunito", "sans-serif";

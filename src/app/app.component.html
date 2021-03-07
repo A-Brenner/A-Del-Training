@@ -16,6 +16,7 @@
     <title>Document</title>
   </head>
   <body>
+    <!-- Nav-Bar-->
     <header>
       <div class="container">
         <input
@@ -34,17 +35,25 @@
         </nav>
       </div>
     </header>
+
     <h1>{{ title }}</h1>
-    <video
-      height="250"
-      width="445"
-      src="../assets/videos/construction-vid.mp4"
-      type="video/mp4"
-      controls
-    >
-      Orientation Video Not Supported by Browser
-    </video>
-    <p>testing testingn 123 ...</p>
+    <div class="row">
+      <div class="column left">
+        <p>testing testingn 123 ...</p>
+      </div>
+      <div class="column middle">
+        <video
+          src="../assets/videos/construction-vid.mp4"
+          type="video/mp4"
+          controls
+        >
+          Orientation Video Not Supported by Browser
+        </video>
+      </div>
+      <div class="column right">
+        <p>testing testingn 123 ...</p>
+      </div>
+    </div>
     <div class="container">
       <router-outlet></router-outlet>
     </div>
