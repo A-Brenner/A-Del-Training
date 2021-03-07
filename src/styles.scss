@@ -16,6 +16,13 @@ body {
   font-size: 18px;
 }
 
+#nav-logo {
+  margin-top: -15px;
+  margin-left: -30px;
+  width: auto;
+  height: 60px;
+}
+
 .container {
   max-height: 30px;
   width: 80%;
@@ -33,9 +40,6 @@ header {
   a {
     color: white;
     text-decoration: none;
-  }
-  a.logo {
-    font-weight: bold;
   }
 
   nav {
@@ -55,8 +59,4 @@ header {
       }
     }
   }
-}
-
-h1 {
-  margin-top: 2em;
 }
