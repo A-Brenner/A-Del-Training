@@ -3,7 +3,7 @@ $secondary: rgb(250, 171, 52);
 
 body {
   background-color: $secondary;
-  height: 90vh;
+  height: 100%;
   width: 100%;
 }
 
@@ -12,6 +12,31 @@ h1 {
   font-size: xx-large;
   text-align: center;
   color: $primary;
+  font-weight: bold;
+}
+
+input {
+  width: 90%;
+  height: 100%;
+  max-height: 100%;
+}
+
+.img-container {
+  position: relative;
+  text-align: center;
+  color: white;
+  height: 30%;
+  margin-bottom: 5px;
+}
+
+/* Centered text */
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-weight: bold;
 }
 
 .column {
