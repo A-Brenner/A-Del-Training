@@ -24,7 +24,8 @@ body {
 }
 
 .nav-container {
-  max-height: 4.5vh;
+  min-height: 25px;
+  height: 4.5vh;
   width: 80%;
   margin: 0 auto;
 }
