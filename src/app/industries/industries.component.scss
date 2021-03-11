@@ -1,0 +1,28 @@
+$primary: rgb(87, 3, 24);
+$secondary: rgb(250, 171, 52);
+
+body {
+  background-color: $secondary;
+  height: 90vh;
+  width: 100%;
+}
+
+h1 {
+  padding: 0.5em;
+  font-size: xx-large;
+  text-align: center;
+  color: $primary;
+}
+
+.column {
+  float: left;
+  width: 50%;
+  text-align: center;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
