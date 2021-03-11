@@ -18,7 +18,7 @@ h1 {
 input {
   width: 90%;
   height: 100%;
-  max-height: 100%;
+  //max-height: 100%;
 }
 
 .img-container {
@@ -43,6 +43,7 @@ input {
   float: left;
   width: 50%;
   text-align: center;
+  //padding: 5px;
 }
 
 /* Clear floats after the columns */
