@@ -2,6 +2,11 @@ $primary: rgb(87, 3, 24);
 $secondary: rgb(250, 171, 52);
 
 body {
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+body {
   background-color: $secondary;
   height: 100%;
   width: 100%;
@@ -24,6 +29,8 @@ input {
 .label-container {
   background-color: $primary;
   color: $secondary;
+  //font-size: 5vw;
+  //height: 2em;
   width: 90%;
   position: relative;
   text-align: center;

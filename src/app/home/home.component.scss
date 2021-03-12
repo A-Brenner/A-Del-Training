@@ -5,6 +5,8 @@ body {
   background-color: $secondary;
   height: 90vh;
   width: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
 h1 {
