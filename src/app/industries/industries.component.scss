@@ -21,6 +21,15 @@ input {
   //max-height: 100%;
 }
 
+.label-container {
+  background-color: $primary;
+  color: $secondary;
+  width: 90%;
+  position: relative;
+  text-align: center;
+  margin-left: 5%;
+}
+
 .img-container {
   position: relative;
   text-align: center;
