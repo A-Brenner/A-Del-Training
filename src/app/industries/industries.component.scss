@@ -36,12 +36,13 @@ h5 {
 
 .label-container {
   background-color: $primary;
-
   height: 2em;
   width: 90%;
   position: relative;
   text-align: center;
   margin-left: 5%;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
 }
 
 .img-container {
