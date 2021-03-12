@@ -27,22 +27,27 @@ input {
   //max-height: 100%;
 }
 
-.label-container {
-  background-color: $primary;
+h5 {
   color: $secondary;
   font-size: 2.5vw;
+  font-family: fantasy, Georgia, "Times New Roman", Times, serif;
+  white-space: nowrap;
+}
+
+.label-container {
+  background-color: $primary;
+
   height: 2em;
   width: 90%;
   position: relative;
   text-align: center;
   margin-left: 5%;
-  font-family: fantasy, Georgia, "Times New Roman", Times, serif;
 }
 
 .img-container {
   position: relative;
   text-align: center;
-  color: white;
+  //color: white;
   height: 30%;
   margin-bottom: 5px;
 }
@@ -53,8 +58,7 @@ input {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: white;
-  font-weight: bold;
+  //font-weight: bold;
 }
 
 .column {
