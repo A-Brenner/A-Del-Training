@@ -20,6 +20,8 @@ export class IndustriesComponent implements OnInit {
 
   fieldWorkersClicked() {
     console.log('field workers');
+    this.message = 'field workers :)';
+    this.shared.setMessage(this.message);
   }
 
   shopWorkersClicked() {
