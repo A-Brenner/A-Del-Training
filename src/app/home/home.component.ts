@@ -13,7 +13,7 @@ export class HomeComponent implements OnInit {
   // onClick Method
   // Takes user to the Industries page
   beginTrainingClick() {
-    this.router.navigateByUrl('/industries');
+    this.router.navigateByUrl('/training-programs');
   }
 
   ngOnInit(): void {}

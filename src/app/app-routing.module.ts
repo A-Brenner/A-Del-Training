@@ -5,7 +5,7 @@ import { IndustriesComponent } from './industries/industries.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
-  { path: 'industries', component: IndustriesComponent },
+  { path: 'training-programs', component: IndustriesComponent },
 ];
 
 @NgModule({
