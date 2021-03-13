@@ -13,7 +13,7 @@
         <div
           class="label-container"
           routerLink="/"
-          (click)="(newEmployeesClicked)"
+          (click)="newEmployeesClicked()"
         >
           <h5 class="centered">New Employees</h5>
         </div>
@@ -22,14 +22,14 @@
             id="newEmployees"
             type="image"
             src="../assets/images/handshake.jpg"
-            routerLink="/"
-            (click)="(newEmployeesClicked)"
+            routerLink="/training-programs/sections"
+            (click)="newEmployeesClicked()"
           />
         </div>
         <div
           class="label-container"
           routerLink="/"
-          (click)="(fieldWorkersClicked)"
+          (click)="fieldWorkersClicked()"
         >
           <h5 class="centered">Field Workers</h5>
         </div>
@@ -38,13 +38,13 @@
             id="field-worker"
             type="image"
             src="../assets/images/field-workers.jpg"
-            (click)="(fieldWorkersClicked)"
+            (click)="fieldWorkersClicked()"
           />
         </div>
         <div
           class="label-container"
           routerLink="/"
-          (click)="(shopWorkersClicked)"
+          (click)="shopWorkersClicked()"
         >
           <h5 class="centered">Shop Workers & Mechanics</h5>
         </div>
@@ -54,7 +54,7 @@
             id="shop-worker"
             type="image"
             src="../assets/images/shop-worker.jpg"
-            (click)="(shopWorkersClicked)"
+            (click)="shopWorkersClicked()"
           />
         </div>
       </div>
@@ -62,7 +62,7 @@
         <div
           class="label-container"
           routerLink="/"
-          (click)="(officeEmployeesClicked)"
+          (click)="officeEmployeesClicked()"
         >
           <h5 class="centered">Office Employees</h5>
         </div>
@@ -75,7 +75,7 @@
             (click)="officeEmployeesClicked()"
           />
         </div>
-        <div class="label-container" routerLink="/" (click)="(foremanClicked)">
+        <div class="label-container" routerLink="/" (click)="foremanClicked()">
           <h5 class="centered">Foreman</h5>
         </div>
 
@@ -84,13 +84,13 @@
             id="foreman"
             type="image"
             src="../assets/images/foreman.jpg"
-            (click)="(foremanClicked)"
+            (click)="foremanClicked()"
           />
         </div>
         <div
           class="label-container"
           routerLink="/"
-          (click)="(truckDriversClicked)"
+          (click)="truckDriversClicked()"
         >
           <h5 class="centered">Truck Drivers</h5>
         </div>
@@ -100,7 +100,7 @@
             id="truck-drivers"
             type="image"
             src="../assets/images/truck.jpg"
-            (click)="(truckDriversClicked)"
+            (click)="truckDriversClicked()"
           />
         </div>
       </div>

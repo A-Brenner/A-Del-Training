@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { IndustriesToSectionsService } from '../shared/industries-to-sections.service';
 
 @Component({
   selector: 'app-industries',
@@ -6,11 +7,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./industries.component.scss'],
 })
 export class IndustriesComponent implements OnInit {
-  constructor() {}
+  constructor(private shared: IndustriesToSectionsService) {}
+
+  message = 'Helloo World :)';
 
   // OnCLick methods for images and labels
   newEmployeesClicked() {
     console.log('new employees');
+    this.message = 'new Employees ^_^';
+    this.shared.setMessage(this.message);
   }
 
   fieldWorkersClicked() {
