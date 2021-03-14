@@ -9,35 +9,44 @@ import { IndustriesToSectionsService } from '../shared/industries-to-sections.se
 export class IndustriesComponent implements OnInit {
   constructor(private shared: IndustriesToSectionsService) {}
 
-  message = 'Helloo World :)';
+  message: string = 'Helloo World :)';
+  trainingProgram: string = '';
 
   // OnCLick methods for images and labels
-  newEmployeesClicked() {
+  newEmployeesClicked(): void {
     console.log('new employees');
-    this.message = 'new Employees ^_^';
-    this.shared.setMessage(this.message);
+    this.trainingProgram = 'newEmployees';
+    this.shared.setTrainingProgram(this.trainingProgram);
   }
 
-  fieldWorkersClicked() {
+  fieldWorkersClicked(): void {
     console.log('field workers');
-    this.message = 'field workers :)';
-    this.shared.setMessage(this.message);
+    this.trainingProgram = 'fieldWorkers';
+    this.shared.setTrainingProgram(this.trainingProgram);
   }
 
-  shopWorkersClicked() {
+  shopWorkersClicked(): void {
     console.log('shop workers & mechanics');
+    this.trainingProgram = 'shopWorkers';
+    this.shared.setTrainingProgram(this.trainingProgram);
   }
 
-  officeEmployeesClicked() {
+  officeEmployeesClicked(): void {
     console.log('office employees');
+    this.trainingProgram = 'officeEmployees';
+    this.shared.setTrainingProgram(this.trainingProgram);
   }
 
-  foremanClicked() {
+  foremanClicked(): void {
     console.log('foreman');
+    this.trainingProgram = 'foreman';
+    this.shared.setTrainingProgram(this.trainingProgram);
   }
 
-  truckDriversClicked() {
+  truckDriversClicked(): void {
     console.log('truck drivers');
+    this.trainingProgram = 'truckDrivers';
+    this.shared.setTrainingProgram(this.trainingProgram);
   }
   ngOnInit(): void {}
 }

@@ -10,7 +10,10 @@ export class SectionsComponent implements OnInit {
   constructor(private shared: IndustriesToSectionsService) {}
 
   message: string = '';
+  trainingProgram: string = '';
+
   ngOnInit(): void {
     this.message = this.shared.getMessage();
+    this.trainingProgram = this.shared.getTrainingProgram();
   }
 }

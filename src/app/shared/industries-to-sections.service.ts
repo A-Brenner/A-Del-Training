@@ -5,12 +5,22 @@ import { Injectable } from '@angular/core';
 })
 export class IndustriesToSectionsService {
   message: string = '';
+  trainingProgram: string = '';
+
   constructor() {}
-  setMessage(data: string) {
+  setMessage(data: string): void {
     this.message = data;
-    console.log(this.message);
   }
-  getMessage() {
+
+  setTrainingProgram(program: string): void {
+    this.trainingProgram = program;
+  }
+
+  getTrainingProgram(): string {
+    return this.trainingProgram;
+  }
+
+  getMessage(): string {
     return this.message;
   }
 }
