@@ -1,7 +1,7 @@
 <p>sections works! {{ trainingProgram }}</p>
 
-<ng-template [ngIf]="trainingProgram === 'newEmployees'">
-  <h1>New Employees</h1>
+<ng-template [ngIf]="latestTrainingProgram === 'newEmployees'">
+  <h1 class="title">New Employees</h1>
   <ul *ngFor="let section of newEmployeeSections">
     <li>
       {{ section.sectionNo }}
@@ -12,8 +12,8 @@
   </ul>
 </ng-template>
 
-<ng-template [ngIf]="trainingProgram === 'officeEmployees'">
-  <h1>Office Employees</h1>
+<ng-template [ngIf]="latestTrainingProgram === 'officeEmployees'">
+  <h1 class="title">Office Employees</h1>
   <ul *ngFor="let section of officeEmployeeSections">
     <li>
       {{ section.sectionNo }}

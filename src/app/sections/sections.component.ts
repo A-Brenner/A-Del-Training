@@ -13,6 +13,7 @@ export class SectionsComponent implements OnInit {
 
   // determines which training program was selected
   trainingProgram: string = '';
+  latestTrainingProgram: any = '';
 
   // NEW EMPLOYEE SECTIONS
   neSection1 = {
@@ -96,6 +97,8 @@ export class SectionsComponent implements OnInit {
 
   ngOnInit(): void {
     this.message = this.shared.getMessage();
+
     this.trainingProgram = this.shared.getTrainingProgram();
+    this.latestTrainingProgram = window.localStorage.getItem('latestProgram');
   }
 }
