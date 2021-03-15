@@ -17,31 +17,31 @@ export class SectionsComponent implements OnInit {
   // NEW EMPLOYEE SECTIONS
   neSection1 = {
     sectionName: 'EEO',
-    sectionNum: 1,
+    sectionNo: 1,
     completed: false,
     link: '',
   };
   neSection2 = {
     sectionName: 'Safety Orientation',
-    sectionNum: 2,
+    sectionNo: 2,
     completed: false,
     link: '',
   };
   neSection3 = {
     sectionName: 'Sexual Harassment',
-    sectionNum: 3,
+    sectionNo: 3,
     completed: false,
     link: '',
   };
   neSection4 = {
     sectionName: 'Cell Phone',
-    sectionNum: 4,
+    sectionNo: 4,
     completed: false,
     link: '',
   };
   neSection5 = {
     sectionName: 'Drug & Alcohol',
-    sectionNum: 5,
+    sectionNo: 5,
     completed: false,
     link: '',
   };
@@ -49,25 +49,25 @@ export class SectionsComponent implements OnInit {
   // OFFICE EMPLOYEE SECTIONS
   oeSection1 = {
     sectionName: 'Emergency Action Plan',
-    sectionNum: 1,
+    sectionNo: 1,
     completed: false,
     link: '',
   };
   oeSection2 = {
     sectionName: 'Active Shooter',
-    sectionNum: 2,
+    sectionNo: 2,
     completed: false,
     link: '',
   };
   oeSection3 = {
     sectionName: 'Sexual Harassment',
-    sectionNum: 3,
+    sectionNo: 3,
     completed: false,
     link: '',
   };
   oeSection4 = {
     sectionName: 'First Aid',
-    sectionNum: 4,
+    sectionNo: 4,
     completed: false,
     link: '',
   };

@@ -2,4 +2,24 @@
 
 <ng-template [ngIf]="trainingProgram === 'newEmployees'">
   <h1>New Employees</h1>
+  <ul *ngFor="let section of newEmployeeSections">
+    <li>
+      {{ section.sectionNo }}
+      {{ section.sectionName }}
+      {{ section.completed }}
+      {{ section.link }}
+    </li>
+  </ul>
+</ng-template>
+
+<ng-template [ngIf]="trainingProgram === 'officeEmployees'">
+  <h1>Office Employees</h1>
+  <ul *ngFor="let section of officeEmployeeSections">
+    <li>
+      {{ section.sectionNo }}
+      {{ section.sectionName }}
+      {{ section.completed }}
+      {{ section.link }}
+    </li>
+  </ul>
 </ng-template>

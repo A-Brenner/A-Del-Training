@@ -17,36 +17,42 @@ export class IndustriesComponent implements OnInit {
     console.log('new employees');
     this.trainingProgram = 'newEmployees';
     this.shared.setTrainingProgram(this.trainingProgram);
+    window.localStorage.setItem('latestProgram', this.trainingProgram);
   }
 
   fieldWorkersClicked(): void {
     console.log('field workers');
     this.trainingProgram = 'fieldWorkers';
     this.shared.setTrainingProgram(this.trainingProgram);
+    window.localStorage.setItem('latestProgram', this.trainingProgram);
   }
 
   shopWorkersClicked(): void {
     console.log('shop workers & mechanics');
     this.trainingProgram = 'shopWorkers';
     this.shared.setTrainingProgram(this.trainingProgram);
+    window.localStorage.setItem('latestProgram', this.trainingProgram);
   }
 
   officeEmployeesClicked(): void {
     console.log('office employees');
     this.trainingProgram = 'officeEmployees';
     this.shared.setTrainingProgram(this.trainingProgram);
+    window.localStorage.setItem('latestProgram', this.trainingProgram);
   }
 
   foremanClicked(): void {
     console.log('foreman');
     this.trainingProgram = 'foreman';
     this.shared.setTrainingProgram(this.trainingProgram);
+    window.localStorage.setItem('latestProgram', this.trainingProgram);
   }
 
   truckDriversClicked(): void {
     console.log('truck drivers');
     this.trainingProgram = 'truckDrivers';
     this.shared.setTrainingProgram(this.trainingProgram);
+    window.localStorage.setItem('latestProgram', this.trainingProgram);
   }
   ngOnInit(): void {}
 }
