@@ -8,7 +8,15 @@ import { Router } from '@angular/router';
 })
 export class AppComponent {
   constructor(private router: Router) {}
-  logoClick() {
-    this.router.navigateByUrl('/');
+
+  trainingProgramsClick(): void {
+    if (
+      window.localStorage.getItem('fName') &&
+      window.localStorage.getItem('lName')
+    ) {
+      this.router.navigateByUrl('/training-programs');
+    } else {
+      alert('Please enter your name before beginning.');
+    }
   }
 }

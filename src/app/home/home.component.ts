@@ -1,3 +1,4 @@
+import { analyzeAndValidateNgModules } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
@@ -7,14 +8,59 @@ import { Router } from '@angular/router';
   styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent implements OnInit {
-  title: String = 'A-Del Training';
+  title: string = 'A-Del Training';
+  fName: string = '';
+  lName: string = '';
   constructor(private router: Router) {}
 
   // onClick Method
   // Takes user to the Industries page
   beginTrainingClick(): void {
-    this.router.navigateByUrl('/training-programs');
+    this.saveName();
+    console.log(window.localStorage.getItem('fName'));
+    console.log(window.localStorage.getItem('lName'));
+
+    if (this.doesNameExist()) {
+      this.router.navigateByUrl('/training-programs');
+    } else {
+      alert('Please enter your name before beginning.');
+    }
   }
 
-  ngOnInit(): void {}
+  // Save user's name to local storage
+  // Only if inout is NOT blank && NOT default values
+  saveName(): void {
+    this.fName = (<HTMLInputElement>document.getElementById('fname')).value;
+    this.lName = (<HTMLInputElement>document.getElementById('lname')).value;
+
+    // Makes sure the user actually entered their name before saving to local storage
+    if (
+      this.fName !== 'First Name' &&
+      this.fName !== '' &&
+      this.lName !== 'Last Name' &&
+      this.lName !== ''
+    ) {
+      window.localStorage.setItem('fName', this.fName);
+      window.localStorage.setItem('lName', this.lName);
+    }
+  }
+
+  // Checks to see if name has already been saved in local storage
+  doesNameExist(): boolean {
+    if (
+      window.localStorage.getItem('fName') &&
+      window.localStorage.getItem('lName')
+    ) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
+  // component start-up
+  ngOnInit(): void {
+    //window.localStorage.clear();
+    this.doesNameExist();
+    console.log(document.getElementById('nav-training-programs'));
+  }
 }

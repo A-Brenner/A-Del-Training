@@ -24,14 +24,19 @@
           type="image"
           src="../assets/images/A-Del-logo.png"
           alt="A-Del Construction"
-          (click)="logoClick()"
+          routerLink="/"
         />
         <!-- <a href="#" class="logo">A-Del Construction</a> -->
         <nav>
           <ul>
-            <li><a href="#" routerLink="/">Home</a></li>
+            <li><a id="nav-home" href="#" routerLink="/">Home</a></li>
             <li>
-              <a href="#" routerLink="/training-programs">Training Programs</a>
+              <a
+                id="nav-training-programs"
+                href="/training-programs"
+                (click)="trainingProgramsClick()"
+                >Training Programs</a
+              >
             </li>
           </ul>
         </nav>
