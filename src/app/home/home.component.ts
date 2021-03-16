@@ -11,6 +11,7 @@ export class HomeComponent implements OnInit {
   title: string = 'A-Del Training';
   fName: string = '';
   lName: string = '';
+  hasName: boolean = false;
   constructor(private router: Router) {}
 
   // onClick Method
@@ -19,8 +20,9 @@ export class HomeComponent implements OnInit {
     this.saveName();
     console.log(window.localStorage.getItem('fName'));
     console.log(window.localStorage.getItem('lName'));
+    this.hasName = this.doesNameExist();
 
-    if (this.doesNameExist()) {
+    if (this.hasName) {
       this.router.navigateByUrl('/training-programs');
     } else {
       alert('Please enter your name before beginning.');
@@ -59,8 +61,8 @@ export class HomeComponent implements OnInit {
 
   // component start-up
   ngOnInit(): void {
-    window.localStorage.clear();
-    this.doesNameExist();
+    //window.localStorage.clear();
+    this.hasName = this.doesNameExist();
     console.log(document.getElementById('nav-training-programs'));
   }
 }
