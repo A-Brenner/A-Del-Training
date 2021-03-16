@@ -14,6 +14,11 @@ export class AppComponent {
       window.localStorage.getItem('fName') &&
       window.localStorage.getItem('lName')
     ) {
+      let navTrainingPrograms = document.getElementById(
+        'nav-training-programs'
+      );
+      //navTrainingPrograms?.setAttribute('href', '#!');
+      navTrainingPrograms?.setAttribute('routerLink', '/training-programs');
       this.router.navigateByUrl('/training-programs');
     } else {
       alert('Please enter your name before beginning.');

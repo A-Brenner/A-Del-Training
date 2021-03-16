@@ -59,7 +59,7 @@ export class HomeComponent implements OnInit {
 
   // component start-up
   ngOnInit(): void {
-    //window.localStorage.clear();
+    window.localStorage.clear();
     this.doesNameExist();
     console.log(document.getElementById('nav-training-programs'));
   }

@@ -30,6 +30,13 @@ body {
   margin: 0 auto;
 }
 
+#nav-training-programs {
+  color: white;
+}
+#nav-training-programs:hover {
+  text-decoration-line: underline;
+}
+
 // Router Outlet container
 // .container {
 //   background-color: gray;
@@ -67,6 +74,7 @@ header {
         &:hover {
           background: darken($primary, 10%);
           color: white;
+          cursor: pointer;
         }
       }
     }
