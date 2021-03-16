@@ -12,6 +12,7 @@ export class HomeComponent implements OnInit {
   fName: string = '';
   lName: string = '';
   hasName: boolean = false;
+  lastVisitedProgram: any = '';
   constructor(private router: Router) {}
 
   // onClick Method
@@ -27,6 +28,11 @@ export class HomeComponent implements OnInit {
     } else {
       alert('Please enter your name before beginning.');
     }
+  }
+
+  continueTraining(): void {
+    this.lastVisitedProgram = window.localStorage.getItem('latestProgram');
+    this.router.navigateByUrl('/training-programs/sections');
   }
 
   // Save user's name to local storage

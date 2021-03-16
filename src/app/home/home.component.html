@@ -27,7 +27,7 @@
         </video>
       </div>
       <div class="column right">
-        <ng-template [ngIf]="hasName === false">
+        <ng-template [ngIf]="!hasName">
           <h5>Register</h5>
           <form>
             <input
@@ -43,10 +43,23 @@
               value="Last Name"
             /><br />
           </form>
+          <button
+            id="beginTrainingBtn"
+            class="trainingBtn"
+            (click)="beginTrainingClick()"
+          >
+            Begin Training
+          </button>
         </ng-template>
-        <button id="beginTrainingBtn" (click)="beginTrainingClick()">
-          Begin Training
-        </button>
+        <ng-template [ngIf]="hasName">
+          <button
+            id="continueTrainingBtn"
+            class="trainingBtn"
+            (click)="continueTraining()"
+          >
+            Continue Training
+          </button>
+        </ng-template>
       </div>
     </div>
   </body>
