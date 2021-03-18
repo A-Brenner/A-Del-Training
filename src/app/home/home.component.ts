@@ -9,10 +9,9 @@ import { Router } from '@angular/router';
 })
 export class HomeComponent implements OnInit {
   title: string = 'A-Del Training';
-  fName: string = '';
-  lName: string = '';
+  fName: any = '';
+  lName: any = '';
   hasName: boolean = false;
-  lastVisitedProgram: any = '';
   constructor(private router: Router) {}
 
   // onClick Method
@@ -30,9 +29,14 @@ export class HomeComponent implements OnInit {
     }
   }
 
+  // take user to the training program they last visited if found in local storage
+  // otherwise, take user to the training programs page
   continueTraining(): void {
-    this.lastVisitedProgram = window.localStorage.getItem('latestProgram');
-    this.router.navigateByUrl('/training-programs/sections');
+    if (window.localStorage.getItem('latestProgram')) {
+      this.router.navigateByUrl('/training-programs/sections');
+    } else {
+      this.router.navigateByUrl('/training-programs');
+    }
   }
 
   // Save user's name to local storage
@@ -59,6 +63,8 @@ export class HomeComponent implements OnInit {
       window.localStorage.getItem('fName') &&
       window.localStorage.getItem('lName')
     ) {
+      this.fName = window.localStorage.getItem('fName');
+      this.lName = window.localStorage.getItem('lName');
       return true;
     } else {
       return false;
