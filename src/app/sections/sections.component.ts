@@ -23,152 +23,28 @@ export class SectionsComponent implements OnInit {
   trainingProgram: string = '';
   latestTrainingProgram: any = '';
 
-  // // ARRAYS OF SECTIONS
-  // newEmployeeSections: object[] = [];
-
-  // // NEW EMPLOYEE SECTIONS
-  // neSection1: object = {};
-  // neSection2: object = {};
-  // neSection3: object = {};
-  // neSection4: object = {};
-  // neSection5: object = {};
-  // // OFFICE EMPLOYEE SECTIONS
-  // oeSection1: object = {};
-  // oeSection2: object = {};
-  // oeSection3: object = {};
-  // oeSection4: object = {};
-  // // TRUCK DRIVER SECTIONS
-  // tdSection1: object = {};
-  // tdSection2: object = {};
-  // tdSection3: object = {};
-  // tdSection4: object = {};
-  // tdSection5: object = {};
-  // tdSection6: object = {};
-  // tdSection7: object = {};
-  // tdSection8: object = {};
-  // tdSection9: object = {};
-  // tdSection10: object = {};
-
-  // // OFFICE EMPLOYEE SECTIONS
-  // oeSection1 = {
-  //   sectionName: 'Emergency Action Plan',
-  //   sectionNo: 1,
-  //   completed: false,
-  //   link: '',
-  // };
-  // oeSection2 = {
-  //   sectionName: 'Active Shooter',
-  //   sectionNo: 2,
-  //   completed: false,
-  //   link: '',
-  // };
-  // oeSection3 = {
-  //   sectionName: 'Sexual Harassment',
-  //   sectionNo: 3,
-  //   completed: false,
-  //   link: '',
-  // };
-  // oeSection4 = {
-  //   sectionName: 'First Aid',
-  //   sectionNo: 4,
-  //   completed: false,
-  //   link: '',
-  // };
-
-  // // TRUCK DRIVER SECTIONS
-  // tdSection1 = {
-  //   sectionName: 'PPE: Basic Training',
-  //   sectionNo: 1,
-  //   completed: false,
-  //   link: '',
-  // };
-  // tdSection2 = {
-  //   sectionName: 'Hazardous Materials Labels',
-  //   sectionNo: 2,
-  //   completed: false,
-  //   link: '',
-  // };
-  // tdSection3 = {
-  //   sectionName: 'GHS: Safety Data Sheets',
-  //   sectionNo: 3,
-  //   completed: false,
-  //   link: '',
-  // };
-  // tdSection4 = {
-  //   sectionName: 'Fire Prevention',
-  //   sectionNo: 4,
-  //   completed: false,
-  //   link: '',
-  // };
-  // tdSection5 = {
-  //   sectionName: 'First aid',
-  //   sectionNo: 5,
-  //   completed: false,
-  //   link: '',
-  // };
-  // tdSection6 = {
-  //   sectionName: 'Slips, Trips, & Falls',
-  //   sectionNo: 6,
-  //   completed: false,
-  //   link: '',
-  // };
-  // tdSection7 = {
-  //   sectionName: 'Cell Phones',
-  //   sectionNo: 7,
-  //   completed: false,
-  //   link: '',
-  // };
-  // tdSection8 = {
-  //   sectionName: 'Drugs & Alcohol',
-  //   sectionNo: 8,
-  //   completed: false,
-  //   link: '',
-  // };
-  // tdSection9 = {
-  //   sectionName: 'Dump Truck Safety',
-  //   sectionNo: 9,
-  //   completed: false,
-  //   link: '',
-  // };
-  // tdSection10 = {
-  //   sectionName: 'Driver Safety',
-  //   sectionNo: 10,
-  //   completed: false,
-  //   link: '',
-  // };
-
-  // // ** ARRAYS OF SECTIONS **
-  // newEmployeeSections = [
-  //   this.neSection1,
-  //   this.neSection2,
-  //   this.neSection3,
-  //   this.neSection4,
-  //   this.neSection5,
-  // ];
-  // officeEmployeeSections = [
-  //   this.oeSection1,
-  //   this.oeSection2,
-  //   this.oeSection3,
-  //   this.oeSection4,
-  // ];
-  // truckDriverSections = [
-  //   this.tdSection1,
-  //   this.tdSection2,
-  //   this.tdSection3,
-  //   this.tdSection4,
-  //   this.tdSection5,
-  //   this.tdSection6,
-  //   this.tdSection7,
-  //   this.tdSection8,
-  //   this.tdSection9,
-  //   this.tdSection10,
-  // ];
-
+  // Determine which sections must be created and calls corresponding function
   createSections(): void {
     switch (this.latestTrainingProgram) {
       case 'newEmployees': {
         this.createSectionsNE();
         console.log(this.sectionsArr);
+        break;
+      }
+      case 'fieldWorkers': {
+        break;
+      }
+      case 'shopWorkers': {
+        break;
+      }
+      case 'officeEmployees': {
+        console.log(this.sectionsArr);
+        break;
+      }
+      case 'foreman': {
+        break;
+      }
+      case 'truckDrivers': {
         break;
       }
     }
