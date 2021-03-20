@@ -86,6 +86,113 @@ export class SectionsComponent implements OnInit {
     this.sectionsArr.push(section1, section2, section3, section4, section5);
   }
 
+  // Creates sections for Office Employees, Adds sections to array
+  createSectionsOE(): void {
+    let section1: sectionModule.Section = new sectionModule.Section(
+      1,
+      'Emergency Action Plan',
+      false,
+      'https://www....'
+    );
+    let section2: sectionModule.Section = new sectionModule.Section(
+      2,
+      'Active Shooter',
+      false,
+      'https://www....'
+    );
+    let section3: sectionModule.Section = new sectionModule.Section(
+      3,
+      'Sexual Harassment Training',
+      false,
+      'https://www....'
+    );
+    let section4: sectionModule.Section = new sectionModule.Section(
+      4,
+      'First Aid',
+      false,
+      'https://www....'
+    );
+
+    this.sectionsArr.push(section1, section2, section3, section4);
+  }
+
+  // Creates sections for Truck Drivers, Adds sections to array
+  createSectionsTD(): void {
+    let section1: sectionModule.Section = new sectionModule.Section(
+      1,
+      'PPE: Basic Training',
+      false,
+      'https://www....'
+    );
+    let section2: sectionModule.Section = new sectionModule.Section(
+      2,
+      'Hazardous Materials Labels',
+      false,
+      'https://www....'
+    );
+    let section3: sectionModule.Section = new sectionModule.Section(
+      3,
+      'GHS: Safety Data Sheets',
+      false,
+      'https://www....'
+    );
+    let section4: sectionModule.Section = new sectionModule.Section(
+      4,
+      'Fire Prevention',
+      false,
+      'https://www....'
+    );
+    let section5: sectionModule.Section = new sectionModule.Section(
+      5,
+      'First Aid',
+      false,
+      'https://www....'
+    );
+    let section6: sectionModule.Section = new sectionModule.Section(
+      6,
+      'Slips, Trips, & Falls',
+      false,
+      'https://www....'
+    );
+    let section7: sectionModule.Section = new sectionModule.Section(
+      7,
+      'Cell Phones',
+      false,
+      'https://www....'
+    );
+    let section8: sectionModule.Section = new sectionModule.Section(
+      8,
+      'Drugs & Alcohol',
+      false,
+      'https://www....'
+    );
+    let section9: sectionModule.Section = new sectionModule.Section(
+      9,
+      'Dump Truck Safety',
+      false,
+      'https://www....'
+    );
+    let section10: sectionModule.Section = new sectionModule.Section(
+      10,
+      'Driver Safety',
+      false,
+      'https://www....'
+    );
+
+    this.sectionsArr.push(
+      section1,
+      section2,
+      section3,
+      section4,
+      section5,
+      section6,
+      section7,
+      section8,
+      section9,
+      section10
+    );
+  }
+
   ngOnInit(): void {
     this.message = this.shared.getMessage();
 
