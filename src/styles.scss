@@ -12,13 +12,12 @@ html {
 
 body {
   margin: 0;
-  font-family: "Nunito", "sans-serif";
-  font-size: 18px;
 }
 
 #nav-logo {
   margin-top: -16px;
-  margin-left: -30px;
+  margin-left: 0px;
+  margin-right: 0px;
   width: auto;
   height: 57px;
 }
@@ -27,8 +26,8 @@ body {
   min-height: 25px;
   height: 25px;
   max-height: 25px;
-  width: 80%;
-  margin: 0 auto;
+  width: 100%;
+  margin: 0px;
 }
 
 #nav-training-programs {
@@ -46,11 +45,39 @@ header {
   background: $primary;
   padding: 1em 0;
 
+  // For Browser
   a {
     color: white;
     text-decoration: none;
     font-family: fantasy, Georgia, "Times New Roman", Times, serif;
     text-size-adjust: auto;
+    font-size: medium;
+  }
+
+  // Spaces out nav-links from right wall if screen is big enough
+  @media screen and (min-width: 600px) {
+    .nav-container {
+      width: 90%;
+    }
+  }
+
+  // For mobile
+  @media screen and (max-width: 360px) {
+    a {
+      font-size: smaller;
+    }
+  }
+
+  @media screen and (max-width: 320px) {
+    a {
+      font-size: x-small;
+    }
+  }
+
+  @media screen and (max-width: 275px) {
+    a {
+      font-size: xx-small;
+    }
   }
 
   nav {
@@ -60,6 +87,8 @@ header {
       list-style-type: none;
       margin: 0;
       display: flex;
+      width: 100%;
+      padding: 0px;
 
       li a {
         padding: 1em;

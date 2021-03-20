@@ -99,8 +99,6 @@ make the columns stack on top of each other
   .row {
     flex-direction: column;
   }
-}
-@media screen and (max-width: 600px) {
   .column {
     width: 100%;
   }
