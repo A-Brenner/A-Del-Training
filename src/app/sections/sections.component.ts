@@ -50,6 +50,7 @@ export class SectionsComponent implements OnInit {
     }
   }
 
+  // NEW EMPLOYEES
   // Creates sections for New Employees, Adds sections to array
   createSectionsNE(): void {
     let section1: sectionModule.Section = new sectionModule.Section(
@@ -86,6 +87,7 @@ export class SectionsComponent implements OnInit {
     this.sectionsArr.push(section1, section2, section3, section4, section5);
   }
 
+  // OFFICE EMPLOYEES
   // Creates sections for Office Employees, Adds sections to array
   createSectionsOE(): void {
     let section1: sectionModule.Section = new sectionModule.Section(
@@ -116,6 +118,155 @@ export class SectionsComponent implements OnInit {
     this.sectionsArr.push(section1, section2, section3, section4);
   }
 
+  // FIELD WORKERS
+  // Creates sections for Field Workers, Adds sections to array
+  createSectionsFW(): void {
+    let section1: sectionModule.Section = new sectionModule.Section(
+      1,
+      'PPE: Basic Training',
+      false,
+      'https://www....'
+    );
+    let section2: sectionModule.Section = new sectionModule.Section(
+      2,
+      'Hazardous Materials Labels',
+      false,
+      'https://www....'
+    );
+    let section3: sectionModule.Section = new sectionModule.Section(
+      3,
+      'GHS: Safety Data Sheets',
+      false,
+      'https://www....'
+    );
+    let section4: sectionModule.Section = new sectionModule.Section(
+      4,
+      'Ladder Safety',
+      false,
+      'https://www....'
+    );
+    let section5: sectionModule.Section = new sectionModule.Section(
+      5,
+      'Fire Prevention',
+      false,
+      'https://www....'
+    );
+    let section6: sectionModule.Section = new sectionModule.Section(
+      6,
+      'First Aid',
+      false,
+      'https://www....'
+    );
+    let section7: sectionModule.Section = new sectionModule.Section(
+      4,
+      'Basic Electrical Safety',
+      false,
+      'https://www....'
+    );
+    let section8: sectionModule.Section = new sectionModule.Section(
+      8,
+      'Slips, Trips, & Falls',
+      false,
+      'https://www....'
+    );
+    let section9: sectionModule.Section = new sectionModule.Section(
+      9,
+      'Trenching & Excavation',
+      false,
+      'https://www....'
+    );
+    let section10: sectionModule.Section = new sectionModule.Section(
+      10,
+      'Fall Protection',
+      false,
+      'https://www....'
+    );
+    let section11: sectionModule.Section = new sectionModule.Section(
+      11,
+      'Confined Space Entry',
+      false,
+      'https://www....'
+    );
+    let section12: sectionModule.Section = new sectionModule.Section(
+      12,
+      'Small Tools',
+      false,
+      'https://www....'
+    );
+    let section13: sectionModule.Section = new sectionModule.Section(
+      13,
+      'Crystalline Silica Safety',
+      false,
+      'https://www....'
+    );
+    let section14: sectionModule.Section = new sectionModule.Section(
+      14,
+      'Machine Guarding',
+      false,
+      'https://www....'
+    );
+    let section15: sectionModule.Section = new sectionModule.Section(
+      15,
+      'Driving Safety',
+      false,
+      'https://www....'
+    );
+    let section16: sectionModule.Section = new sectionModule.Section(
+      16,
+      'Rigging & Load Securement',
+      false,
+      'https://www....'
+    );
+    let section17: sectionModule.Section = new sectionModule.Section(
+      17,
+      'Power Hand Tools',
+      false,
+      'https://www....'
+    );
+    let section18: sectionModule.Section = new sectionModule.Section(
+      18,
+      'Heat Stress',
+      false,
+      'https://www....'
+    );
+    let section19: sectionModule.Section = new sectionModule.Section(
+      19,
+      'Aerial Lifts',
+      false,
+      'https://www....'
+    );
+    let section20: sectionModule.Section = new sectionModule.Section(
+      20,
+      'Working Around Equipment',
+      false,
+      'https://www....'
+    );
+
+    this.sectionsArr.push(
+      section1,
+      section2,
+      section3,
+      section4,
+      section5,
+      section6,
+      section7,
+      section8,
+      section9,
+      section10,
+      section11,
+      section12,
+      section13,
+      section14,
+      section15,
+      section16,
+      section17,
+      section18,
+      section19,
+      section20
+    );
+  }
+
+  // TRUCK DRIVERS
   // Creates sections for Truck Drivers, Adds sections to array
   createSectionsTD(): void {
     let section1: sectionModule.Section = new sectionModule.Section(
