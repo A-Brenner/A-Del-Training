@@ -45,7 +45,6 @@ header {
   background: $primary;
   padding: 1em 0;
 
-  // For Browser
   a {
     color: white;
     text-decoration: none;
@@ -61,7 +60,7 @@ header {
     }
   }
 
-  // For mobile
+  // Adjusts nav-links font size for small screen widths
   @media screen and (max-width: 360px) {
     a {
       font-size: smaller;
