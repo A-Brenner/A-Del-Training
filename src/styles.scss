@@ -1,6 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
 /* You can add global styles to this file, and also import other style files */
-@import url("https://fonts.googleapis.com/css?family=Nunito:400,700&display=swap");
 
 // SCSS Variable
 $primary: rgb(87, 3, 24);
@@ -11,6 +10,7 @@ html {
 }
 
 body {
+  overflow-y: hidden;
   margin: 0;
 }
 

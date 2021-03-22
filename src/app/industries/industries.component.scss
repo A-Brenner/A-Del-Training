@@ -7,6 +7,7 @@ body {
   background-color: $secondary;
   height: 100%;
   width: 100%;
+  font-family: fantasy, Georgia, "Times New Roman", Times, serif;
 }
 
 .label-container {
@@ -24,7 +25,6 @@ body {
 .img-container {
   position: relative;
   text-align: center;
-  //color: white;
   height: 30%;
   margin-bottom: 5px;
 }
@@ -65,7 +65,6 @@ h1 {
   text-align: center;
   color: $primary;
   font-weight: bold;
-  font-family: fantasy, Georgia, "Times New Roman", Times, serif;
 }
 
 input {
@@ -78,7 +77,6 @@ input {
 h5 {
   color: $secondary;
   font-size: 2.4vw;
-  font-family: fantasy, Georgia, "Times New Roman", Times, serif;
   white-space: nowrap;
 }
 
