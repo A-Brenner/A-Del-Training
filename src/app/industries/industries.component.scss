@@ -82,9 +82,15 @@ h5 {
   white-space: nowrap;
 }
 
+// Dynamic Resizing for Smaller / Bigger Screens
 @media screen and (min-width: 1024px) {
   h5 {
     font-size: 2.2vw;
+  }
+}
+@media screen and (min-width: 1200px) {
+  h5 {
+    font-size: 2vw;
   }
 }
 @media screen and (max-width: 900px) {
@@ -132,7 +138,6 @@ h5 {
   }
   #sw-label {
     font-size: 3.8vw;
-    //padding-left: 10px;
   }
 }
 @media screen and (max-width: 380px) {
