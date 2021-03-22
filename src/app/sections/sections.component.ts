@@ -55,6 +55,9 @@ export class SectionsComponent implements OnInit {
         console.log(this.sectionsArr);
         break;
       }
+      default: {
+        console.log('Sections NOT FOUND');
+      }
     }
   }
 

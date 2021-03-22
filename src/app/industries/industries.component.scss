@@ -9,79 +9,6 @@ body {
   width: 100%;
 }
 
-h1 {
-  padding: 0.5em;
-  font-size: xx-large;
-  text-align: center;
-  color: $primary;
-  font-weight: bold;
-  font-family: fantasy, Georgia, "Times New Roman", Times, serif;
-}
-
-input {
-  width: 90%;
-  height: 100%;
-  //max-height: 100%;
-}
-
-h5 {
-  color: $secondary;
-  font-size: 2.4vw;
-  font-family: fantasy, Georgia, "Times New Roman", Times, serif;
-  white-space: nowrap;
-}
-
-@media screen and (min-width: 1024px) {
-  h5 {
-    font-size: 2.2vw;
-  }
-}
-@media screen and (max-width: 900px) {
-  h5 {
-    font-size: 2.7vw;
-  }
-}
-@media screen and (max-width: 800px) {
-  h5 {
-    font-size: 2.9vw;
-  }
-}
-@media screen and (max-width: 700px) {
-  h5 {
-    font-size: 3.1vw;
-  }
-}
-@media screen and (max-width: 600px) {
-  h5 {
-    font-size: 3.3vw;
-  }
-}
-@media screen and (max-width: 500px) {
-  h5 {
-    font-size: 3.6vw;
-  }
-}
-@media screen and (max-width: 450px) {
-  h5 {
-    font-size: 3.8vw;
-  }
-}
-@media screen and (max-width: 420px) {
-  h5 {
-    font-size: 4vw;
-  }
-}
-@media screen and (max-width: 380px) {
-  h5 {
-    font-size: 4.2vw;
-  }
-}
-@media screen and (max-width: 350px) {
-  h5 {
-    font-size: 4.5vw;
-  }
-}
-
 .label-container {
   background-color: $primary;
   height: 2.5em;
@@ -116,6 +43,12 @@ h5 {
   width: 50%;
   text-align: center;
   //padding: 5px;
+  margin-bottom: 50px;
+}
+
+// left column only
+.column-left {
+  padding-left: 5px;
 }
 
 /* Clear floats after the columns */
@@ -123,4 +56,95 @@ h5 {
   content: "";
   display: table;
   clear: both;
+}
+
+// page heading
+h1 {
+  padding: 0.5em;
+  font-size: xx-large;
+  text-align: center;
+  color: $primary;
+  font-weight: bold;
+  font-family: fantasy, Georgia, "Times New Roman", Times, serif;
+}
+
+input {
+  width: 90%;
+  height: 100%;
+  //max-height: 100%;
+}
+
+// image headings
+h5 {
+  color: $secondary;
+  font-size: 2.4vw;
+  font-family: fantasy, Georgia, "Times New Roman", Times, serif;
+  white-space: nowrap;
+}
+
+@media screen and (min-width: 1024px) {
+  h5 {
+    font-size: 2.2vw;
+  }
+}
+@media screen and (max-width: 900px) {
+  h5 {
+    font-size: 2.7vw;
+  }
+}
+@media screen and (max-width: 800px) {
+  h5 {
+    font-size: 2.9vw;
+  }
+}
+@media screen and (max-width: 700px) {
+  h5 {
+    font-size: 3.1vw;
+  }
+  .column {
+    margin-bottom: 60px;
+  }
+}
+@media screen and (max-width: 600px) {
+  h5 {
+    font-size: 3.3vw;
+  }
+  .column {
+    margin-bottom: 70px;
+  }
+}
+@media screen and (max-width: 500px) {
+  h5 {
+    font-size: 3.6vw;
+  }
+  .column {
+    margin-bottom: 80px;
+  }
+}
+@media screen and (max-width: 450px) {
+  h5 {
+    font-size: 3.8vw;
+  }
+}
+@media screen and (max-width: 420px) {
+  h5 {
+    font-size: 4vw;
+  }
+  #sw-label {
+    font-size: 3.8vw;
+    //padding-left: 10px;
+  }
+}
+@media screen and (max-width: 380px) {
+  h5 {
+    font-size: 4.2vw;
+  }
+}
+@media screen and (max-width: 350px) {
+  h5 {
+    font-size: 4.5vw;
+  }
+  .column {
+    margin-bottom: 85px;
+  }
 }
