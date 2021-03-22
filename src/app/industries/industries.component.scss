@@ -4,9 +4,6 @@ $secondary: rgb(250, 171, 52);
 body {
   overflow-x: hidden;
   overflow-y: hidden;
-}
-
-body {
   background-color: $secondary;
   height: 100%;
   width: 100%;
@@ -29,14 +26,65 @@ input {
 
 h5 {
   color: $secondary;
-  font-size: 2.5vw;
+  font-size: 2.4vw;
   font-family: fantasy, Georgia, "Times New Roman", Times, serif;
   white-space: nowrap;
 }
 
+@media screen and (min-width: 1024px) {
+  h5 {
+    font-size: 2.2vw;
+  }
+}
+@media screen and (max-width: 900px) {
+  h5 {
+    font-size: 2.7vw;
+  }
+}
+@media screen and (max-width: 800px) {
+  h5 {
+    font-size: 2.9vw;
+  }
+}
+@media screen and (max-width: 700px) {
+  h5 {
+    font-size: 3.1vw;
+  }
+}
+@media screen and (max-width: 600px) {
+  h5 {
+    font-size: 3.3vw;
+  }
+}
+@media screen and (max-width: 500px) {
+  h5 {
+    font-size: 3.6vw;
+  }
+}
+@media screen and (max-width: 450px) {
+  h5 {
+    font-size: 3.8vw;
+  }
+}
+@media screen and (max-width: 420px) {
+  h5 {
+    font-size: 4vw;
+  }
+}
+@media screen and (max-width: 380px) {
+  h5 {
+    font-size: 4.2vw;
+  }
+}
+@media screen and (max-width: 350px) {
+  h5 {
+    font-size: 4.5vw;
+  }
+}
+
 .label-container {
   background-color: $primary;
-  height: 2em;
+  height: 2.5em;
   width: 90%;
   position: relative;
   text-align: center;

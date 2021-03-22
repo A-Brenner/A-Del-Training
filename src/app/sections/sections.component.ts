@@ -32,19 +32,27 @@ export class SectionsComponent implements OnInit {
         break;
       }
       case 'fieldWorkers': {
+        this.createSectionsFW();
+        console.log(this.sectionsArr);
         break;
       }
       case 'shopWorkers': {
         break;
       }
       case 'officeEmployees': {
+        this.createSectionsOE();
         console.log(this.sectionsArr);
         break;
       }
       case 'foreman': {
+        this.createSectionsFM();
+        this.createSectionsFW();
+        console.log(this.sectionsArr);
         break;
       }
       case 'truckDrivers': {
+        this.createSectionsTD();
+        console.log(this.sectionsArr);
         break;
       }
     }
@@ -263,6 +271,57 @@ export class SectionsComponent implements OnInit {
       section18,
       section19,
       section20
+    );
+  }
+
+  // FOREMAN
+  // Creates sections for FOREMAN, Adds sections to array
+  // Foreman sectiona include all Field Worker sections + more
+  createSectionsFM(): void {
+    let section1: sectionModule.Section = new sectionModule.Section(
+      1,
+      'Equipment',
+      false,
+      'https://www....'
+    );
+    let section2: sectionModule.Section = new sectionModule.Section(
+      2,
+      'Accident Investigation',
+      false,
+      'https://www....'
+    );
+    let section3: sectionModule.Section = new sectionModule.Section(
+      3,
+      'Lock Out Tag Out',
+      false,
+      'https://www....'
+    );
+    let section4: sectionModule.Section = new sectionModule.Section(
+      4,
+      'Drug & Alcohol Supervisor',
+      false,
+      'https://www....'
+    );
+    let section5: sectionModule.Section = new sectionModule.Section(
+      5,
+      'Near Miss Reporting',
+      false,
+      'https://www....'
+    );
+    let section6: sectionModule.Section = new sectionModule.Section(
+      5,
+      'HCSS Reporting',
+      false,
+      'https://www....'
+    );
+
+    this.sectionsArr.push(
+      section1,
+      section2,
+      section3,
+      section4,
+      section5,
+      section6
     );
   }
 
