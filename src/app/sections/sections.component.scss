@@ -1,0 +1,59 @@
+$primary: rgb(87, 3, 24);
+$secondary: rgb(250, 171, 52);
+
+body {
+  overflow-x: hidden;
+  overflow-y: auto;
+  height: 90vh;
+  background-color: $secondary;
+  font-family: fantasy, Georgia, "Times New Roman", Times, serif;
+}
+
+h1 {
+  color: $primary;
+  text-align: center;
+}
+
+.section-container {
+  color: $secondary;
+  background-color: $primary;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
+  max-width: 600px;
+  //column-count: 2;
+}
+
+.left {
+  width: 20%;
+}
+
+.right {
+  width: 80%;
+}
+
+p {
+}
+
+.row {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Centered text */
+// .centered {
+//   position: absolute;
+//   top: 50%;
+//   left: 50%;
+//   transform: translate(-50%, -50%);
+//   //font-weight: bold;
+// }

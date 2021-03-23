@@ -1,31 +1,34 @@
-{{ latestTrainingProgram }}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    {{ latestTrainingProgram }}
 
-<!-- New Employees -->
-<ng-template [ngIf]="latestTrainingProgram === 'newEmployees'">
-  <h1 class="title">New Employees</h1>
-  <div class="section-container" *ngFor="let section of sectionsArr">
-    <div class="section-title">
-      {{ section.sectionNo }}
-      {{ section.sectionName }}
-    </div>
-    <div class="section-info">
-      {{ section.completed }}
-      {{ section.link }}
-    </div>
-  </div>
-</ng-template>
-
-<!-- Office Workers -->
-<!-- <ng-template [ngIf]="latestTrainingProgram === 'officeEmployees'">
-  <h1 class="title">Office Employees</h1>
-  <div class="section-container" *ngFor="let section of officeEmployeeSections">
-    <div class="section-title">
-      {{ section.sectionNo }}
-      {{ section.sectionName }}
-    </div>
-    <div class="section-info">
-      {{ section.completed }}
-      {{ section.link }}
-    </div>
-  </div>
-</ng-template> -->
+    <!-- New Employees -->
+    <ng-template [ngIf]="latestTrainingProgram === 'newEmployees'">
+      <h1 class="title">New Employees</h1>
+      <div class="section-container" *ngFor="let section of sectionsArr">
+        <div class="row">
+          <div class="column left">
+            <p>{{ section.sectionNo }}</p>
+            <p>100%</p>
+          </div>
+          <div class="column right">
+            <div class="section-title">
+              {{ section.sectionName }}
+            </div>
+            <div class="section-info">
+              {{ section.completed }}
+              {{ section.link }}
+            </div>
+          </div>
+        </div>
+      </div>
+    </ng-template>
+  </body>
+</html>
