@@ -30,5 +30,115 @@
         </div>
       </div>
     </ng-template>
+
+    <!-- Office Employees -->
+    <ng-template [ngIf]="latestTrainingProgram === 'officeEmployees'">
+      <h1 class="title">Office Employees</h1>
+      <div class="section-container" *ngFor="let section of sectionsArr">
+        <div class="row">
+          <div class="column left">
+            <h5>{{ section.sectionNo }}.</h5>
+            <p>100%</p>
+          </div>
+          <div class="column right">
+            <div class="section-title">
+              <h5>{{ section.sectionName }}</h5>
+            </div>
+            <div class="section-info">
+              <button id="videoBtn">Watch Video</button>
+              <button id="examBtn">Take Exam</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </ng-template>
+
+    <!-- Field Workers -->
+    <ng-template [ngIf]="latestTrainingProgram === 'fieldWorkers'">
+      <h1 class="title">Field Workers</h1>
+      <div class="section-container" *ngFor="let section of sectionsArr">
+        <div class="row">
+          <div class="column left">
+            <h5>{{ section.sectionNo }}.</h5>
+            <p>100%</p>
+          </div>
+          <div class="column right">
+            <div class="section-title">
+              <h5>{{ section.sectionName }}</h5>
+            </div>
+            <div class="section-info">
+              <button id="videoBtn">Watch Video</button>
+              <button id="examBtn">Take Exam</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </ng-template>
+
+    <!-- Foreman -->
+    <ng-template [ngIf]="latestTrainingProgram === 'foreman'">
+      <h1 class="title">Foreman</h1>
+      <div class="section-container" *ngFor="let section of sectionsArr">
+        <div class="row">
+          <div class="column left">
+            <h5>{{ section.sectionNo }}.</h5>
+            <p>100%</p>
+          </div>
+          <div class="column right">
+            <div class="section-title">
+              <h5>{{ section.sectionName }}</h5>
+            </div>
+            <div class="section-info">
+              <button id="videoBtn">Watch Video</button>
+              <button id="examBtn">Take Exam</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </ng-template>
+
+    <!-- Shop Workers & Mechanics -->
+    <ng-template [ngIf]="latestTrainingProgram === 'shopWorkers'">
+      <h1 class="title">Shop Workers & Mechanics</h1>
+      <div class="section-container" *ngFor="let section of sectionsArr">
+        <div class="row">
+          <div class="column left">
+            <h5>{{ section.sectionNo }}.</h5>
+            <p>100%</p>
+          </div>
+          <div class="column right">
+            <div class="section-title">
+              <h5>{{ section.sectionName }}</h5>
+            </div>
+            <div class="section-info">
+              <button id="videoBtn">Watch Video</button>
+              <button id="examBtn">Take Exam</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </ng-template>
+
+    <!-- Truck Drivers -->
+    <ng-template [ngIf]="latestTrainingProgram === 'truckDrivers'">
+      <h1 class="title">Truck Drivers</h1>
+      <div class="section-container" *ngFor="let section of sectionsArr">
+        <div class="row">
+          <div class="column left">
+            <h5>{{ section.sectionNo }}.</h5>
+            <p>100%</p>
+          </div>
+          <div class="column right">
+            <div class="section-title">
+              <h5>{{ section.sectionName }}</h5>
+            </div>
+            <div class="section-info">
+              <button id="videoBtn">Watch Video</button>
+              <button id="examBtn">Take Exam</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </ng-template>
   </body>
 </html>

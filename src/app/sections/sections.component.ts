@@ -41,7 +41,6 @@ export class SectionsComponent implements OnInit {
       }
       case 'foreman': {
         this.createSectionsFM();
-        this.createSectionsFW();
         console.log(this.sectionsArr);
         break;
       }
@@ -307,8 +306,128 @@ export class SectionsComponent implements OnInit {
       'https://www....'
     );
     let section6: sectionModule.Section = new sectionModule.Section(
-      5,
+      6,
       'HCSS Reporting',
+      false,
+      'https://www....'
+    );
+    let section7: sectionModule.Section = new sectionModule.Section(
+      7,
+      'PPE: Basic Training',
+      false,
+      'https://www....'
+    );
+    let section8: sectionModule.Section = new sectionModule.Section(
+      8,
+      'Hazardous Materials Labels',
+      false,
+      'https://www....'
+    );
+    let section9: sectionModule.Section = new sectionModule.Section(
+      9,
+      'GHS: Safety Data Sheets',
+      false,
+      'https://www....'
+    );
+    let section10: sectionModule.Section = new sectionModule.Section(
+      10,
+      'Ladder Safety',
+      false,
+      'https://www....'
+    );
+    let section11: sectionModule.Section = new sectionModule.Section(
+      11,
+      'Fire Prevention',
+      false,
+      'https://www....'
+    );
+    let section12: sectionModule.Section = new sectionModule.Section(
+      12,
+      'First Aid',
+      false,
+      'https://www....'
+    );
+    let section13: sectionModule.Section = new sectionModule.Section(
+      13,
+      'Basic Electrical Safety',
+      false,
+      'https://www....'
+    );
+    let section14: sectionModule.Section = new sectionModule.Section(
+      14,
+      'Slips, Trips, & Falls',
+      false,
+      'https://www....'
+    );
+    let section15: sectionModule.Section = new sectionModule.Section(
+      15,
+      'Trenching & Excavation',
+      false,
+      'https://www....'
+    );
+    let section16: sectionModule.Section = new sectionModule.Section(
+      16,
+      'Fall Protection',
+      false,
+      'https://www....'
+    );
+    let section17: sectionModule.Section = new sectionModule.Section(
+      17,
+      'Confined Space Entry',
+      false,
+      'https://www....'
+    );
+    let section18: sectionModule.Section = new sectionModule.Section(
+      18,
+      'Small Tools',
+      false,
+      'https://www....'
+    );
+    let section19: sectionModule.Section = new sectionModule.Section(
+      19,
+      'Crystalline Silica Safety',
+      false,
+      'https://www....'
+    );
+    let section20: sectionModule.Section = new sectionModule.Section(
+      20,
+      'Machine Guarding',
+      false,
+      'https://www....'
+    );
+    let section21: sectionModule.Section = new sectionModule.Section(
+      21,
+      'Driving Safety',
+      false,
+      'https://www....'
+    );
+    let section22: sectionModule.Section = new sectionModule.Section(
+      22,
+      'Rigging & Load Securement',
+      false,
+      'https://www....'
+    );
+    let section23: sectionModule.Section = new sectionModule.Section(
+      23,
+      'Power Hand Tools',
+      false,
+      'https://www....'
+    );
+    let section24: sectionModule.Section = new sectionModule.Section(
+      24,
+      'Heat Stress',
+      false,
+      'https://www....'
+    );
+    let section25: sectionModule.Section = new sectionModule.Section(
+      25,
+      'Aerial Lifts',
+      false,
+      'https://www....'
+    );
+    let section26: sectionModule.Section = new sectionModule.Section(
+      26,
+      'Working Around Equipment',
       false,
       'https://www....'
     );
@@ -319,7 +438,27 @@ export class SectionsComponent implements OnInit {
       section3,
       section4,
       section5,
-      section6
+      section6,
+      section7,
+      section8,
+      section9,
+      section10,
+      section11,
+      section12,
+      section13,
+      section14,
+      section15,
+      section16,
+      section17,
+      section18,
+      section19,
+      section20,
+      section21,
+      section22,
+      section23,
+      section24,
+      section25,
+      section26
     );
   }
 
