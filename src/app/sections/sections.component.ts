@@ -21,34 +21,41 @@ export class SectionsComponent implements OnInit {
   createSections(): void {
     switch (this.latestTrainingProgram) {
       case 'newEmployees': {
+        this.trainingProgram = 'New Employees';
         this.createSectionsNE();
         console.log(this.sectionsArr);
         break;
       }
       case 'fieldWorkers': {
+        this.trainingProgram = 'Field Workers';
         this.createSectionsFW();
         console.log(this.sectionsArr);
         break;
       }
       case 'shopWorkers': {
+        this.trainingProgram = 'Shop Workers & Mechanics';
         break;
       }
       case 'officeEmployees': {
+        this.trainingProgram = 'Office Employees';
         this.createSectionsOE();
         console.log(this.sectionsArr);
         break;
       }
       case 'foreman': {
+        this.trainingProgram = 'Foreman';
         this.createSectionsFM();
         console.log(this.sectionsArr);
         break;
       }
       case 'truckDrivers': {
+        this.trainingProgram = 'Truck Drivers';
         this.createSectionsTD();
         console.log(this.sectionsArr);
         break;
       }
       default: {
+        this.trainingProgram = 'Section Not Found';
         console.log('Sections NOT FOUND');
       }
     }
@@ -533,7 +540,6 @@ export class SectionsComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.trainingProgram = this.shared.getTrainingProgram();
     this.latestTrainingProgram = window.localStorage.getItem('latestProgram');
     this.createSections();
   }

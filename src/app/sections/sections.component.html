@@ -7,9 +7,10 @@
     <title>Document</title>
   </head>
   <body>
+    <h1 class="title">{{ trainingProgram }}</h1>
+
     <!-- New Employees -->
     <ng-template [ngIf]="latestTrainingProgram === 'newEmployees'">
-      <h1 class="title">New Employees</h1>
       <div class="section-container" *ngFor="let section of sectionsArr">
         <div class="row">
           <div class="column left">
@@ -31,7 +32,6 @@
 
     <!-- Office Employees -->
     <ng-template [ngIf]="latestTrainingProgram === 'officeEmployees'">
-      <h1 class="title">Office Employees</h1>
       <div class="section-container" *ngFor="let section of sectionsArr">
         <div class="row">
           <div class="column left">
@@ -53,7 +53,6 @@
 
     <!-- Field Workers -->
     <ng-template [ngIf]="latestTrainingProgram === 'fieldWorkers'">
-      <h1 class="title">Field Workers</h1>
       <div class="section-container" *ngFor="let section of sectionsArr">
         <div class="row">
           <div class="column left">
@@ -75,7 +74,6 @@
 
     <!-- Foreman -->
     <ng-template [ngIf]="latestTrainingProgram === 'foreman'">
-      <h1 class="title">Foreman</h1>
       <div class="section-container" *ngFor="let section of sectionsArr">
         <div class="row">
           <div class="column left">
@@ -97,7 +95,6 @@
 
     <!-- Shop Workers & Mechanics -->
     <ng-template [ngIf]="latestTrainingProgram === 'shopWorkers'">
-      <h1 class="title">Shop Workers & Mechanics</h1>
       <div class="section-container" *ngFor="let section of sectionsArr">
         <div class="row">
           <div class="column left">
@@ -119,7 +116,6 @@
 
     <!-- Truck Drivers -->
     <ng-template [ngIf]="latestTrainingProgram === 'truckDrivers'">
-      <h1 class="title">Truck Drivers</h1>
       <div class="section-container" *ngFor="let section of sectionsArr">
         <div class="row">
           <div class="column left">
