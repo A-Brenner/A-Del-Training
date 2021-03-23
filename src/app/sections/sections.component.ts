@@ -28,7 +28,7 @@ export class SectionsComponent implements OnInit {
       }
       case 'fieldWorkers': {
         this.trainingProgram = 'Field Workers';
-        this.createSectionsFW();
+        this.createSectionsFW(0);
         console.log(this.sectionsArr);
         break;
       }
@@ -43,8 +43,11 @@ export class SectionsComponent implements OnInit {
         break;
       }
       case 'foreman': {
+        // Foreman must complete both Foreman AND Field Worker sections
         this.trainingProgram = 'Foreman';
         this.createSectionsFM();
+        console.log(this.sectionsArr);
+        this.createSectionsFW(this.sectionsArr.length);
         console.log(this.sectionsArr);
         break;
       }
@@ -60,11 +63,12 @@ export class SectionsComponent implements OnInit {
       }
     }
   }
+
   // NEW EMPLOYEES
   // Creates sections for New Employees, Adds sections to array
   createSectionsNE(): void {
     // array of New Employee section titles
-    let titlesNE: string[] = [
+    let titles: string[] = [
       'EEO',
       'Safety Orientation',
       'Sexual Harassment',
@@ -72,20 +76,20 @@ export class SectionsComponent implements OnInit {
       'Drugs & Alcohol',
     ];
     // array of New Employee video links
-    let linksNE: string[] = [
-      '',
+    let links: string[] = [
+      '', // (Audra) EEO
       'https://safetysourceonline.com/video/safety-bobs-comprehensive-construction-orientation-e1316e-24-min-2/',
-      '',
+      '', // sexual harassment
       'https://safetysourceonline.com/video/cell-phone-hands-free-driving-awareness-ss1089/',
       'https://safetysourceonline.com/video/dealing-with-drug-and-alcohol-abuse-for-employees-052/',
     ];
 
-    for (let i = 0; i < titlesNE.length; i++) {
+    for (let i = 0; i < titles.length; i++) {
       let section: sectionModule.Section = new sectionModule.Section(
         i + 1,
-        titlesNE[i],
+        titles[i],
         false,
-        linksNE[i]
+        links[i]
       );
       this.sectionsArr.push(section);
     }
@@ -94,371 +98,125 @@ export class SectionsComponent implements OnInit {
   // OFFICE EMPLOYEES
   // Creates sections for Office Employees, Adds sections to array
   createSectionsOE(): void {
-    let section1: sectionModule.Section = new sectionModule.Section(
-      1,
+    // array of New Employee section titles
+    let titles: string[] = [
       'Emergency Action Plan',
-      false,
-      'https://www....'
-    );
-    let section2: sectionModule.Section = new sectionModule.Section(
-      2,
-      'Active Shooter',
-      false,
-      'https://www....'
-    );
-    let section3: sectionModule.Section = new sectionModule.Section(
-      3,
-      'Sexual Harassment Training',
-      false,
-      'https://www....'
-    );
-    let section4: sectionModule.Section = new sectionModule.Section(
-      4,
+      'Surviving an Active Shooter',
+      'Sexual Harassment',
       'First Aid',
-      false,
-      'https://www....'
-    );
+    ];
+    // array of New Employee video links
+    let links: string[] = [
+      '', // (Chuck) Emergency Action Plan
+      'https://www.youtube.com/watch?v=DFQ-oxhdFjE',
+      '', // sexual harassment
+      'https://safetysourceonline.com/video/first-aid-m209/',
+    ];
 
-    this.sectionsArr.push(section1, section2, section3, section4);
+    for (let i = 0; i < titles.length; i++) {
+      let section: sectionModule.Section = new sectionModule.Section(
+        i + 1,
+        titles[i],
+        false,
+        links[i]
+      );
+      this.sectionsArr.push(section);
+    }
   }
 
   // FIELD WORKERS
   // Creates sections for Field Workers, Adds sections to array
-  createSectionsFW(): void {
-    let section1: sectionModule.Section = new sectionModule.Section(
-      1,
+  createSectionsFW(startIndex: number): void {
+    // array of New Employee section titles
+    let titles: string[] = [
       'PPE: Basic Training',
-      false,
-      'https://www....'
-    );
-    let section2: sectionModule.Section = new sectionModule.Section(
-      2,
       'Hazardous Materials Labels',
-      false,
-      'https://www....'
-    );
-    let section3: sectionModule.Section = new sectionModule.Section(
-      3,
       'GHS: Safety Data Sheets',
-      false,
-      'https://www....'
-    );
-    let section4: sectionModule.Section = new sectionModule.Section(
-      4,
       'Ladder Safety',
-      false,
-      'https://www....'
-    );
-    let section5: sectionModule.Section = new sectionModule.Section(
-      5,
+      'Sexual Harassment',
       'Fire Prevention',
-      false,
-      'https://www....'
-    );
-    let section6: sectionModule.Section = new sectionModule.Section(
-      6,
       'First Aid',
-      false,
-      'https://www....'
-    );
-    let section7: sectionModule.Section = new sectionModule.Section(
-      4,
       'Basic Electrical Safety',
-      false,
-      'https://www....'
-    );
-    let section8: sectionModule.Section = new sectionModule.Section(
-      8,
       'Slips, Trips, & Falls',
-      false,
-      'https://www....'
-    );
-    let section9: sectionModule.Section = new sectionModule.Section(
-      9,
       'Trenching & Excavation',
-      false,
-      'https://www....'
-    );
-    let section10: sectionModule.Section = new sectionModule.Section(
-      10,
       'Fall Protection',
-      false,
-      'https://www....'
-    );
-    let section11: sectionModule.Section = new sectionModule.Section(
-      11,
-      'Confined Space Entry',
-      false,
-      'https://www....'
-    );
-    let section12: sectionModule.Section = new sectionModule.Section(
-      12,
+      'Confined Space',
       'Small Tools',
-      false,
-      'https://www....'
-    );
-    let section13: sectionModule.Section = new sectionModule.Section(
-      13,
       'Crystalline Silica Safety',
-      false,
-      'https://www....'
-    );
-    let section14: sectionModule.Section = new sectionModule.Section(
-      14,
       'Machine Guarding',
-      false,
-      'https://www....'
-    );
-    let section15: sectionModule.Section = new sectionModule.Section(
-      15,
       'Driving Safety',
-      false,
-      'https://www....'
-    );
-    let section16: sectionModule.Section = new sectionModule.Section(
-      16,
       'Rigging & Load Securement',
-      false,
-      'https://www....'
-    );
-    let section17: sectionModule.Section = new sectionModule.Section(
-      17,
-      'Power Hand Tools',
-      false,
-      'https://www....'
-    );
-    let section18: sectionModule.Section = new sectionModule.Section(
-      18,
+      'Hand & Power Tool Safety',
       'Heat Stress',
-      false,
-      'https://www....'
-    );
-    let section19: sectionModule.Section = new sectionModule.Section(
-      19,
-      'Aerial Lifts',
-      false,
-      'https://www....'
-    );
-    let section20: sectionModule.Section = new sectionModule.Section(
-      20,
+      'Aerial Lift Safety',
       'Working Around Equipment',
-      false,
-      'https://www....'
-    );
+    ];
+    // array of New Employee video links
+    let links: string[] = [
+      'https://safetysourceonline.com/video/ppebasic-training-1028b-12-min/',
+      'https://safetysourceonline.com/video/ghs-labels-ss2001fe/',
+      'https://safetysourceonline.com/video/ghs-safety-data-sheets-the-basics-ss2002fe/',
+      'https://safetysourceonline.com/video/ladder-safety-8019a-10-min/',
+      '', // sexual harassment
+      'https://safetysourceonline.com/video/to-the-point-about-fire-prevention-response-tp07/',
+      'https://safetysourceonline.com/video/first-aid-m209/',
+      'https://safetysourceonline.com/video/basic-electrical-safety-1085i-11-min/',
+      'https://safetysourceonline.com/video/slips-trips-falls-ss1064ie-5-concise-version/',
+      'https://safetysourceonline.com/video/13592/',
+      'https://safetysourceonline.com/video/fall-protection/',
+      'https://safetysourceonline.com/video/confined-space-entry-ss1055he-10-min/',
+      '', // small tools
+      'https://safetysourceonline.com/video/crystalline-silica-safety/',
+      'https://safetysourceonline.com/video/machine-guarding-conveyor-safety-1003h-12-min/',
+      'https://safetysourceonline.com/video/choices-safe-driving-1078ie/',
+      '', // rigging & load securement
+      'https://safetysourceonline.com/video/hand-power-tool-safety-ss1094ie-10-min/',
+      'https://safetysourceonline.com/video/heat-stress-facts-and-prevention/',
+      'https://safetysourceonline.com/video/aerial-lift-safety-ss1031be/',
+      'https://www.youtube.com/watch?v=7tdfizoornI',
+    ];
 
-    this.sectionsArr.push(
-      section1,
-      section2,
-      section3,
-      section4,
-      section5,
-      section6,
-      section7,
-      section8,
-      section9,
-      section10,
-      section11,
-      section12,
-      section13,
-      section14,
-      section15,
-      section16,
-      section17,
-      section18,
-      section19,
-      section20
-    );
+    for (let i = startIndex; i < titles.length + startIndex; i++) {
+      let section: sectionModule.Section = new sectionModule.Section(
+        i + 1,
+        titles[i - startIndex],
+        false,
+        links[i - startIndex]
+      );
+      this.sectionsArr.push(section);
+    }
   }
 
   // FOREMAN
-  // Creates sections for FOREMAN, Adds sections to array
-  // Foreman sectiona include all Field Worker sections + more
+  // Creates sections for Foreman, Adds sections to array
   createSectionsFM(): void {
-    let section1: sectionModule.Section = new sectionModule.Section(
-      1,
+    // array of New Employee section titles
+    let titles: string[] = [
       'Equipment',
-      false,
-      'https://www....'
-    );
-    let section2: sectionModule.Section = new sectionModule.Section(
-      2,
       'Accident Investigation',
-      false,
-      'https://www....'
-    );
-    let section3: sectionModule.Section = new sectionModule.Section(
-      3,
       'Lock Out Tag Out',
-      false,
-      'https://www....'
-    );
-    let section4: sectionModule.Section = new sectionModule.Section(
-      4,
       'Drug & Alcohol Supervisor',
-      false,
-      'https://www....'
-    );
-    let section5: sectionModule.Section = new sectionModule.Section(
-      5,
-      'Near Miss Reporting',
-      false,
-      'https://www....'
-    );
-    let section6: sectionModule.Section = new sectionModule.Section(
-      6,
       'HCSS Reporting',
-      false,
-      'https://www....'
-    );
-    let section7: sectionModule.Section = new sectionModule.Section(
-      7,
-      'PPE: Basic Training',
-      false,
-      'https://www....'
-    );
-    let section8: sectionModule.Section = new sectionModule.Section(
-      8,
-      'Hazardous Materials Labels',
-      false,
-      'https://www....'
-    );
-    let section9: sectionModule.Section = new sectionModule.Section(
-      9,
-      'GHS: Safety Data Sheets',
-      false,
-      'https://www....'
-    );
-    let section10: sectionModule.Section = new sectionModule.Section(
-      10,
-      'Ladder Safety',
-      false,
-      'https://www....'
-    );
-    let section11: sectionModule.Section = new sectionModule.Section(
-      11,
-      'Fire Prevention',
-      false,
-      'https://www....'
-    );
-    let section12: sectionModule.Section = new sectionModule.Section(
-      12,
-      'First Aid',
-      false,
-      'https://www....'
-    );
-    let section13: sectionModule.Section = new sectionModule.Section(
-      13,
-      'Basic Electrical Safety',
-      false,
-      'https://www....'
-    );
-    let section14: sectionModule.Section = new sectionModule.Section(
-      14,
-      'Slips, Trips, & Falls',
-      false,
-      'https://www....'
-    );
-    let section15: sectionModule.Section = new sectionModule.Section(
-      15,
-      'Trenching & Excavation',
-      false,
-      'https://www....'
-    );
-    let section16: sectionModule.Section = new sectionModule.Section(
-      16,
-      'Fall Protection',
-      false,
-      'https://www....'
-    );
-    let section17: sectionModule.Section = new sectionModule.Section(
-      17,
-      'Confined Space Entry',
-      false,
-      'https://www....'
-    );
-    let section18: sectionModule.Section = new sectionModule.Section(
-      18,
-      'Small Tools',
-      false,
-      'https://www....'
-    );
-    let section19: sectionModule.Section = new sectionModule.Section(
-      19,
-      'Crystalline Silica Safety',
-      false,
-      'https://www....'
-    );
-    let section20: sectionModule.Section = new sectionModule.Section(
-      20,
-      'Machine Guarding',
-      false,
-      'https://www....'
-    );
-    let section21: sectionModule.Section = new sectionModule.Section(
-      21,
-      'Driving Safety',
-      false,
-      'https://www....'
-    );
-    let section22: sectionModule.Section = new sectionModule.Section(
-      22,
-      'Rigging & Load Securement',
-      false,
-      'https://www....'
-    );
-    let section23: sectionModule.Section = new sectionModule.Section(
-      23,
-      'Power Hand Tools',
-      false,
-      'https://www....'
-    );
-    let section24: sectionModule.Section = new sectionModule.Section(
-      24,
-      'Heat Stress',
-      false,
-      'https://www....'
-    );
-    let section25: sectionModule.Section = new sectionModule.Section(
-      25,
-      'Aerial Lifts',
-      false,
-      'https://www....'
-    );
-    let section26: sectionModule.Section = new sectionModule.Section(
-      26,
-      'Working Around Equipment',
-      false,
-      'https://www....'
-    );
+    ];
+    // array of New Employee video links
+    let links: string[] = [
+      '', // Equipment
+      'https://safetysourceonline.com/video/accident-investigation-for-everyone-2485-2/',
+      '',
+      'https://safetysourceonline.com/video/dealing-with-drug-and-alcohol-abuse-for-managers-and-supervisors-053/',
+      'https://safetysourceonline.com/video/evaluating-near-misses-to-prevent-accidents-bbcs1008-8-min/', // Near miss reporting
+      '', // HCSS
+    ];
 
-    this.sectionsArr.push(
-      section1,
-      section2,
-      section3,
-      section4,
-      section5,
-      section6,
-      section7,
-      section8,
-      section9,
-      section10,
-      section11,
-      section12,
-      section13,
-      section14,
-      section15,
-      section16,
-      section17,
-      section18,
-      section19,
-      section20,
-      section21,
-      section22,
-      section23,
-      section24,
-      section25,
-      section26
-    );
+    for (let i = 0; i < titles.length; i++) {
+      let section: sectionModule.Section = new sectionModule.Section(
+        i + 1,
+        titles[i],
+        false,
+        links[i]
+      );
+      this.sectionsArr.push(section);
+    }
   }
 
   // TRUCK DRIVERS
