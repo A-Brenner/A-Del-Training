@@ -15,16 +15,16 @@
       <div class="section-container" *ngFor="let section of sectionsArr">
         <div class="row">
           <div class="column left">
-            <h5>{{ section.sectionNo }}</h5>
+            <h5>{{ section.sectionNo }}.</h5>
             <p>100%</p>
           </div>
           <div class="column right">
             <div class="section-title">
-              {{ section.sectionName }}
+              <h5>{{ section.sectionName }}</h5>
             </div>
             <div class="section-info">
-              {{ section.completed }}
-              {{ section.link }}
+              <button id="videoBtn">Watch Video</button>
+              <button id="examBtn">Take Exam</button>
             </div>
           </div>
         </div>

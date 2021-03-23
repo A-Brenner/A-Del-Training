@@ -9,12 +9,15 @@ body {
   font-family: fantasy, Georgia, "Times New Roman", Times, serif;
 }
 
-h1 {
-  font-size: xx-large;
-  padding: 0.5em;
-  font-weight: bold;
-  color: $primary;
-  text-align: center;
+.row {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
 }
 
 .section-container {
@@ -33,6 +36,7 @@ h1 {
 .left {
   width: 20%;
   border-right-style: outset;
+  border-width: 1.5px;
   border-color: $secondary;
 }
 
@@ -40,10 +44,19 @@ h1 {
   width: 80%;
 }
 
+h1 {
+  font-size: xx-large;
+  padding: 0.5em;
+  font-weight: bold;
+  color: $primary;
+  text-align: center;
+}
+
 h5 {
-  //font-size: ;
+  font-size: medium;
   padding-top: 5px;
   border-bottom-style: outset;
+  border-width: 1.5px;
   border-color: $secondary;
 }
 
@@ -51,15 +64,24 @@ p {
   padding-top: 5px;
 }
 
-.row {
-  padding-left: 15px;
-  padding-right: 15px;
+button {
+  background-color: $secondary;
+  color: $primary;
+  border-radius: 5px;
+  margin: 8px;
+  padding: 7px;
+  width: 35%;
+  min-width: 75px;
 }
 
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
+// #videoBtn {
+//     padding-left: 7px;
+//     padding-right: 7px;
+// }
+
+#examBtn {
+  padding-right: 14.6px;
+  padding-left: 14.6px;
 }
 
 /* Centered text */

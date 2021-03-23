@@ -10,12 +10,7 @@ import { sectionModule } from './section';
 export class SectionsComponent implements OnInit {
   constructor(private shared: IndustriesToSectionsService) {}
 
-  mySection: sectionModule.Section = new sectionModule.Section(
-    1,
-    'name',
-    false,
-    'https:www....'
-  );
+  // array for holding Section objects
   sectionsArr: sectionModule.Section[] = [];
   message: string = '';
 
