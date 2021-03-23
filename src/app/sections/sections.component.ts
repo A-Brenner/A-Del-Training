@@ -12,7 +12,6 @@ export class SectionsComponent implements OnInit {
 
   // array for holding Section objects
   sectionsArr: sectionModule.Section[] = [];
-  message: string = '';
 
   // determines which training program was selected
   trainingProgram: string = '';
@@ -54,42 +53,35 @@ export class SectionsComponent implements OnInit {
       }
     }
   }
-
   // NEW EMPLOYEES
   // Creates sections for New Employees, Adds sections to array
   createSectionsNE(): void {
-    let section1: sectionModule.Section = new sectionModule.Section(
-      1,
+    // array of New Employee section titles
+    let titlesNE: string[] = [
       'EEO',
-      false,
-      'https://www....'
-    );
-    let section2: sectionModule.Section = new sectionModule.Section(
-      2,
       'Safety Orientation',
-      false,
-      'https://www....'
-    );
-    let section3: sectionModule.Section = new sectionModule.Section(
-      3,
       'Sexual Harassment',
-      false,
-      'https://www....'
-    );
-    let section4: sectionModule.Section = new sectionModule.Section(
-      4,
-      'Cell Phone',
-      false,
-      'https://www....'
-    );
-    let section5: sectionModule.Section = new sectionModule.Section(
-      5,
-      'Drug & Alcohol',
-      false,
-      'https://www....'
-    );
+      'Cell Phones',
+      'Drugs & Alcohol',
+    ];
+    // array of New Employee video links
+    let linksNE: string[] = [
+      '',
+      'https://safetysourceonline.com/video/safety-bobs-comprehensive-construction-orientation-e1316e-24-min-2/',
+      '',
+      'https://safetysourceonline.com/video/cell-phone-hands-free-driving-awareness-ss1089/',
+      'https://safetysourceonline.com/video/dealing-with-drug-and-alcohol-abuse-for-employees-052/',
+    ];
 
-    this.sectionsArr.push(section1, section2, section3, section4, section5);
+    for (let i = 0; i < titlesNE.length; i++) {
+      let section: sectionModule.Section = new sectionModule.Section(
+        i + 1,
+        titlesNE[i],
+        false,
+        linksNE[i]
+      );
+      this.sectionsArr.push(section);
+    }
   }
 
   // OFFICE EMPLOYEES
@@ -541,8 +533,6 @@ export class SectionsComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.message = this.shared.getMessage();
-
     this.trainingProgram = this.shared.getTrainingProgram();
     this.latestTrainingProgram = window.localStorage.getItem('latestProgram');
     this.createSections();
