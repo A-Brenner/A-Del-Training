@@ -11,11 +11,55 @@ export class SectionsComponent implements OnInit {
   constructor(private shared: IndustriesToSectionsService) {}
 
   // array for holding Section objects
-  sectionsArr: sectionModule.Section[] = [];
+  public sectionsArr: sectionModule.Section[] = [];
 
   // determines which training program was selected
   trainingProgram: string = '';
   latestTrainingProgram: any = '';
+
+  // redirect to another website
+  // location.href = "www.yoursite.com";
+
+  /**
+   * publicMethod
+   */
+  public publicMethod() {
+    console.log('public ^_^');
+  }
+
+  ngOnInit(): void {
+    this.latestTrainingProgram = window.localStorage.getItem('latestProgram');
+    this.createSections();
+    console.log(this.sectionsArr);
+  }
+
+  ngAfterViewInit(): void {
+    //this.addBtnMethods();
+    console.log(this.sectionsArr);
+    this.setVideoBtnMethods();
+  }
+
+  // Add onClick methods for each videoBtn on the page
+  // directs user to the corresponding video in a new tab / window
+  setVideoBtnMethods(): void {
+    for (let i = 0; i < this.sectionsArr.length; i++) {
+      let videoLink = this.sectionsArr[i].link;
+
+      document
+        .getElementById('videoBtn' + i.toString())
+        ?.addEventListener('click', function (): void {
+          if (videoLink === '') {
+            alert('Video Link Not Found.');
+          } else {
+            // open a new tab (or window depending on user's browser settings)
+            // goes directly to the video
+            window.open(videoLink);
+          }
+        });
+    }
+  }
+
+  addBtnMethods(): void {}
 
   // Determine which sections must be created and calls corresponding function
   createSections(): void {
@@ -321,10 +365,5 @@ export class SectionsComponent implements OnInit {
       );
       this.sectionsArr.push(section);
     }
-  }
-
-  ngOnInit(): void {
-    this.latestTrainingProgram = window.localStorage.getItem('latestProgram');
-    this.createSections();
   }
 }
