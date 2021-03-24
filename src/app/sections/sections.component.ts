@@ -220,81 +220,46 @@ export class SectionsComponent implements OnInit {
   }
 
   // TRUCK DRIVERS
-  // Creates sections for Truck Drivers, Adds sections to array
+  // Creates sections for TRUCK DRIVERS, Adds sections to array
   createSectionsTD(): void {
-    let section1: sectionModule.Section = new sectionModule.Section(
-      1,
+    // array of New Employee section titles
+    let titles: string[] = [
       'PPE: Basic Training',
-      false,
-      'https://www....'
-    );
-    let section2: sectionModule.Section = new sectionModule.Section(
-      2,
       'Hazardous Materials Labels',
-      false,
-      'https://www....'
-    );
-    let section3: sectionModule.Section = new sectionModule.Section(
-      3,
       'GHS: Safety Data Sheets',
-      false,
-      'https://www....'
-    );
-    let section4: sectionModule.Section = new sectionModule.Section(
-      4,
+      'Sexual Harassment',
       'Fire Prevention',
-      false,
-      'https://www....'
-    );
-    let section5: sectionModule.Section = new sectionModule.Section(
-      5,
       'First Aid',
-      false,
-      'https://www....'
-    );
-    let section6: sectionModule.Section = new sectionModule.Section(
-      6,
       'Slips, Trips, & Falls',
-      false,
-      'https://www....'
-    );
-    let section7: sectionModule.Section = new sectionModule.Section(
-      7,
       'Cell Phones',
-      false,
-      'https://www....'
-    );
-    let section8: sectionModule.Section = new sectionModule.Section(
-      8,
       'Drugs & Alcohol',
-      false,
-      'https://www....'
-    );
-    let section9: sectionModule.Section = new sectionModule.Section(
-      9,
       'Dump Truck Safety',
-      false,
-      'https://www....'
-    );
-    let section10: sectionModule.Section = new sectionModule.Section(
-      10,
       'Driver Safety',
-      false,
-      'https://www....'
-    );
+    ];
+    // array of New Employee video links
+    let links: string[] = [
+      'https://safetysourceonline.com/video/ppebasic-training-1028b-12-min/',
+      'https://safetysourceonline.com/video/ghs-labels-ss2001fe/',
+      'https://safetysourceonline.com/video/ghs-safety-data-sheets-the-basics-ss2002fe/',
+      '', // sexual harassment
+      'https://safetysourceonline.com/video/to-the-point-about-fire-prevention-response-tp07/',
+      'https://safetysourceonline.com/video/emergency-first-aid-1058i-19-min-2/', // First Aid ... 2  video options
+      'https://safetysourceonline.com/video/slips-trips-falls-ss1064ie-5-concise-version/',
+      'https://safetysourceonline.com/video/cell-phone-hands-free-driving-awareness-ss1089/',
+      'https://safetysourceonline.com/video/dot-drugs-alcohol-what-employees-need-to-know-ss17041ae/',
+      'https://safetysourceonline.com/video/construction-series-dump-truck-safety/',
+      'https://safetysourceonline.com/video/choices-safe-driving-1078ie/',
+    ];
 
-    this.sectionsArr.push(
-      section1,
-      section2,
-      section3,
-      section4,
-      section5,
-      section6,
-      section7,
-      section8,
-      section9,
-      section10
-    );
+    for (let i = 0; i < titles.length; i++) {
+      let section: sectionModule.Section = new sectionModule.Section(
+        i + 1,
+        titles[i],
+        false,
+        links[i]
+      );
+      this.sectionsArr.push(section);
+    }
   }
 
   ngOnInit(): void {
