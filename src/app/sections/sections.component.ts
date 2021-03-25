@@ -17,16 +17,6 @@ export class SectionsComponent implements OnInit {
   trainingProgram: string = '';
   latestTrainingProgram: any = '';
 
-  // redirect to another website
-  // location.href = "www.yoursite.com";
-
-  /**
-   * publicMethod
-   */
-  public publicMethod() {
-    console.log('public ^_^');
-  }
-
   ngOnInit(): void {
     this.latestTrainingProgram = window.localStorage.getItem('latestProgram');
     this.createSections();
@@ -35,7 +25,9 @@ export class SectionsComponent implements OnInit {
   ngAfterViewInit(): void {
     //this.addBtnMethods();
     console.log(this.sectionsArr);
+
     this.setVideoBtnMethods();
+    this.setExamBtnMethods();
   }
 
   // Add onClick methods for each videoBtn on the page
@@ -58,7 +50,15 @@ export class SectionsComponent implements OnInit {
     }
   }
 
-  addBtnMethods(): void {}
+  setExamBtnMethods(): void {
+    for (let i = 0; i < this.sectionsArr.length; i++) {
+      document
+        .getElementById('examBtn' + i.toString())
+        ?.addEventListener('click', function (): void {
+          console.log('examBtn clicked :)');
+        });
+    }
+  }
 
   // Determine which sections must be created and calls corresponding function
   createSections(): void {
