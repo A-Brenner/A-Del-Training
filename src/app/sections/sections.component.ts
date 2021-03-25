@@ -30,7 +30,6 @@ export class SectionsComponent implements OnInit {
   ngOnInit(): void {
     this.latestTrainingProgram = window.localStorage.getItem('latestProgram');
     this.createSections();
-    console.log(this.sectionsArr);
   }
 
   ngAfterViewInit(): void {
@@ -242,6 +241,7 @@ export class SectionsComponent implements OnInit {
       'Accident Investigation',
       'Lock Out Tag Out',
       'Drug & Alcohol - Supervisors',
+      'Near Miss Reporting',
       'HCSS Reporting',
     ];
     // array of video links
