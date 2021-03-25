@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { IndustriesToSectionsService } from '../shared/industries-to-sections.service';
 import { sectionModule } from './section';
 
@@ -8,7 +9,10 @@ import { sectionModule } from './section';
   styleUrls: ['./sections.component.scss'],
 })
 export class SectionsComponent implements OnInit {
-  constructor(private shared: IndustriesToSectionsService) {}
+  constructor(
+    private shared: IndustriesToSectionsService,
+    private router: Router
+  ) {}
 
   // array for holding Section objects
   public sectionsArr: sectionModule.Section[] = [];
@@ -22,10 +26,8 @@ export class SectionsComponent implements OnInit {
     this.createSections();
   }
 
+  // Sets onClick methods AFTER dynamic HTML is in place
   ngAfterViewInit(): void {
-    //this.addBtnMethods();
-    console.log(this.sectionsArr);
-
     this.setVideoBtnMethods();
     this.setExamBtnMethods();
   }
@@ -52,10 +54,14 @@ export class SectionsComponent implements OnInit {
 
   setExamBtnMethods(): void {
     for (let i = 0; i < this.sectionsArr.length; i++) {
+      let examName = this.sectionsArr[i].sectionName;
+      let router = this.router;
       document
         .getElementById('examBtn' + i.toString())
         ?.addEventListener('click', function (): void {
           console.log('examBtn clicked :)');
+          sessionStorage.setItem('examName', examName);
+          router.navigateByUrl('/training-programs/sections/exam');
         });
     }
   }
