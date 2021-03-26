@@ -26,7 +26,7 @@ export class ExamsComponent implements OnInit {
   createExam(): void {
     for (let i = 0; i < this.questionList.length; i++) {
       let question: questionModule.Question = new questionModule.Question(
-        i,
+        i + 1,
         this.questionList[i],
         this.choicesList[i],
         this.answersList[i]

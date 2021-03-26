@@ -1,5 +1,57 @@
-<p>exams works!</p>
-<p>{{ examName }}</p>
-<button class="backBtn" routerLink="/training-programs/sections">
-  <p><i class="arrow left"></i> Back</p>
-</button>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button class="backBtn" routerLink="/training-programs/sections">
+      <p><i class="arrow arrow-left"></i> Back</p>
+    </button>
+    <p>{{ examName }}</p>
+    <div
+      class="question-container"
+      *ngFor="let question of questionsArr; let i = index"
+    >
+      <div class="row">
+        <div class="column left">
+          <h5>{{ question.questionNo }}.</h5>
+        </div>
+        <div class="column right">
+          <div class="question-container">
+            <p>{{ question.question }}</p>
+          </div>
+          <ng-template [ngIf]="question.choices.length === 2">
+            <p>{{ question.choices[0] }}</p>
+            <p>{{ question.choices[1] }}</p>
+          </ng-template>
+          <ng-template [ngIf]="question.choices.length === 4">
+            <p>{{ question.choices[0] }}</p>
+            <p>{{ question.choices[1] }}</p>
+            <p>{{ question.choices[2] }}</p>
+            <p>{{ question.choices[3] }}</p>
+          </ng-template>
+          <!-- <div ng-if="question.choices.length === 4">
+            <p>length is 4</p>
+          </div> -->
+          <!-- <div ng-if="{{question.choices.length}} === 2">
+            <div class="choice-container">
+              <p>{{ question.choices[0] }}</p>
+              <p>{{ question.choices[1] }}</p>
+            </div>
+          </div>
+          <div ng-if="{{question.choices.length}} === 4">
+            <div class="choice-container">
+              <p>{{ question.choices[0] }}</p>
+              <p>{{ question.choices[1] }}</p>
+              <p>{{ question.choices[2] }}</p>
+              <p>{{ question.choices[3] }}</p>
+            </div>
+          </div> -->
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

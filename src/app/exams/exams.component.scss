@@ -1,5 +1,16 @@
+body {
+  overflow-x: hidden;
+  overflow-y: auto;
+  height: 90vh;
+  padding-left: 20px;
+}
+
 p {
   font-size: medium;
+}
+
+.question-container {
+  width: 100%;
 }
 
 .arrow {
@@ -9,7 +20,7 @@ p {
   padding: 3px;
 }
 
-.left {
+.arrow-left {
   transform: rotate(135deg);
   -webkit-transform: rotate(135deg);
 }
