@@ -63,6 +63,55 @@ export class ExamsComponent implements OnInit {
 
         this.answersList = [0, 3, 1, 0, 0, 0, 1, 0];
         break;
+      case 'Hazardous Materials Labels':
+        this.questionList = ['', '', '', '', '', '', '', '', '', ''];
+
+        this.choicesList = [
+          [''],
+          [''],
+          [''],
+          [''],
+          [''],
+          [''],
+          [''],
+          [''],
+          [''],
+          [''],
+        ];
+
+        this.answersList = [];
+        break;
+
+      // template
+      // this.questionList = [
+      //   '',
+      //   '',
+      //   '',
+      //   '',
+      //   '',
+      //   '',
+      //   '',
+      //   '',
+      //   '',
+      //   '',
+      // ];
+
+      // this.choicesList = [
+      //   [''],
+      //   [''],
+      //   [''],
+      //   [''],
+      //   [''],
+      //   [''],
+      //   [''],
+      //   [''],
+      //   [''],
+      //   ['']
+      // ];
+
+      // this.answersList = [];
+      // break;
+
       default:
         alert('Exam Not Found');
         break;
