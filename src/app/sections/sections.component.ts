@@ -15,7 +15,7 @@ export class SectionsComponent implements OnInit {
   ) {}
 
   // array for holding Section objects
-  public sectionsArr: sectionModule.Section[] = [];
+  sectionsArr: sectionModule.Section[] = [];
 
   // determines which training program was selected
   trainingProgram: string = '';
