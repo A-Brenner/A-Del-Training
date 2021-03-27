@@ -7,49 +7,29 @@
     <title>Document</title>
   </head>
   <body>
-    <button class="backBtn" routerLink="/training-programs/sections">
-      <p><i class="arrow arrow-left"></i> Back</p>
-    </button>
-    <p>{{ examName }}</p>
+    <div class="header">
+      <button class="backBtn" routerLink="/training-programs/sections">
+        <p><i class="arrow"></i> Back</p>
+      </button>
+      <h1 class="title">{{ examName }}</h1>
+    </div>
     <div
       class="question-container"
       *ngFor="let question of questionsArr; let i = index"
     >
-      <div class="row">
+      <!-- <div class="row"> -->
+      <div class="top">
         <div class="column left">
-          <h5>{{ question.questionNo }}.</h5>
+          <h5 class="questionNo">{{ question.questionNo }}.</h5>
         </div>
         <div class="column right">
-          <div class="question-container">
-            <p>{{ question.question }}</p>
-          </div>
-          <ng-template [ngIf]="question.choices.length === 2">
-            <p>{{ question.choices[0] }}</p>
-            <p>{{ question.choices[1] }}</p>
-          </ng-template>
-          <ng-template [ngIf]="question.choices.length === 4">
-            <p>{{ question.choices[0] }}</p>
-            <p>{{ question.choices[1] }}</p>
-            <p>{{ question.choices[2] }}</p>
-            <p>{{ question.choices[3] }}</p>
-          </ng-template>
-          <!-- <div ng-if="question.choices.length === 4">
-            <p>length is 4</p>
-          </div> -->
-          <!-- <div ng-if="{{question.choices.length}} === 2">
-            <div class="choice-container">
-              <p>{{ question.choices[0] }}</p>
-              <p>{{ question.choices[1] }}</p>
-            </div>
-          </div>
-          <div ng-if="{{question.choices.length}} === 4">
-            <div class="choice-container">
-              <p>{{ question.choices[0] }}</p>
-              <p>{{ question.choices[1] }}</p>
-              <p>{{ question.choices[2] }}</p>
-              <p>{{ question.choices[3] }}</p>
-            </div>
-          </div> -->
+          <p class="question">{{ question.question }}</p>
+        </div>
+      </div>
+      <div class="bottom">
+        <div *ngFor="let choice of question.choices; let i = index">
+          <input id="{{ 'choice' + i }}" class="choice" type="radio" />
+          {{ choice }}
         </div>
       </div>
     </div>
