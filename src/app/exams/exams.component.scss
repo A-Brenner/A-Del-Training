@@ -1,7 +1,13 @@
+$primary: rgb(87, 3, 24);
+$secondary: rgb(250, 171, 52);
+
 body {
   overflow-x: hidden;
   overflow-y: auto;
   height: 90vh;
+  background-color: $secondary;
+  color: $primary;
+  font-family: fantasy, Georgia, "Times New Roman", Times, serif;
   //padding-left: 20px;
 }
 
@@ -16,14 +22,26 @@ body {
 .backBtn {
   width: auto;
   height: auto;
-  padding-top: 10px;
+  padding-top: 15px;
   position: absolute;
   left: 0px;
   margin-right: 20px;
+  background-color: $primary;
+  color: $secondary;
+  border-radius: 5px;
+}
+
+// Back button arrow
+.arrow {
+  border: solid $secondary;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
 }
 
 .title {
-  //position: absolute;
   text-align: center;
 }
 
@@ -46,14 +64,7 @@ p {
   padding-right: 0.5em;
 }
 
-// Back button arrow
-.arrow {
-  border: solid black;
-  border-width: 0 3px 3px 0;
-  display: inline-block;
-  padding: 3px;
-  transform: rotate(135deg);
-  -webkit-transform: rotate(135deg);
+.choice {
 }
 
 @media screen and (max-width: 320px) {
