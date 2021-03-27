@@ -64,25 +64,63 @@ export class ExamsComponent implements OnInit {
         this.answersList = [0, 3, 1, 0, 0, 0, 1, 0];
         break;
       case 'Hazardous Materials Labels':
-        this.questionList = ['', '', '', '', '', '', '', '', '', ''];
-
-        this.choicesList = [
-          [''],
-          [''],
-          [''],
-          [''],
-          [''],
-          [''],
-          [''],
-          [''],
-          [''],
-          [''],
+        this.questionList = [
+          'The label contains information about the chemical inside the container.',
+          'When is the best time to read a chemical label?',
+          'Unlabeled chemical containers are permitted for cleaning supplies.',
+          'Which of these instructions are contained on the chemical label?',
+          'Health hazards can be found on the chemical label.',
+          'Chemical containers under 12 oz. are not required to be labeled',
+          'If you transfer a chemical from a large container to a smaller container, the new smaller container must be properly labeled as well.',
+          'First aid information should be printed on a chemical label.',
         ];
 
-        this.answersList = [];
+        this.choicesList = [
+          ['True', 'False'],
+          ['Before you use it', 'After you use it', 'As needed'],
+          ['True', 'False'],
+          ['Use', 'Disposal', 'Storage', 'All of the above', 'A and B only'],
+          ['True', 'False'],
+          ['True', 'False'],
+          ['True', 'False'],
+          ['True', 'False'],
+        ];
+
+        this.answersList = [0, 0, 1, 0, 0, 1, 0, 0];
         break;
+      //case '':
+      // this.questionList = [
+      //   '',
+      //   '',
+      //   '',
+      //   '',
+      //   '',
+      //   '',
+      //   '',
+      //   '',
+      //   '',
+      //   '',
+      // ];
+
+      // this.choicesList = [
+      //   [''],
+      //   [''],
+      //   [''],
+      //   [''],
+      //   [''],
+      //   [''],
+      //   [''],
+      //   [''],
+      //   [''],
+      //   ['']
+      // ];
+
+      // this.answersList = [];
+      // break;
 
       // template
+
+      //case '':
       // this.questionList = [
       //   '',
       //   '',
