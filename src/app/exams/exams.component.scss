@@ -42,15 +42,18 @@ body {
 }
 
 .title {
+  font-size: xx-large;
+  font-weight: bold;
   text-align: center;
   margin-left: 60px;
   margin-right: 60px;
+  padding-top: 10px;
   //margin-left: 100px;
 }
 
-h5 {
-  font-size: larger;
-}
+// h5 {
+//   font-size: larger;
+// }
 
 input {
   margin-right: 5px;
@@ -91,5 +94,7 @@ input {
 @media screen and (max-width: 305px) {
   .title {
     margin-top: 60px;
+    margin-left: 0px;
+    margin-right: 0px;
   }
 }
