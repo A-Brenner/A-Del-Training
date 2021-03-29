@@ -130,6 +130,47 @@ export class ExamsComponent implements OnInit {
         this.answersList = [2, 0, 4, 0, 0, 1, 3, 0, 0, 1];
         break;
 
+      case 'Ladder Safety':
+        this.questionList = [
+          'Falls from ladders usually result in only minor injuries.',
+          'If a ladder cannot be found, use a chair or table to reach the item you need.',
+          'How often should you inspect a ladder?',
+          'If you notice a damaged or defective ladder, what should you do?',
+          'Never use metal ladders around electrical equipment',
+          'You can stand on the top two steps of the ladder only if you cannot reach the item any other way.',
+          'The “Belt Buckle” rule means _____________.',
+          'How many feet should the ladder be away from the support on a straight ladder extended 12 feet?',
+        ];
+
+        this.choicesList = [
+          ['True', 'False'],
+          ['True', 'False'],
+          [
+            'Every time before you inspect a ladder',
+            'Once a shift',
+            'Once a week',
+            'Once a month',
+          ],
+          [
+            'Use it anyway',
+            'Report it to your supervisor',
+            "Don't us it",
+            'Both B and C',
+          ],
+          ['True', 'False'],
+          ['True', 'False'],
+          [
+            'Keep your belt buck;e touching the ladder at all times',
+            'Never wear a belt buckle when workong on a ladder',
+            "Don't lean where your belt buckle is outside the ladder rails",
+            'None of the above',
+          ],
+          ['3 inches', '1 foot', '3 feet', '4 feet'],
+        ];
+
+        this.answersList = [1, 1, 0, 3, 0, 1, 2, 2];
+        break;
+
       // template
       //case '':
       // this.questionList = [
