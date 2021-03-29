@@ -38,11 +38,12 @@ export class ExamsComponent implements OnInit {
   // Sets all question, choices, and answer data into arrays for the exam
   setExamData(): void {
     switch (this.examName) {
+      // FIELD WORKER SECTIONS
       case 'PPE: Basic Training':
         this.questionList = [
           'If you have a question about your protective equipment you should ask your supervisor before starting a task.',
           'Which below are considered eye protection?',
-          'You should never wear _____ when working',
+          'You should never wear _____ when working.',
           'Rubber, vinyl or neoprene gloves provide protection against.',
           'Different forms of hearing protection have different levels of effectiveness.',
           'Goggles are stronger safety glasses.',
@@ -70,7 +71,7 @@ export class ExamsComponent implements OnInit {
           'Unlabeled chemical containers are permitted for cleaning supplies.',
           'Which of these instructions are contained on the chemical label?',
           'Health hazards can be found on the chemical label.',
-          'Chemical containers under 12 oz. are not required to be labeled',
+          'Chemical containers under 12 oz. are not required to be labeled.',
           'If you transfer a chemical from a large container to a smaller container, the new smaller container must be properly labeled as well.',
           'First aid information should be printed on a chemical label.',
         ];
@@ -88,38 +89,48 @@ export class ExamsComponent implements OnInit {
 
         this.answersList = [0, 0, 1, 0, 0, 1, 0, 0];
         break;
-      //case '':
-      // this.questionList = [
-      //   '',
-      //   '',
-      //   '',
-      //   '',
-      //   '',
-      //   '',
-      //   '',
-      //   '',
-      //   '',
-      //   '',
-      // ];
+      case 'GHS: Safety Data Sheets':
+        this.questionList = [
+          'What does SDS stand for?',
+          'SDS contain information on chemicals you need to know.',
+          'Which of these are contained on an SDS?',
+          'SDS are usually available in printed for and online.',
+          'Generally, the information in an SDS is much more technical than is normally provided on labels.',
+          'First Aid information is only on flammable chemical SDS.',
+          'Direction on how to _____________ a chemical are present on the SDS.',
+          'SDS’s are available to anyone asking for the information.',
+          'An SDS carries more information than the chemical container label.',
+          'Basic cleaning chemicals do not require an SDS to be maintained on site.',
+        ];
 
-      // this.choicesList = [
-      //   [''],
-      //   [''],
-      //   [''],
-      //   [''],
-      //   [''],
-      //   [''],
-      //   [''],
-      //   [''],
-      //   [''],
-      //   ['']
-      // ];
+        this.choicesList = [
+          [
+            'Safet Data Service',
+            'Standard Data Sheet',
+            'Safety Data Sheet',
+            'Safety Data Service',
+          ],
+          ['True', 'False'],
+          [
+            'Ingredients',
+            'Hazards',
+            'Price',
+            'All of the above',
+            'A and B only',
+          ],
+          ['True', 'False'],
+          ['True', 'False'],
+          ['True', 'False'],
+          ['Use', 'Store', 'Dispose', 'All of the above', 'A and B only'],
+          ['True', 'False'],
+          ['True', 'False'],
+          ['True', 'False'],
+        ];
 
-      // this.answersList = [];
-      // break;
+        this.answersList = [2, 0, 4, 0, 0, 1, 3, 0, 0, 1];
+        break;
 
       // template
-
       //case '':
       // this.questionList = [
       //   '',
