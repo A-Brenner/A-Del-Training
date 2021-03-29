@@ -16,6 +16,7 @@ body {
   position: relative;
   padding: 0.5em;
   justify-content: space-evenly;
+  margin-bottom: 15px;
 }
 
 .backBtn {
@@ -42,20 +43,39 @@ body {
 
 .title {
   text-align: center;
+  margin-left: 60px;
+  margin-right: 60px;
+  //margin-left: 100px;
 }
 
-p {
-  font-size: medium;
+h5 {
+  font-size: larger;
 }
 
 .question-container {
-  width: 100%;
+  width: 80%;
   padding: 0.5em;
+  background-color: $primary;
+  color: $secondary;
+  // border-style: ridge;
+  // border-color: $primary;
+  border-radius: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
 }
 
 .top {
   position: relative;
   display: flex;
+  border-bottom-style: outset;
+  border-radius: 1.5px;
+  border-color: $secondary;
+}
+
+.bottom {
+  font-size: medium;
+  padding-top: 5px;
 }
 
 .right {
@@ -63,11 +83,8 @@ p {
   padding-right: 0.5em;
 }
 
-.choice {
-}
-
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 285px) {
   .title {
-    margin-top: 50px;
+    margin-top: 60px;
   }
 }

@@ -68,9 +68,21 @@ header {
     }
   }
 
-  @media screen and (max-width: 275px) {
+  @media screen and (max-width: 260px) {
     a {
       font-size: xx-small;
+    }
+  }
+
+  @media screen and (max-width: 245px) {
+    a {
+      font-size: 7px;
+    }
+  }
+
+  @media screen and (max-width: 185px) {
+    a {
+      font-size: 0px;
     }
   }
 

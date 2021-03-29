@@ -8,8 +8,11 @@
   </head>
   <body>
     <div class="header">
-      <button class="backBtn" routerLink="/training-programs/sections">
-        <p><i class="arrow"></i> Back</p>
+      <button
+        class="backBtn header-left"
+        routerLink="/training-programs/sections"
+      >
+        <p><i class="arrow header-right"></i> Back</p>
       </button>
       <h1 class="title">{{ examName }}</h1>
     </div>
@@ -23,7 +26,7 @@
           <h5 class="questionNo">{{ question.questionNo }}.</h5>
         </div>
         <div class="column right">
-          <p class="question">{{ question.question }}</p>
+          <h5 class="question">{{ question.question }}</h5>
         </div>
       </div>
       <div class="bottom">
