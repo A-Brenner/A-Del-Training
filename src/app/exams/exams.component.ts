@@ -129,7 +129,6 @@ export class ExamsComponent implements OnInit {
 
         this.answersList = [2, 0, 4, 0, 0, 1, 3, 0, 0, 1];
         break;
-
       case 'Ladder Safety':
         this.questionList = [
           'Falls from ladders usually result in only minor injuries.',
@@ -170,7 +169,6 @@ export class ExamsComponent implements OnInit {
 
         this.answersList = [1, 1, 0, 3, 0, 1, 2, 2];
         break;
-
       case 'Fire Prevention':
         this.questionList = [
           'Which of the following conditions must be met before using a fire extinguisher to put out a fire?',
@@ -202,8 +200,73 @@ export class ExamsComponent implements OnInit {
 
         this.answersList = [];
         break;
+      case 'First Aid':
+        this.questionList = [
+          'The definition of a "compound" fracture is one that _________.',
+          'For most cases of "shock" you should wrap something around the victim to keep them warm.',
+          'An automatic external defibrillator (AED), is used with what type of condition?',
+          'The procedure that is used to remove blockages in the windpipe is known as the ________.',
+          "Heat stroke occurs when a person gets so hot that they can't cool downnormally, though sweating.",
+          'The best treatment for a blister is to puncture it and drain the fluid underneath, then cover it with a bandage.',
+          'The best treatment for most burns is _________.',
+        ];
 
-      // template
+        this.choicesList = [
+          [
+            'Involves an open wound',
+            'Does not involve an open wound',
+            'None of the above',
+          ],
+          ['True', 'False'],
+          ['Choking', 'Cardiac arrest', 'Shock'],
+          ['Heart-lung Maneuver', 'Heimlich Manuever', 'Hug-of-Life'],
+          ['True', 'False'],
+          ['True', 'False'],
+          [
+            'Soaking them in water, then bandaging them',
+            'Applying an ointment',
+            'Leaving them as is',
+          ],
+        ];
+
+        this.answersList = [0, 0, 1, 1, 0, 1, 0];
+        break;
+      case 'Basic Electrical Safety':
+        this.questionList = [
+          'Insulators like wood can become conductors when they become wet.',
+          'Which of the following are considered conductors?',
+          'Electrical hazards only affects professional electricians.',
+          'Which of these can increase the chance of electric shock?',
+          'Voltage and Amperage mean the same thing.',
+          'GFCIs serve a similar purpose as a fuse, they break the current in the event of overload or short circuit.',
+          'The human body is also a good conductor of electricity.',
+          'Alternating current (AC) needs to be grounded, either in a home or a business.',
+          'Insulators do the same thing that conductors do.',
+          'Water is a great conductor of electricity.',
+        ];
+
+        this.choicesList = [
+          ['True', 'False'],
+          ['Copper', 'Silver', 'Aluminum', 'All of the above'],
+          ['True', 'False'],
+          [
+            'Loose Wires',
+            'Jewelry',
+            'Wet Hands',
+            'All of the above',
+            'A and C only',
+          ],
+          ['True', 'False'],
+          ['True', 'False'],
+          ['True', 'False'],
+          ['True', 'False'],
+          ['True', 'False'],
+          ['True', 'False'],
+        ];
+
+        this.answersList = [0, 3, 2, 3, 2, 0, 0, 0, 1, 0];
+        break;
+
       //case '':
       // this.questionList = [
       //   '',
