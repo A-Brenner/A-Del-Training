@@ -267,6 +267,75 @@ export class ExamsComponent implements OnInit {
         this.answersList = [0, 3, 2, 3, 2, 0, 0, 0, 1, 0];
         break;
 
+      case 'Slips, Trips, & Falls':
+        this.questionList = [
+          'Which is an example of “best practices” which can help prevent slips, trips, and falls?',
+          'A key to preventing injuries caused by slips, trips and falls is recognizing and respecting potential hazards in your work environment.',
+          'Which is a common cause of trips in the work environment?',
+          'Good housekeeping is an important element of safe work practices for preventing slips, trips and falls.',
+        ];
+
+        this.choicesList = [
+          [
+            'Good housekeeping',
+            'Closing all drawers and cabinet doors',
+            'Cleaning up spills immediately',
+            'Wearing proper shoes',
+            'All of the above',
+          ],
+          ['True', 'False'],
+          [
+            'Uneven surfaces',
+            'Non-secured cables and cords',
+            'Obstructed views',
+            'Changes in surface elevations',
+            'All of the above',
+          ],
+          ['True', 'False'],
+        ];
+
+        this.answersList = [4, 0, 4, 0];
+        break;
+      case 'Trenching & Excavation':
+        this.questionList = [
+          'Trench cave-ins are predictable and preventable.',
+          'A person buried under only a couple of feet of soil can experience enough pressure to cause suffocation.',
+          'Training and understanding the trenching and shoring regulations are keys to working safely in trenches.',
+          'A trench refers to a narrow excavation made below the surface of the ground where the width is greater than the depth.',
+          'It is not necessary for the competent person to conduct an inspection after every rain storm or other weather event.',
+          'Trench cave-in fatalities are caused by __________.',
+          'If a trench is more than _____ feet in depth, there must be a protective system in place while workers are in the excavation.',
+          'A competent person must classify the soil by using ________ test.',
+          'Soil is heavy. A cubic foot generally weighs as much as _____ pounds or more.',
+          'It is not permissible to use backhoes, breakers, digging bars or other metal tools to locate or work around utilities.',
+        ];
+
+        this.choicesList = [
+          ['True', 'False'],
+          ['True', 'False'],
+          ['True', 'False'],
+          ['True', 'False'],
+          ['True', 'False'],
+          [
+            'Lack of trench protection',
+            'Ignoring hazards',
+            'Poor judgement',
+            'All of the above',
+          ],
+          ['3', '4', '5', '6'],
+          [
+            'A computerized',
+            'One visual and one computerized',
+            'One visual and one manual',
+            'Strength',
+          ],
+          ['50', '75', '80', '100'],
+          ['True', 'False'],
+        ];
+
+        this.answersList = [0, 0, 0, 1, 1, 3, 2, 2, 3, 0];
+        break;
+
       //case '':
       // this.questionList = [
       //   '',
