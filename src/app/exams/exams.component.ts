@@ -22,6 +22,73 @@ export class ExamsComponent implements OnInit {
     console.log(this.questionsArr);
   }
 
+  ngAfterViewInit(): void {
+    this.setUpSubmitBtn();
+  }
+
+  setUpSubmitBtn(): void {
+    let questionsArr = this.questionsArr;
+
+    document
+      .getElementById('submitBtn')
+      ?.addEventListener('click', function (): void {
+        console.log('Checking Answers...');
+        let threshold = 1; // 100% Correct
+        let correctAnswers = 0;
+        for (let i = 0; i < questionsArr.length; i++) {
+          let currentChoices = document.getElementsByName(
+            questionsArr[i].questionNo.toString()
+          );
+          for (let j = 0; j < currentChoices.length; j++) {
+            let currChoice = currentChoices[j] as HTMLInputElement;
+            if (currChoice.checked) {
+              if (currChoice.value === questionsArr[i].answer.toString()) {
+                console.log(
+                  'Q' + questionsArr[i].questionNo.toString() + ' is Correct!'
+                );
+                correctAnswers += 1;
+              } else {
+                console.log(
+                  questionsArr[i].questionNo.toString() + ' is Wrong!'
+                );
+              }
+            }
+          } // end choices for loop
+        } // end Q for loop
+
+        console.log('Number of correct answers: ' + correctAnswers);
+        let percentage = correctAnswers / questionsArr.length;
+        console.log(percentage + '% correct');
+      });
+  }
+
+  // Checks for corect answer for each question
+  // returns boolean dependant on whether the user got ALL answers correct
+  checkAnswers(): void {
+    console.log('Checking Answers...');
+    let threshold = 1; // 100% Correct
+    let correctAnswers = 0;
+    for (let i = 0; i < this.questionsArr.length; i++) {
+      let currentChoices = document.getElementsByName(
+        this.questionsArr[i].questionNo.toString()
+      );
+      for (let j = 0; j < currentChoices.length; j++) {
+        let currChoice = currentChoices[j] as HTMLInputElement;
+        if (currChoice.checked) {
+          if (currChoice.value === this.questionsArr[i].answer.toString()) {
+            console.log(
+              this.questionsArr[i].questionNo.toString() + ' is Correct!'
+            );
+          } else {
+            console.log(
+              this.questionsArr[i].questionNo.toString() + ' is Wrong!'
+            );
+          }
+        }
+      } // end choices for loop
+    } // end Q for loop
+  }
+
   // Creates each Question object and adds them to the Questions array
   createExam(): void {
     for (let i = 0; i < this.questionList.length; i++) {

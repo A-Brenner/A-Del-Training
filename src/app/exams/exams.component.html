@@ -32,14 +32,16 @@
       <div class="bottom">
         <div *ngFor="let choice of question.choices; let i = index">
           <input
-            id="{{ 'choice' + i }}"
+            id="{{ 'Q' + question.questionNo + 'choice' + i }}"
             class="choice"
             name="{{ question.questionNo }}"
             type="radio"
+            value="{{ i }}"
           />
           {{ choice }}
         </div>
       </div>
     </div>
+    <button id="submitBtn">Submit</button>
   </body>
 </html>
