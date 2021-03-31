@@ -53,9 +53,9 @@ export class ExamsComponent implements OnInit {
 
         this.choicesList = [
           ['True', 'False'],
-          ['Safety Glasses', 'Goggles', 'Face-shield', 'All of the Above'],
-          ['Eye Protection', 'Sandals', 'Hard Hat', 'Work Boots'],
-          ['Corrosive Chemicals', 'Splinters', 'Heat', 'None of the Above'],
+          ['Safety glasses', 'Goggles', 'Face-shield', 'All of the Above'],
+          ['Eye protection', 'Sandals', 'Hard hat', 'Work boots'],
+          ['Corrosive chemicals', 'Splinters', 'Heat', 'None of the Above'],
           ['True', 'False'],
           ['True', 'False'],
           ['True', 'False'],
@@ -153,7 +153,7 @@ export class ExamsComponent implements OnInit {
           [
             'Use it anyway',
             'Report it to your supervisor',
-            "Don't us it",
+            "Don't use it",
             'Both B and C',
           ],
           ['True', 'False'],
@@ -191,7 +191,7 @@ export class ExamsComponent implements OnInit {
           ],
           ['Class A', 'Class B', 'Class C'],
           ['True', 'False'],
-          ['An ignition source', 'Fuel', 'Oxygen', 'Carbon Dioxide'],
+          ['An ignition source', 'Fuel', 'Oxygen', 'Carbon dioxide'],
           ['True', 'False'],
           ['10', '15', '35'],
           ['True', 'False'],
@@ -250,9 +250,9 @@ export class ExamsComponent implements OnInit {
           ['Copper', 'Silver', 'Aluminum', 'All of the above'],
           ['True', 'False'],
           [
-            'Loose Wires',
+            'Loose wires',
             'Jewelry',
-            'Wet Hands',
+            'Wet hands',
             'All of the above',
             'A and C only',
           ],
@@ -334,6 +334,42 @@ export class ExamsComponent implements OnInit {
         ];
 
         this.answersList = [0, 0, 0, 1, 1, 3, 2, 2, 3, 0];
+        break;
+
+      case 'Fall Protection':
+        this.questionList = [
+          'How many people are injured in falls each year?',
+          'Most falls from height are preventable.',
+          'Which of these are considered fall protection?',
+          'In construction, fall protection is required for working at heights over _____ feet.',
+          'In certain situations, it is safe to tie off back to your lanyard.',
+          'How often must fall protection equipment be re-certified?',
+          'Falling with loose leg straps can be very painful and cause injuries.',
+          'Fall arrest systems are not required on any type of aerial lift equipment.',
+          'Fall from ladders can be deadly.',
+          'Tying off improperly is a common cause of injury or death in construction.',
+        ];
+
+        this.choicesList = [
+          ['200', '2000', '20,000', '200,000'],
+          ['True', 'False'],
+          [
+            'Guard rails',
+            'Covers',
+            'Harness and lanyard',
+            'All of the above',
+            'A and B only',
+          ],
+          ['2', '4', '6', '8'],
+          ['True', 'False'],
+          ['Once a month', 'Every 6 months', 'Every year', 'Every two years'],
+          ['True', 'False'],
+          ['True', 'False'],
+          ['True', 'False'],
+          ['True', 'False'],
+        ];
+
+        this.answersList = [3, 0, 3, 2, 1, 1, 0, 1, 0, 0];
         break;
 
       //case '':
