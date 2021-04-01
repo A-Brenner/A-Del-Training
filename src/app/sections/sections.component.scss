@@ -72,11 +72,6 @@ h5 {
   transform: translate(-50%, -50%);
 }
 
-p {
-  margin-bottom: 0px;
-  padding-top: 5px;
-}
-
 button {
   background-color: $secondary;
   color: $primary;
@@ -90,6 +85,100 @@ button {
 .examBtn {
   padding-right: 14.6px;
   padding-left: 14.6px;
+}
+
+// contains toggle switch
+.translation-box {
+  position: relative;
+  padding-left: 10px;
+  padding-right: 10px;
+  width: 50%;
+  margin-right: 0px;
+}
+
+#translation-info {
+  color: $primary;
+  position: relative;
+  left: 0px;
+  margin-bottom: 0px;
+  width: 100%;
+}
+
+.login-info-box {
+  width: 50%;
+  position: relative;
+}
+
+#login-info-btn {
+  width: 50%;
+  background-color: $primary;
+  color: $secondary;
+  float: right;
+}
+
+// Toggle Switch Below
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  left: 0px;
+  width: 45px;
+  height: 25.5px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 19.5px;
+  width: 19.5px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: $primary;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px $primary;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(19.5px);
+  -ms-transform: translateX(19.5px);
+  transform: translateX(19.5px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 25.5px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
 }
 
 /* Centered text */
