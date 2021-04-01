@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { questionModule } from './question';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-exams',
@@ -7,12 +8,13 @@ import { questionModule } from './question';
   styleUrls: ['./exams.component.scss'],
 })
 export class ExamsComponent implements OnInit {
-  constructor() {}
+  constructor(private router: Router) {}
   examName: any = null;
   questionsArr: questionModule.Question[] = [];
   questionList: string[] = [];
   choicesList: string[][] = [];
   answersList: number[] = [];
+  results: string = '';
 
   ngOnInit(): void {
     console.log(sessionStorage.getItem('examName'));
@@ -24,16 +26,20 @@ export class ExamsComponent implements OnInit {
 
   ngAfterViewInit(): void {
     this.setUpSubmitBtn();
+    this.setUpRetryBtn();
   }
 
   setUpSubmitBtn(): void {
     let questionsArr = this.questionsArr;
+    let checkCompletion = this.checkCompletion;
+    let router = this.router;
 
     document
       .getElementById('submitBtn')
       ?.addEventListener('click', function (): void {
+        // Checks for corect answer for each question
+        // returns boolean dependant on whether the user got ALL answers correct
         console.log('Checking Answers...');
-        let threshold = 1; // 100% Correct
         let correctAnswers = 0;
         for (let i = 0; i < questionsArr.length; i++) {
           let currentChoices = document.getElementsByName(
@@ -56,37 +62,62 @@ export class ExamsComponent implements OnInit {
           } // end choices for loop
         } // end Q for loop
 
-        console.log('Number of correct answers: ' + correctAnswers);
-        let percentage = correctAnswers / questionsArr.length;
-        console.log(percentage + '% correct');
+        checkCompletion(correctAnswers, questionsArr, router);
       });
   }
 
-  // Checks for corect answer for each question
-  // returns boolean dependant on whether the user got ALL answers correct
-  checkAnswers(): void {
-    console.log('Checking Answers...');
+  // Check is the number of correct answers meets the requirement
+  // IF SO - route user back to the sections page
+  // IF NOT - retry
+  checkCompletion(
+    correctAnswers: number,
+    questionsArr: questionModule.Question[],
+    router: Router
+  ): void {
     let threshold = 1; // 100% Correct
-    let correctAnswers = 0;
-    for (let i = 0; i < this.questionsArr.length; i++) {
-      let currentChoices = document.getElementsByName(
-        this.questionsArr[i].questionNo.toString()
-      );
-      for (let j = 0; j < currentChoices.length; j++) {
-        let currChoice = currentChoices[j] as HTMLInputElement;
-        if (currChoice.checked) {
-          if (currChoice.value === this.questionsArr[i].answer.toString()) {
-            console.log(
-              this.questionsArr[i].questionNo.toString() + ' is Correct!'
-            );
-          } else {
-            console.log(
-              this.questionsArr[i].questionNo.toString() + ' is Wrong!'
-            );
-          }
-        }
-      } // end choices for loop
-    } // end Q for loop
+    console.log('Number of correct answers: ' + correctAnswers);
+    let percentage = correctAnswers / questionsArr.length;
+    console.log(percentage + '% correct');
+
+    if (correctAnswers / questionsArr.length >= threshold) {
+      console.log('You passed the exam!');
+      router.navigateByUrl('/training-programs/sections');
+      // router back to sections page
+    } else {
+      console.log('You FAILED the exam :(');
+      let modal = document.querySelector('.modal') as HTMLElement;
+      modal.style.display = 'block';
+      let results = document.querySelector('.results') as HTMLElement;
+      results.textContent = `You have selected ${correctAnswers}/${questionsArr.length} or ${percentage}% correct answers.\r\nYou need at least 100% to pass the exam.`;
+    }
+  }
+
+  setUpRetryBtn(): void {
+    //let questionsArr = this.questionsArr;
+    let modal = document.querySelector('.modal') as HTMLElement;
+
+    document
+      .getElementById('retryBtn')
+      ?.addEventListener('click', function (): void {
+        modal.style.display = 'none';
+
+        // Reset all selections
+        // for (let i = 0; i < questionsArr.length; i++) {
+        //   let currentChoices = document.getElementsByName(
+        //     questionsArr[i].questionNo.toString()
+        //   );
+        //   for (let j = 0; j < currentChoices.length; j++) {
+        //     let currChoice = currentChoices[j] as HTMLInputElement;
+        //     currChoice.checked = false;
+        //   }
+        // }
+      });
+
+    window.addEventListener('click', function (event): void {
+      if (event.target == modal) {
+        modal.style.display = 'none';
+      }
+    });
   }
 
   // Creates each Question object and adds them to the Questions array
