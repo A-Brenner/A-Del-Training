@@ -33,6 +33,7 @@ export class ExamsComponent implements OnInit {
     let questionsArr = this.questionsArr;
     let checkCompletion = this.checkCompletion;
     let router = this.router;
+    let examName = this.examName;
 
     document
       .getElementById('submitBtn')
@@ -62,7 +63,7 @@ export class ExamsComponent implements OnInit {
           } // end choices for loop
         } // end Q for loop
 
-        checkCompletion(correctAnswers, questionsArr, router);
+        checkCompletion(correctAnswers, questionsArr, router, examName);
       });
   }
 
@@ -72,7 +73,8 @@ export class ExamsComponent implements OnInit {
   checkCompletion(
     correctAnswers: number,
     questionsArr: questionModule.Question[],
-    router: Router
+    router: Router,
+    examName: string
   ): void {
     let threshold = 1; // 100% Correct
     console.log('Number of correct answers: ' + correctAnswers);
@@ -81,6 +83,7 @@ export class ExamsComponent implements OnInit {
 
     if (correctAnswers / questionsArr.length >= threshold) {
       console.log('You passed the exam!');
+      localStorage.setItem(examName, 'true');
       router.navigateByUrl('/training-programs/sections');
       // router back to sections page
     } else {

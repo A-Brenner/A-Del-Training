@@ -34,6 +34,7 @@ body {
 }
 
 .left {
+  position: relative;
   width: 20%;
   border-right-style: outset;
   border-width: 1.5px;
@@ -61,11 +62,14 @@ h5 {
 }
 
 .dot {
-  height: 10px;
-  width: 10px;
+  height: 15px;
+  width: 15px;
   background-color: grey;
   border-radius: 50%;
-  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 p {

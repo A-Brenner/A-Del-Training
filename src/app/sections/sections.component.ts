@@ -136,10 +136,18 @@ export class SectionsComponent implements OnInit {
     ];
 
     for (let i = 0; i < titles.length; i++) {
+      let completed: boolean;
+      if (localStorage.getItem(titles[i])) {
+        completed = true;
+        console.log(titles[i] + ' completed');
+      } else {
+        console.log(titles[i] + ' NAWWW');
+        completed = false;
+      }
       let section: sectionModule.Section = new sectionModule.Section(
         i + 1,
         titles[i],
-        false,
+        completed,
         links[i]
       );
       this.sectionsArr.push(section);
@@ -165,10 +173,18 @@ export class SectionsComponent implements OnInit {
     ];
 
     for (let i = 0; i < titles.length; i++) {
+      let completed: boolean;
+      if (localStorage.getItem(titles[i])) {
+        completed = true;
+        console.log(titles[i] + ' completed');
+      } else {
+        console.log(titles[i] + ' NAWWW');
+        completed = false;
+      }
       let section: sectionModule.Section = new sectionModule.Section(
         i + 1,
         titles[i],
-        false,
+        completed,
         links[i]
       );
       this.sectionsArr.push(section);
@@ -228,10 +244,18 @@ export class SectionsComponent implements OnInit {
     ];
 
     for (let i = startIndex; i < titles.length + startIndex; i++) {
+      let completed: boolean;
+      if (localStorage.getItem(titles[i])) {
+        completed = true;
+        console.log(titles[i] + ' completed');
+      } else {
+        console.log(titles[i] + ' NAWWW');
+        completed = false;
+      }
       let section: sectionModule.Section = new sectionModule.Section(
         i + 1,
         titles[i - startIndex],
-        false,
+        completed,
         links[i - startIndex]
       );
       this.sectionsArr.push(section);
@@ -261,10 +285,18 @@ export class SectionsComponent implements OnInit {
     ];
 
     for (let i = 0; i < titles.length; i++) {
+      let completed: boolean;
+      if (localStorage.getItem(titles[i])) {
+        completed = true;
+        console.log(titles[i] + ' completed');
+      } else {
+        console.log(titles[i] + ' NAWWW');
+        completed = false;
+      }
       let section: sectionModule.Section = new sectionModule.Section(
         i + 1,
         titles[i],
-        false,
+        completed,
         links[i]
       );
       this.sectionsArr.push(section);
@@ -320,10 +352,18 @@ export class SectionsComponent implements OnInit {
     ];
 
     for (let i = 0; i < titles.length; i++) {
+      let completed: boolean;
+      if (localStorage.getItem(titles[i])) {
+        completed = true;
+        console.log(titles[i] + ' completed');
+      } else {
+        console.log(titles[i] + ' NAWWW');
+        completed = false;
+      }
       let section: sectionModule.Section = new sectionModule.Section(
         i + 1,
         titles[i],
-        false,
+        completed,
         links[i]
       );
       this.sectionsArr.push(section);
@@ -363,10 +403,18 @@ export class SectionsComponent implements OnInit {
     ];
 
     for (let i = 0; i < titles.length; i++) {
+      let completed: boolean;
+      if (localStorage.getItem(titles[i])) {
+        completed = true;
+        console.log(titles[i] + ' completed');
+      } else {
+        console.log(titles[i] + ' NAWWW');
+        completed = false;
+      }
       let section: sectionModule.Section = new sectionModule.Section(
         i + 1,
         titles[i],
-        false,
+        completed,
         links[i]
       );
       this.sectionsArr.push(section);
