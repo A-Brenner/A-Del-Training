@@ -24,6 +24,13 @@
         </div>
       </div>
     </div>
+    <!-- Modal -->
+    <div id="modal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <p class="modal-info">{{ loginInfo }}</p>
+      </div>
+    </div>
     <div
       class="section-container"
       *ngFor="let section of sectionsArr; let i = index"

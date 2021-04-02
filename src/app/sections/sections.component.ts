@@ -20,6 +20,7 @@ export class SectionsComponent implements OnInit {
   // determines which training program was selected
   trainingProgram: string = '';
   latestTrainingProgram: any = '';
+  loginInfo: string = 'Username: cfairer@a-del.com\nPassword: AdelSafety#1';
 
   ngOnInit(): void {
     this.latestTrainingProgram = window.localStorage.getItem('latestProgram');
@@ -30,6 +31,7 @@ export class SectionsComponent implements OnInit {
   ngAfterViewInit(): void {
     this.setVideoBtnMethods();
     this.setExamBtnMethods();
+    this.setUpModal();
   }
 
   // Add onClick methods for each videoBtn on the page
@@ -64,6 +66,28 @@ export class SectionsComponent implements OnInit {
           router.navigateByUrl('/training-programs/sections/exam');
         });
     }
+  }
+
+  setUpModal(): void {
+    let modal: HTMLElement = document.querySelector('.modal') as HTMLElement;
+
+    document
+      .getElementById('login-info-btn')
+      ?.addEventListener('click', function (): void {
+        modal.style.display = 'block';
+      });
+
+    document
+      .querySelector('.close')
+      ?.addEventListener('click', function (): void {
+        modal.style.display = 'none';
+      });
+
+    window.addEventListener('click', function (event): void {
+      if (event.target == modal) {
+        modal.style.display = 'none';
+      }
+    });
   }
 
   // Determine which sections must be created and calls corresponding function
