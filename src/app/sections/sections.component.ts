@@ -17,9 +17,15 @@ export class SectionsComponent implements OnInit {
   // array for holding Section objects
   sectionsArr: sectionModule.Section[] = [];
 
+  // Arrays to hold section data
+  titles: string[] = [];
+  links: string[] = [];
+
   // determines which training program was selected
   trainingProgram: string = '';
   latestTrainingProgram: any = '';
+
+  // Displayed within modal
   loginInfo: string = 'Username: cfairer@a-del.com\nPassword: AdelSafety#1';
 
   ngOnInit(): void {
@@ -90,45 +96,59 @@ export class SectionsComponent implements OnInit {
     });
   }
 
-  // Determine which sections must be created and calls corresponding function
+  createSectionObjects(): void {
+    for (let i = 0; i < this.titles.length; i++) {
+      let completed: boolean;
+      if (localStorage.getItem(this.titles[i])) {
+        completed = true;
+      } else {
+        completed = false;
+      }
+      let section: sectionModule.Section = new sectionModule.Section(
+        i + 1,
+        this.titles[i],
+        completed,
+        this.links[i]
+      );
+      this.sectionsArr.push(section);
+    }
+  }
+
   createSections(): void {
     switch (this.latestTrainingProgram) {
       case 'newEmployees': {
         this.trainingProgram = 'New Employees';
-        this.createSectionsNE();
+        this.setSectionDataNE();
         console.log(this.sectionsArr);
         break;
       }
       case 'fieldWorkers': {
         this.trainingProgram = 'Field Workers';
-        this.createSectionsFW(0);
+        this.setSectionDataFW();
         console.log(this.sectionsArr);
         break;
       }
       case 'shopWorkers': {
         this.trainingProgram = 'Shop Workers & Mechanics';
-        this.createSectionsSW();
+        this.setSectionDataSW();
         console.log(this.sectionsArr);
         break;
       }
       case 'officeEmployees': {
         this.trainingProgram = 'Office Employees';
-        this.createSectionsOE();
+        this.setSectionDataOE();
         console.log(this.sectionsArr);
         break;
       }
       case 'foreman': {
-        // Foreman must complete both Foreman AND Field Worker sections
         this.trainingProgram = 'Foreman';
-        this.createSectionsFM();
-        console.log(this.sectionsArr);
-        this.createSectionsFW(this.sectionsArr.length);
+        this.setSectionDataFM();
         console.log(this.sectionsArr);
         break;
       }
       case 'truckDrivers': {
         this.trainingProgram = 'Truck Drivers';
-        this.createSectionsTD();
+        this.setSectionDataTD();
         console.log(this.sectionsArr);
         break;
       }
@@ -137,13 +157,14 @@ export class SectionsComponent implements OnInit {
         console.log('Sections NOT FOUND');
       }
     }
+    this.createSectionObjects();
   }
 
   // NEW EMPLOYEES
   // Creates sections for New Employees, Adds sections to array
-  createSectionsNE(): void {
+  setSectionDataNE(): void {
     // array of section titles
-    let titles: string[] = [
+    this.titles = [
       'EEO',
       'Safety Orientation',
       'Sexual Harassment',
@@ -151,75 +172,39 @@ export class SectionsComponent implements OnInit {
       'Drugs & Alcohol',
     ];
     // array of video links
-    let links: string[] = [
-      '', // (Audra) EEO
+    this.links = [
+      '', // EEO (Chuck Recorded Video)
       'https://safetysourceonline.com/video/safety-bobs-comprehensive-construction-orientation-e1316e-24-min-2/',
       '', // sexual harassment
       'https://safetysourceonline.com/video/cell-phone-hands-free-driving-awareness-ss1089/',
       'https://safetysourceonline.com/video/dealing-with-drug-and-alcohol-abuse-for-employees-052/',
     ];
-
-    for (let i = 0; i < titles.length; i++) {
-      let completed: boolean;
-      if (localStorage.getItem(titles[i])) {
-        completed = true;
-        console.log(titles[i] + ' completed');
-      } else {
-        console.log(titles[i] + ' NAWWW');
-        completed = false;
-      }
-      let section: sectionModule.Section = new sectionModule.Section(
-        i + 1,
-        titles[i],
-        completed,
-        links[i]
-      );
-      this.sectionsArr.push(section);
-    }
   }
 
   // OFFICE EMPLOYEES
   // Creates sections for Office Employees, Adds sections to array
-  createSectionsOE(): void {
+  setSectionDataOE(): void {
     // array of section titles
-    let titles: string[] = [
+    this.titles = [
       'Emergency Action Plan',
       'Surviving an Active Shooter',
       'Sexual Harassment',
       'First Aid',
     ];
     // array of video links
-    let links: string[] = [
+    this.links = [
       '', // (Chuck) Emergency Action Plan
       'https://www.youtube.com/watch?v=DFQ-oxhdFjE',
       '', // sexual harassment
       'https://safetysourceonline.com/video/first-aid-m209/',
     ];
-
-    for (let i = 0; i < titles.length; i++) {
-      let completed: boolean;
-      if (localStorage.getItem(titles[i])) {
-        completed = true;
-        console.log(titles[i] + ' completed');
-      } else {
-        console.log(titles[i] + ' NAWWW');
-        completed = false;
-      }
-      let section: sectionModule.Section = new sectionModule.Section(
-        i + 1,
-        titles[i],
-        completed,
-        links[i]
-      );
-      this.sectionsArr.push(section);
-    }
   }
 
   // FIELD WORKERS
   // Creates sections for Field Workers, Adds sections to array
-  createSectionsFW(startIndex: number): void {
+  setSectionDataFW(): void {
     // array of section titles
-    let titles: string[] = [
+    this.titles = [
       'PPE: Basic Training',
       'Hazardous Materials Labels',
       'GHS: Safety Data Sheets',
@@ -243,7 +228,7 @@ export class SectionsComponent implements OnInit {
       'Working Around Equipment',
     ];
     // array of video links
-    let links: string[] = [
+    this.links = [
       'https://safetysourceonline.com/video/ppebasic-training-1028b-12-min/',
       'https://safetysourceonline.com/video/ghs-labels-ss2001fe/',
       'https://safetysourceonline.com/video/ghs-safety-data-sheets-the-basics-ss2002fe/',
@@ -266,72 +251,78 @@ export class SectionsComponent implements OnInit {
       'https://safetysourceonline.com/video/aerial-lift-safety-ss1031be/',
       'https://www.youtube.com/watch?v=7tdfizoornI',
     ];
-
-    for (let i = startIndex; i < titles.length + startIndex; i++) {
-      let completed: boolean;
-      if (localStorage.getItem(titles[i])) {
-        completed = true;
-        console.log(titles[i] + ' completed');
-      } else {
-        console.log(titles[i] + ' NAWWW');
-        completed = false;
-      }
-      let section: sectionModule.Section = new sectionModule.Section(
-        i + 1,
-        titles[i - startIndex],
-        completed,
-        links[i - startIndex]
-      );
-      this.sectionsArr.push(section);
-    }
   }
 
   // FOREMAN
   // Creates sections for Foreman, Adds sections to array
-  createSectionsFM(): void {
+  setSectionDataFM(): void {
     // array of section titles
-    let titles: string[] = [
+    this.titles = [
       'Equipment',
       'Accident Investigation',
       'Lock Out Tag Out',
       'Drug & Alcohol - Supervisors',
       'Near Miss Reporting',
       'HCSS Reporting',
+      'PPE: Basic Training',
+      'Hazardous Materials Labels',
+      'GHS: Safety Data Sheets',
+      'Ladder Safety',
+      'Sexual Harassment',
+      'Fire Prevention',
+      'First Aid',
+      'Basic Electrical Safety',
+      'Slips, Trips, & Falls',
+      'Trenching & Excavation',
+      'Fall Protection',
+      'Confined Space',
+      'Small Tools',
+      'Crystalline Silica Safety',
+      'Machine Guarding',
+      'Driving Safety',
+      'Rigging & Load Securement',
+      'Hand & Power Tool Safety',
+      'Heat Stress',
+      'Aerial Lift Safety',
+      'Working Around Equipment',
     ];
     // array of video links
-    let links: string[] = [
+    this.links = [
       '', // Equipment
       'https://safetysourceonline.com/video/accident-investigation-for-everyone-2485-2/',
       '',
       'https://safetysourceonline.com/video/dealing-with-drug-and-alcohol-abuse-for-managers-and-supervisors-053/',
       'https://safetysourceonline.com/video/evaluating-near-misses-to-prevent-accidents-bbcs1008-8-min/', // Near miss reporting
       '', // HCSS
+      'https://safetysourceonline.com/video/ppebasic-training-1028b-12-min/',
+      'https://safetysourceonline.com/video/ghs-labels-ss2001fe/',
+      'https://safetysourceonline.com/video/ghs-safety-data-sheets-the-basics-ss2002fe/',
+      'https://safetysourceonline.com/video/ladder-safety-8019a-10-min/',
+      '', // sexual harassment
+      'https://safetysourceonline.com/video/to-the-point-about-fire-prevention-response-tp07/',
+      'https://safetysourceonline.com/video/first-aid-m209/',
+      'https://safetysourceonline.com/video/basic-electrical-safety-1085i-11-min/',
+      'https://safetysourceonline.com/video/slips-trips-falls-ss1064ie-5-concise-version/',
+      'https://safetysourceonline.com/video/13592/',
+      'https://safetysourceonline.com/video/fall-protection/',
+      'https://safetysourceonline.com/video/confined-space-entry-ss1055he-10-min/',
+      '', // small tools
+      'https://safetysourceonline.com/video/crystalline-silica-safety/',
+      'https://safetysourceonline.com/video/grinding-and-abrasive-wheels-ss040789/',
+      'https://safetysourceonline.com/video/choices-safe-driving-1078ie/',
+      '', // rigging & load securement
+      'https://safetysourceonline.com/video/hand-power-tool-safety-ss1094ie-10-min/',
+      'https://safetysourceonline.com/video/heat-stress-facts-and-prevention/',
+      'https://safetysourceonline.com/video/aerial-lift-safety-ss1031be/',
+      'https://www.youtube.com/watch?v=7tdfizoornI',
     ];
-
-    for (let i = 0; i < titles.length; i++) {
-      let completed: boolean;
-      if (localStorage.getItem(titles[i])) {
-        completed = true;
-        console.log(titles[i] + ' completed');
-      } else {
-        console.log(titles[i] + ' NAWWW');
-        completed = false;
-      }
-      let section: sectionModule.Section = new sectionModule.Section(
-        i + 1,
-        titles[i],
-        completed,
-        links[i]
-      );
-      this.sectionsArr.push(section);
-    }
   }
 
   // SHOP WORKERS & MECHANICS
   // Creates sections for Shop Workers, Adds sections to array
-  createSectionsSW(): void {
+  setSectionDataSW(): void {
     // array of section titles
-    let titles: string[] = [
+    this.titles = [
       'PPE: Basic Training',
       'Hazardous Materials Labels',
       'GHS: Safety Data Sheets',
@@ -353,7 +344,7 @@ export class SectionsComponent implements OnInit {
       'Slips, Trips, & Falls',
     ];
     // array of video links
-    let links: string[] = [
+    this.links = [
       'https://safetysourceonline.com/video/ppebasic-training-1028b-12-min/',
       'https://safetysourceonline.com/video/ghs-labels-ss2001fe/',
       'https://safetysourceonline.com/video/ghs-safety-data-sheets-the-basics-ss2002fe/',
@@ -374,31 +365,13 @@ export class SectionsComponent implements OnInit {
       'https://safetysourceonline.com/video/heat-stress-facts-and-prevention/',
       'https://safetysourceonline.com/video/slips-trips-falls-ss1064ie-5-concise-version/',
     ];
-
-    for (let i = 0; i < titles.length; i++) {
-      let completed: boolean;
-      if (localStorage.getItem(titles[i])) {
-        completed = true;
-        console.log(titles[i] + ' completed');
-      } else {
-        console.log(titles[i] + ' NAWWW');
-        completed = false;
-      }
-      let section: sectionModule.Section = new sectionModule.Section(
-        i + 1,
-        titles[i],
-        completed,
-        links[i]
-      );
-      this.sectionsArr.push(section);
-    }
   }
 
   // TRUCK DRIVERS
   // Creates sections for TRUCK DRIVERS, Adds sections to array
-  createSectionsTD(): void {
+  setSectionDataTD(): void {
     // array of section titles
-    let titles: string[] = [
+    this.titles = [
       'PPE: Basic Training',
       'Hazardous Materials Labels',
       'GHS: Safety Data Sheets',
@@ -412,7 +385,7 @@ export class SectionsComponent implements OnInit {
       'Driver Safety',
     ];
     // array of video links
-    let links: string[] = [
+    this.links = [
       'https://safetysourceonline.com/video/ppebasic-training-1028b-12-min/',
       'https://safetysourceonline.com/video/ghs-labels-ss2001fe/',
       'https://safetysourceonline.com/video/ghs-safety-data-sheets-the-basics-ss2002fe/',
@@ -425,23 +398,5 @@ export class SectionsComponent implements OnInit {
       'https://safetysourceonline.com/video/construction-series-dump-truck-safety/',
       'https://safetysourceonline.com/video/choices-safe-driving-1078ie/',
     ];
-
-    for (let i = 0; i < titles.length; i++) {
-      let completed: boolean;
-      if (localStorage.getItem(titles[i])) {
-        completed = true;
-        console.log(titles[i] + ' completed');
-      } else {
-        console.log(titles[i] + ' NAWWW');
-        completed = false;
-      }
-      let section: sectionModule.Section = new sectionModule.Section(
-        i + 1,
-        titles[i],
-        completed,
-        links[i]
-      );
-      this.sectionsArr.push(section);
-    }
   }
 }
