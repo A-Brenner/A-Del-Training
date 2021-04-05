@@ -20,6 +20,7 @@ export class SectionsComponent implements OnInit {
   // Arrays to hold section data
   titles: string[] = [];
   links: string[] = [];
+  linksSpanish: string[] = [];
 
   // determines which training program was selected
   trainingProgram: string = '';
@@ -176,8 +177,16 @@ export class SectionsComponent implements OnInit {
       '', // EEO (Chuck Recorded Video)
       'https://safetysourceonline.com/video/safety-bobs-comprehensive-construction-orientation-e1316e-24-min-2/',
       '', // sexual harassment
-      'https://safetysourceonline.com/video/cell-phone-hands-free-driving-awareness-ss1089/',
+      'https://safetysourceonline.com/video/texting-and-driving-the-facts-1072i-11-min/',
       'https://safetysourceonline.com/video/dealing-with-drug-and-alcohol-abuse-for-employees-052/',
+    ];
+
+    this.linksSpanish = [
+      '', // EEO
+      'https://safetysourceonline.com/video/safety-bobs-comprehensive-construction-orientation-e1316s-24-min-spanish-2/',
+      '', // Sexual Harassment
+      'https://safetysourceonline.com/video/texting-and-driving-the-facts-spanish-ss1072is/',
+      'https://safetysourceonline.com/video/dealing-with-drug-and-alcohol-abuse-for-employees-052-spanish/',
     ];
   }
 
@@ -197,6 +206,13 @@ export class SectionsComponent implements OnInit {
       'https://www.youtube.com/watch?v=DFQ-oxhdFjE',
       '', // sexual harassment
       'https://safetysourceonline.com/video/first-aid-m209/',
+    ];
+
+    this.linksSpanish = [
+      '', // (Chuck) Emergency Action Plan
+      'https://www.youtube.com/watch?v=DFQ-oxhdFjE',
+      '', // Sexual Harassment
+      'https://safetysourceonline.com/video/first-aid-m209-spanish/',
     ];
   }
 
