@@ -221,7 +221,7 @@ export class SectionsComponent implements OnInit {
   setSectionDataFW(): void {
     // array of section titles
     this.titles = [
-      'PPE: Basic Training',
+      "PPE: It's Your Call",
       'Hazardous Materials Labels',
       'GHS: Safety Data Sheets',
       'Ladder Safety',
@@ -245,7 +245,7 @@ export class SectionsComponent implements OnInit {
     ];
     // array of video links
     this.links = [
-      'https://safetysourceonline.com/video/ppebasic-training-1028b-12-min/',
+      'https://safetysourceonline.com/video/ppe-its-your-call-1021b-12-min/',
       'https://safetysourceonline.com/video/ghs-labels-ss2001fe/',
       'https://safetysourceonline.com/video/ghs-safety-data-sheets-the-basics-ss2002fe/',
       'https://safetysourceonline.com/video/ladder-safety-8019a-10-min/',
@@ -280,7 +280,7 @@ export class SectionsComponent implements OnInit {
       'Drug & Alcohol - Supervisors',
       'Near Miss Reporting',
       'HCSS Reporting',
-      'PPE: Basic Training',
+      "PPE: It's Your Call",
       'Hazardous Materials Labels',
       'GHS: Safety Data Sheets',
       'Ladder Safety',
@@ -339,11 +339,10 @@ export class SectionsComponent implements OnInit {
   setSectionDataSW(): void {
     // array of section titles
     this.titles = [
-      'PPE: Basic Training',
+      "PPE: It's Your Call",
       'Hazardous Materials Labels',
       'GHS: Safety Data Sheets',
       'Ladder Safety',
-      'Sexual Harassment',
       'Fire Prevention',
       'First Aid',
       'Basic Electrical Safety',
@@ -355,31 +354,49 @@ export class SectionsComponent implements OnInit {
       'Arc Flash',
       'Compressed Gas Cylinders',
       'Lock Out Tag Out',
-      'Making Safety Work',
+      'Take Time for Safety',
       'Heat Stress',
-      'Slips, Trips, & Falls',
+      'Sexual Harassment',
     ];
     // array of video links
     this.links = [
-      'https://safetysourceonline.com/video/ppebasic-training-1028b-12-min/',
+      'https://safetysourceonline.com/video/ppe-its-your-call-1021b-12-min/',
       'https://safetysourceonline.com/video/ghs-labels-ss2001fe/',
       'https://safetysourceonline.com/video/ghs-safety-data-sheets-the-basics-ss2002fe/',
       'https://safetysourceonline.com/video/ladder-safety-8019a-10-min/',
-      '', // sexual harassment
       'https://safetysourceonline.com/video/to-the-point-about-fire-prevention-response-tp07/',
       'https://safetysourceonline.com/video/first-aid-m209/',
       'https://safetysourceonline.com/video/basic-electrical-safety-1085i-11-min/',
-      'https://safetysourceonline.com/video/grinding-and-abrasive-wheels-ss040789/',
+      'https://safetysourceonline.com/video/machine-guarding-operatorsafety-m4757e/',
       'https://safetysourceonline.com/video/hand-power-tool-safety-ss1094ie-10-min/',
-      'https://safetysourceonline.com/video/aerial-lift-safety-ss1031be/',
+      'https://safetysourceonline.com/video/aerial-lift-work-platform-1025g-15-min-2/',
       'https://safetysourceonline.com/video/to-the-point-about-safe-forklift-operation-tp09-11-min/',
       'https://safetysourceonline.com/video/creating-safety-in-welding-operations-4760/',
       'https://safetysourceonline.com/video/arc-flash-updated/',
       'https://safetysourceonline.com/video/compressed-gas-cylinders-m259e/',
-      '', // Lock out tag out
-      '', // Making safety work
+      'https://safetysourceonline.com/video/lockouttagout-procedures-1036a-14-min/', // Lock out tag out
+      'https://safetysourceonline.com/video/take-time-for-safety-2950-16-min/',
       'https://safetysourceonline.com/video/heat-stress-facts-and-prevention/',
-      'https://safetysourceonline.com/video/slips-trips-falls-ss1064ie-5-concise-version/',
+      '', // sexual harassment
+    ];
+
+    this.linksSpanish = [
+      'https://safetysourceonline.com/video/ppe-its-your-call-spanish-1021bs/',
+      'https://safetysourceonline.com/video/ghs-hazardous-materials-labels-ss2001fs-8-min-spanish/',
+      'https://safetysourceonline.com/video/ghs-safety-data-sheets-the-basics-ss2002fs-5-min-spanish/',
+      'https://safetysourceonline.com/video/ladder-safety-8019a-10-min-spanish/',
+      'https://safetysourceonline.com/video/to-the-point-about-fire-prevention-response-tp07-spanish/',
+      '',
+      '',
+      '',
+      '',
+      '',
+      '',
+      '',
+      '',
+      '',
+      '',
+      '',
     ];
   }
 

@@ -140,7 +140,7 @@ export class ExamsComponent implements OnInit {
   setExamData(): void {
     switch (this.examName) {
       // FIELD WORKER SECTIONS
-      case 'PPE: Basic Training':
+      case "PPE: It's Your Call":
         this.questionList = [
           'If you have a question about your protective equipment you should ask your supervisor before starting a task.',
           'Which below are considered eye protection?',
