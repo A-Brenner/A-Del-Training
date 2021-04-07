@@ -386,17 +386,19 @@ export class SectionsComponent implements OnInit {
       'https://safetysourceonline.com/video/ghs-safety-data-sheets-the-basics-ss2002fs-5-min-spanish/',
       'https://safetysourceonline.com/video/ladder-safety-8019a-10-min-spanish/',
       'https://safetysourceonline.com/video/to-the-point-about-fire-prevention-response-tp07-spanish/',
-      '',
-      '',
-      '',
-      '',
-      '',
-      '',
-      '',
-      '',
-      '',
-      '',
-      '',
+      'https://safetysourceonline.com/video/first-aid-m209-spanish/',
+      'https://safetysourceonline.com/video/basic-electrical-safety-ss1085is-11-min-spanish/',
+      'https://safetysourceonline.com/video/httpssafetysourceonline-commachine-guarding-operator-safety-4757-spanish/',
+      'https://safetysourceonline.com/video/hand-power-tool-safety-ss1094is-10-min-spanish/',
+      'https://safetysourceonline.com/video/aerial-lift-work-platform-1025g-spanish-2/',
+      'https://safetysourceonline.com/video/to-the-point-about-safe-forklift-operation-tp09-11-min-spanish/',
+      'https://safetysourceonline.com/video/creating-safety-in-welding-operations-4760-spanish/',
+      'https://safetysourceonline.com/video/arc-flash-facts-and-prevention-ss1086is-10-min-spanish/',
+      'https://safetysourceonline.com/video/compressed-gas-cylinders-m259s/',
+      'https://safetysourceonline.com/video/lockouttagout-1036a-14-min-spanish/',
+      'https://safetysourceonline.com/video/take-time-for-safety-2950-16-min-spanish/',
+      'https://safetysourceonline.com/video/heat-stress-the-facts-1007i-12-min-spanish/',
+      '', // SEXUAL HARASSMENT
     ];
   }
 
@@ -405,10 +407,9 @@ export class SectionsComponent implements OnInit {
   setSectionDataTD(): void {
     // array of section titles
     this.titles = [
-      'PPE: Basic Training',
+      "PPE: It's Your Call",
       'Hazardous Materials Labels',
       'GHS: Safety Data Sheets',
-      'Sexual Harassment',
       'Fire Prevention',
       'First Aid',
       'Slips, Trips, & Falls',
@@ -416,20 +417,35 @@ export class SectionsComponent implements OnInit {
       'Drugs & Alcohol',
       'Dump Truck Safety',
       'Driver Safety',
+      'Sexual Harassment',
     ];
     // array of video links
     this.links = [
-      'https://safetysourceonline.com/video/ppebasic-training-1028b-12-min/',
+      'https://safetysourceonline.com/video/ppe-its-your-call-1021b-12-min/',
       'https://safetysourceonline.com/video/ghs-labels-ss2001fe/',
       'https://safetysourceonline.com/video/ghs-safety-data-sheets-the-basics-ss2002fe/',
-      '', // sexual harassment
       'https://safetysourceonline.com/video/to-the-point-about-fire-prevention-response-tp07/',
-      'https://safetysourceonline.com/video/emergency-first-aid-1058i-19-min-2/', // First Aid ... 2  video options
-      'https://safetysourceonline.com/video/slips-trips-falls-ss1064ie-5-concise-version/',
-      'https://safetysourceonline.com/video/cell-phone-hands-free-driving-awareness-ss1089/',
-      'https://safetysourceonline.com/video/dot-drugs-alcohol-what-employees-need-to-know-ss17041ae/',
+      'https://safetysourceonline.com/video/first-aid-m209/',
+      'https://safetysourceonline.com/video/employee-slips-trips-and-falls-1018d-10-min/',
+      'https://safetysourceonline.com/video/texting-and-driving-the-facts-1072i-11-min/',
+      '', // DOT - Drugs & Alcohol (JJ KELLER) 'https://safetysourceonline.com/video/dot-drugs-alcohol-what-employees-need-to-know-ss17041ae/',
       'https://safetysourceonline.com/video/construction-series-dump-truck-safety/',
-      'https://safetysourceonline.com/video/choices-safe-driving-1078ie/',
+      'https://safetysourceonline.com/video/10-4-defensive-driving-ss1087i-11-min/',
+      '', // sexual harassment
+    ];
+    // array of video links in SPANISH
+    this.linksSpanish = [
+      'https://safetysourceonline.com/video/ppe-its-your-call-spanish-1021bs/',
+      'https://safetysourceonline.com/video/ghs-hazardous-materials-labels-ss2001fs-8-min-spanish/',
+      'https://safetysourceonline.com/video/ghs-safety-data-sheets-the-basics-ss2002fs-5-min-spanish/',
+      'https://safetysourceonline.com/video/to-the-point-about-fire-prevention-response-tp07-spanish/',
+      'https://safetysourceonline.com/video/first-aid-m209-spanish/',
+      'https://safetysourceonline.com/video/employee-slips-trips-and-falls-ss1018ds-10-min/',
+      'https://safetysourceonline.com/video/texting-and-driving-the-facts-spanish-ss1072is/',
+      '', // DOT - Drugs & Alcohol (JJ KELLER)
+      'https://safetysourceonline.com/video/dump-truck-safety-ssc020ps-8-mins-spanish/',
+      'https://safetysourceonline.com/video/10-4-defensive-driving-ss1087is-11-min-spanish/',
+      '', // sexual harassment
     ];
   }
 }
