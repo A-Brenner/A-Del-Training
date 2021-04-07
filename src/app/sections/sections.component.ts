@@ -237,17 +237,16 @@ export class SectionsComponent implements OnInit {
       'Trenching & Excavation',
       'Fall Protection',
       'Confined Space',
-      'Small Tools',
+      'Small Tools', // Same as Hand & Power Tools???
       'Crystalline Silica Safety',
       'Machine Guarding',
       'Driving Safety',
       'Rigging & Load Securement',
       'Hand & Power Tool Safety',
       'Heat Stress',
-      'Aerial Lift Safety',
-      'Working Around Equipment',
       'Sexual Harassment',
     ];
+
     // array of video links
     this.links = [
       'https://safetysourceonline.com/video/ppe-its-your-call-1021b-12-min/',
@@ -257,20 +256,41 @@ export class SectionsComponent implements OnInit {
       'https://safetysourceonline.com/video/to-the-point-about-fire-prevention-response-tp07/',
       'https://safetysourceonline.com/video/first-aid-m209/',
       'https://safetysourceonline.com/video/basic-electrical-safety-1085i-11-min/',
-      'https://safetysourceonline.com/video/slips-trips-falls-ss1064ie-5-concise-version/',
+      'https://safetysourceonline.com/video/employee-slips-trips-and-falls-1018d-10-min/',
       'https://safetysourceonline.com/video/13592/',
       'https://safetysourceonline.com/video/fall-protection/',
       'https://safetysourceonline.com/video/confined-space-entry-ss1055he-10-min/',
-      '', // small tools
+      'https://safetysourceonline.com/video/hand-power-tool-safety-ss1094ie-10-min/', // small tools same link as Power & Hand tools
       'https://safetysourceonline.com/video/crystalline-silica-safety/',
-      'https://safetysourceonline.com/video/grinding-and-abrasive-wheels-ss040789/',
-      'https://safetysourceonline.com/video/choices-safe-driving-1078ie/',
-      '', // rigging & load securement
+      'https://safetysourceonline.com/video/machine-guarding-operatorsafety-m4757e/',
+      'https://safetysourceonline.com/video/10-4-defensive-driving-ss1087i-11-min/',
+      'https://safetysourceonline.com/video/rigging-safety-ss123ae/',
       'https://safetysourceonline.com/video/hand-power-tool-safety-ss1094ie-10-min/',
       'https://safetysourceonline.com/video/heat-stress-facts-and-prevention/',
-      'https://safetysourceonline.com/video/aerial-lift-safety-ss1031be/',
-      'https://www.youtube.com/watch?v=7tdfizoornI',
       '', // sexual harassment
+    ];
+
+    // array of SPANISH video links
+    this.linksSpanish = [
+      'https://safetysourceonline.com/video/ppe-its-your-call-1021b-12-min/',
+      'https://safetysourceonline.com/video/ghs-labels-ss2001fe/',
+      'https://safetysourceonline.com/video/ghs-safety-data-sheets-the-basics-ss2002fe/',
+      'https://safetysourceonline.com/video/ladder-safety-8019a-10-min/',
+      'https://safetysourceonline.com/video/to-the-point-about-fire-prevention-response-tp07/',
+      'https://safetysourceonline.com/video/first-aid-m209/',
+      'https://safetysourceonline.com/video/basic-electrical-safety-1085i-11-min/',
+      'https://safetysourceonline.com/video/employee-slips-trips-and-falls-ss1018ds-10-min/',
+      'https://safetysourceonline.com/video/trenching-and-shoring-excavation-safety-ssc003e-13-min-spanish/',
+      'https://safetysourceonline.com/video/fall-protection-ssc0023as-10-min-spanish/',
+      'https://safetysourceonline.com/video/confined-space-entry-ss1055hs-10-min-spanish/',
+      'https://safetysourceonline.com/video/hand-power-tool-safety-ss1094is-10-min-spanish/',
+      'https://safetysourceonline.com/video/crystalline-silica-safety-spanish/',
+      'https://safetysourceonline.com/video/httpssafetysourceonline-commachine-guarding-operator-safety-4757-spanish/',
+      'https://safetysourceonline.com/video/10-4-defensive-driving-ss1087is-11-min-spanish/',
+      'https://safetysourceonline.com/video/rigging-safety-ss123ae/',
+      'https://safetysourceonline.com/video/hand-power-tool-safety-ss1094is-10-min-spanish/',
+      'https://safetysourceonline.com/video/heat-stress-the-facts-1007i-12-min-spanish/',
+      '', // Sexual Harassment
     ];
   }
 
@@ -289,10 +309,24 @@ export class SectionsComponent implements OnInit {
     );
 
     // array of video links
-    this.links.unshift('', '', '', '', '', '');
+    this.links.unshift(
+      '',
+      '',
+      'https://safetysourceonline.com/video/lockouttagout-procedures-1036a-14-min/',
+      '',
+      '',
+      ''
+    );
 
     // array of SPANISH video links
-    this.linksSpanish.unshift('', '', '', '', '', '');
+    this.linksSpanish.unshift(
+      '',
+      '',
+      'https://safetysourceonline.com/video/lockouttagout-1036a-14-min-spanish/',
+      '',
+      '',
+      ''
+    );
   }
 
   // SHOP WORKERS & MECHANICS
