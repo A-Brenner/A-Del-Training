@@ -123,27 +123,29 @@ export class SectionsComponent implements OnInit {
         console.log(this.sectionsArr);
         break;
       }
-      case 'fieldWorkers': {
-        this.trainingProgram = 'Field Workers';
-        this.setSectionDataFW();
-        console.log(this.sectionsArr);
-        break;
-      }
-      case 'shopWorkers': {
-        this.trainingProgram = 'Shop Workers & Mechanics';
-        this.setSectionDataSW();
-        console.log(this.sectionsArr);
-        break;
-      }
       case 'officeEmployees': {
         this.trainingProgram = 'Office Employees';
         this.setSectionDataOE();
         console.log(this.sectionsArr);
         break;
       }
+      case 'fieldWorkers': {
+        this.trainingProgram = 'Field Workers';
+        this.setSectionDataFW();
+        console.log(this.sectionsArr);
+        break;
+      }
       case 'foreman': {
+        // Foreman must complete all Field Worker sections along with their own sections
         this.trainingProgram = 'Foreman';
+        this.setSectionDataFW();
         this.setSectionDataFM();
+        console.log(this.sectionsArr);
+        break;
+      }
+      case 'shopWorkers': {
+        this.trainingProgram = 'Shop Workers & Mechanics';
+        this.setSectionDataSW();
         console.log(this.sectionsArr);
         break;
       }
@@ -162,7 +164,7 @@ export class SectionsComponent implements OnInit {
   }
 
   // NEW EMPLOYEES
-  // Creates sections for New Employees, Adds sections to array
+  // Adds section data to arrays
   setSectionDataNE(): void {
     // array of section titles
     this.titles = [
@@ -181,6 +183,7 @@ export class SectionsComponent implements OnInit {
       'https://safetysourceonline.com/video/dealing-with-drug-and-alcohol-abuse-for-employees-052/',
     ];
 
+    // array of SPANISH video links
     this.linksSpanish = [
       '', // EEO
       'https://safetysourceonline.com/video/safety-bobs-comprehensive-construction-orientation-e1316s-24-min-spanish-2/',
@@ -191,23 +194,25 @@ export class SectionsComponent implements OnInit {
   }
 
   // OFFICE EMPLOYEES
-  // Creates sections for Office Employees, Adds sections to array
+  // Adds section data to arrays
   setSectionDataOE(): void {
     // array of section titles
     this.titles = [
       'Emergency Action Plan',
       'Surviving an Active Shooter',
-      'Sexual Harassment',
       'First Aid',
+      'Sexual Harassment',
     ];
+
     // array of video links
     this.links = [
       '', // (Chuck) Emergency Action Plan
       'https://www.youtube.com/watch?v=DFQ-oxhdFjE',
-      '', // sexual harassment
       'https://safetysourceonline.com/video/first-aid-m209/',
+      '', // sexual harassment
     ];
 
+    // array of SPANISH video links
     this.linksSpanish = [
       '', // (Chuck) Emergency Action Plan
       'https://www.youtube.com/watch?v=DFQ-oxhdFjE',
@@ -217,7 +222,7 @@ export class SectionsComponent implements OnInit {
   }
 
   // FIELD WORKERS
-  // Creates sections for Field Workers, Adds sections to array
+  // Adds section data to arrays
   setSectionDataFW(): void {
     // array of section titles
     this.titles = [
@@ -225,7 +230,6 @@ export class SectionsComponent implements OnInit {
       'Hazardous Materials Labels',
       'GHS: Safety Data Sheets',
       'Ladder Safety',
-      'Sexual Harassment',
       'Fire Prevention',
       'First Aid',
       'Basic Electrical Safety',
@@ -242,6 +246,7 @@ export class SectionsComponent implements OnInit {
       'Heat Stress',
       'Aerial Lift Safety',
       'Working Around Equipment',
+      'Sexual Harassment',
     ];
     // array of video links
     this.links = [
@@ -249,7 +254,6 @@ export class SectionsComponent implements OnInit {
       'https://safetysourceonline.com/video/ghs-labels-ss2001fe/',
       'https://safetysourceonline.com/video/ghs-safety-data-sheets-the-basics-ss2002fe/',
       'https://safetysourceonline.com/video/ladder-safety-8019a-10-min/',
-      '', // sexual harassment
       'https://safetysourceonline.com/video/to-the-point-about-fire-prevention-response-tp07/',
       'https://safetysourceonline.com/video/first-aid-m209/',
       'https://safetysourceonline.com/video/basic-electrical-safety-1085i-11-min/',
@@ -266,76 +270,33 @@ export class SectionsComponent implements OnInit {
       'https://safetysourceonline.com/video/heat-stress-facts-and-prevention/',
       'https://safetysourceonline.com/video/aerial-lift-safety-ss1031be/',
       'https://www.youtube.com/watch?v=7tdfizoornI',
+      '', // sexual harassment
     ];
   }
 
   // FOREMAN
-  // Creates sections for Foreman, Adds sections to array
+  // Adds Foreman Section data to beginning of arrays
+  // Arrays will already contain all section data from Field Workers
   setSectionDataFM(): void {
     // array of section titles
-    this.titles = [
+    this.titles.unshift(
       'Equipment',
       'Accident Investigation',
       'Lock Out Tag Out',
       'Drug & Alcohol - Supervisors',
       'Near Miss Reporting',
-      'HCSS Reporting',
-      "PPE: It's Your Call",
-      'Hazardous Materials Labels',
-      'GHS: Safety Data Sheets',
-      'Ladder Safety',
-      'Sexual Harassment',
-      'Fire Prevention',
-      'First Aid',
-      'Basic Electrical Safety',
-      'Slips, Trips, & Falls',
-      'Trenching & Excavation',
-      'Fall Protection',
-      'Confined Space',
-      'Small Tools',
-      'Crystalline Silica Safety',
-      'Machine Guarding',
-      'Driving Safety',
-      'Rigging & Load Securement',
-      'Hand & Power Tool Safety',
-      'Heat Stress',
-      'Aerial Lift Safety',
-      'Working Around Equipment',
-    ];
+      'HCSS Reporting'
+    );
+
     // array of video links
-    this.links = [
-      '', // Equipment
-      'https://safetysourceonline.com/video/accident-investigation-for-everyone-2485-2/',
-      '',
-      'https://safetysourceonline.com/video/dealing-with-drug-and-alcohol-abuse-for-managers-and-supervisors-053/',
-      'https://safetysourceonline.com/video/evaluating-near-misses-to-prevent-accidents-bbcs1008-8-min/', // Near miss reporting
-      '', // HCSS
-      'https://safetysourceonline.com/video/ppebasic-training-1028b-12-min/',
-      'https://safetysourceonline.com/video/ghs-labels-ss2001fe/',
-      'https://safetysourceonline.com/video/ghs-safety-data-sheets-the-basics-ss2002fe/',
-      'https://safetysourceonline.com/video/ladder-safety-8019a-10-min/',
-      '', // sexual harassment
-      'https://safetysourceonline.com/video/to-the-point-about-fire-prevention-response-tp07/',
-      'https://safetysourceonline.com/video/first-aid-m209/',
-      'https://safetysourceonline.com/video/basic-electrical-safety-1085i-11-min/',
-      'https://safetysourceonline.com/video/slips-trips-falls-ss1064ie-5-concise-version/',
-      'https://safetysourceonline.com/video/13592/',
-      'https://safetysourceonline.com/video/fall-protection/',
-      'https://safetysourceonline.com/video/confined-space-entry-ss1055he-10-min/',
-      '', // small tools
-      'https://safetysourceonline.com/video/crystalline-silica-safety/',
-      'https://safetysourceonline.com/video/grinding-and-abrasive-wheels-ss040789/',
-      'https://safetysourceonline.com/video/choices-safe-driving-1078ie/',
-      '', // rigging & load securement
-      'https://safetysourceonline.com/video/hand-power-tool-safety-ss1094ie-10-min/',
-      'https://safetysourceonline.com/video/heat-stress-facts-and-prevention/',
-      'https://safetysourceonline.com/video/aerial-lift-safety-ss1031be/',
-      'https://www.youtube.com/watch?v=7tdfizoornI',
-    ];
+    this.links.unshift('', '', '', '', '', '');
+
+    // array of SPANISH video links
+    this.linksSpanish.unshift('', '', '', '', '', '');
   }
 
   // SHOP WORKERS & MECHANICS
-  // Creates sections for Shop Workers, Adds sections to array
+  // Adds section data to arrays
   setSectionDataSW(): void {
     // array of section titles
     this.titles = [
@@ -358,6 +319,7 @@ export class SectionsComponent implements OnInit {
       'Heat Stress',
       'Sexual Harassment',
     ];
+
     // array of video links
     this.links = [
       'https://safetysourceonline.com/video/ppe-its-your-call-1021b-12-min/',
@@ -380,6 +342,7 @@ export class SectionsComponent implements OnInit {
       '', // sexual harassment
     ];
 
+    // array of SPANISH video links
     this.linksSpanish = [
       'https://safetysourceonline.com/video/ppe-its-your-call-spanish-1021bs/',
       'https://safetysourceonline.com/video/ghs-hazardous-materials-labels-ss2001fs-8-min-spanish/',
@@ -403,7 +366,7 @@ export class SectionsComponent implements OnInit {
   }
 
   // TRUCK DRIVERS
-  // Creates sections for TRUCK DRIVERS, Adds sections to array
+  // Adds section data to arrays
   setSectionDataTD(): void {
     // array of section titles
     this.titles = [
@@ -419,6 +382,7 @@ export class SectionsComponent implements OnInit {
       'Driver Safety',
       'Sexual Harassment',
     ];
+
     // array of video links
     this.links = [
       'https://safetysourceonline.com/video/ppe-its-your-call-1021b-12-min/',
@@ -433,7 +397,8 @@ export class SectionsComponent implements OnInit {
       'https://safetysourceonline.com/video/10-4-defensive-driving-ss1087i-11-min/',
       '', // sexual harassment
     ];
-    // array of video links in SPANISH
+
+    // array of SPANISH video links
     this.linksSpanish = [
       'https://safetysourceonline.com/video/ppe-its-your-call-spanish-1021bs/',
       'https://safetysourceonline.com/video/ghs-hazardous-materials-labels-ss2001fs-8-min-spanish/',
