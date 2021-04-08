@@ -14,6 +14,7 @@ export class SectionsComponent implements OnInit {
     private router: Router
   ) {}
 
+  // ** GLOBAL VARIABLES **
   // array for holding Section objects
   sectionsArr: sectionModule.Section[] = [];
 
@@ -39,23 +40,55 @@ export class SectionsComponent implements OnInit {
     this.setVideoBtnMethods();
     this.setExamBtnMethods();
     this.setUpModal();
+    this.setUpSpanishVideoSwitch();
+  }
+
+  // Add onClick method for translation input switch
+  // Updates each section's link to either english or spanish while also updating videoBtn onClick method
+  setUpSpanishVideoSwitch(): void {
+    let translationInfo: HTMLElement = document.getElementById(
+      'translation-info'
+    ) as HTMLElement;
+    let videoSwitch: HTMLInputElement = document.getElementById(
+      'videoSwitch'
+    ) as HTMLInputElement;
+    let sections: sectionModule.Section[] = this.sectionsArr;
+    let spanishLinks: string[] = this.linksSpanish;
+    let englishLinks: string[] = this.links;
+
+    videoSwitch.addEventListener('click', function (): void {
+      let isSelected: boolean = videoSwitch.checked;
+      if (isSelected) {
+        // Update section's links to Spanish videos
+        translationInfo.textContent = 'For videos in English, click here';
+        for (let i = 0; i < sections.length; i++) {
+          sections[i].link = spanishLinks[i];
+        }
+      } else {
+        // Update section's links to English Videos
+        translationInfo.textContent = 'Para videos en español haga clic aquí';
+        for (let i = 0; i < sections.length; i++) {
+          sections[i].link = englishLinks[i];
+        }
+      }
+    });
   }
 
   // Add onClick methods for each videoBtn on the page
   // directs user to the corresponding video in a new tab / window
   setVideoBtnMethods(): void {
+    let sections: sectionModule.Section[] = this.sectionsArr;
     for (let i = 0; i < this.sectionsArr.length; i++) {
-      let videoLink = this.sectionsArr[i].link;
-
       document
         .getElementById('videoBtn' + i.toString())
         ?.addEventListener('click', function (): void {
-          if (videoLink === '') {
+          if (sections[i].link === '') {
             alert('Video Link Not Found.');
           } else {
+            console.log('OG method ' + sections[i].link);
             // open a new tab (or window depending on user's browser settings)
             // goes directly to the video
-            window.open(videoLink);
+            window.open(sections[i].link);
           }
         });
     }
