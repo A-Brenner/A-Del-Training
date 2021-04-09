@@ -118,6 +118,12 @@ input {
   white-space: pre-wrap;
 }
 
+#retryBtn {
+  color: $primary;
+  background-color: $secondary;
+  border-radius: 5px;
+}
+
 /* The Close Modal Button */
 .close {
   color: #aaa;

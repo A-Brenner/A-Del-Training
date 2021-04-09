@@ -91,7 +91,8 @@ export class ExamsComponent implements OnInit {
       let modal = document.querySelector('.modal') as HTMLElement;
       modal.style.display = 'block';
       let results = document.querySelector('.results') as HTMLElement;
-      results.textContent = `You have selected ${correctAnswers}/${questionsArr.length} or ${percentage}% correct answers.\r\nYou need at least 100% to pass the exam.`;
+      //results.textContent = `You have selected ${correctAnswers}/${questionsArr.length} or ${percentage}% correct answers.\r\nYou need at least 100% to pass the exam.`;
+      results.textContent = `You have selected ${correctAnswers}/${questionsArr.length} correct answers.`;
     }
   }
 
@@ -103,17 +104,6 @@ export class ExamsComponent implements OnInit {
       .getElementById('retryBtn')
       ?.addEventListener('click', function (): void {
         modal.style.display = 'none';
-
-        // Reset all selections
-        // for (let i = 0; i < questionsArr.length; i++) {
-        //   let currentChoices = document.getElementsByName(
-        //     questionsArr[i].questionNo.toString()
-        //   );
-        //   for (let j = 0; j < currentChoices.length; j++) {
-        //     let currChoice = currentChoices[j] as HTMLInputElement;
-        //     currChoice.checked = false;
-        //   }
-        // }
       });
 
     window.addEventListener('click', function (event): void {
@@ -142,28 +132,46 @@ export class ExamsComponent implements OnInit {
       // FIELD WORKER SECTIONS
       case "PPE: It's Your Call":
         this.questionList = [
-          'If you have a question about your protective equipment you should ask your supervisor before starting a task.',
-          'Which below are considered eye protection?',
-          'You should never wear _____ when working.',
-          'Rubber, vinyl or neoprene gloves provide protection against.',
-          'Different forms of hearing protection have different levels of effectiveness.',
-          'Goggles are stronger safety glasses.',
-          'Wearing hearing protection will usually result in injury.',
-          'PPE can reduce your chance of an injury.',
+          'When noise levels reach 85 decibels or above, hearing protection is required.',
+          'Which of the following can cause a severe eye injury if the proper protection is not worn?',
+          'PPE offers little or no protection if worn improperly.',
+          'Which of the following is a valid reason for not wearing PPE when required?',
+          'How often should you inspect your PPE to ensure it’s in good condition and functioning properly?',
+          'What purpose does a hard hat serve?',
+          'Whose responsibility is it to wear the required PPE?',
+          'Whose responsibility is it to provide the required PPE?',
+          'Which of the following are considered PPE?',
+          'When working with chemicals, safety glasses offer adequate eye protection.',
+          'Who makes the choice to wear PPE when required?',
+          'All gloves offer the same basic level of protection.',
         ];
 
         this.choicesList = [
           ['True', 'False'],
-          ['Safety glasses', 'Goggles', 'Face-shield', 'All of the Above'],
-          ['Eye protection', 'Sandals', 'Hard hat', 'Work boots'],
-          ['Corrosive chemicals', 'Splinters', 'Heat', 'None of the Above'],
+          ['Flying metal chips', 'Nails', 'Chemicals', 'All of the above'],
           ['True', 'False'],
+          [
+            'You are busy',
+            'You are just doing one quick job',
+            "It's uncomfortable",
+            'None of the above',
+          ],
+          ['Before each use', 'Once a week', 'Once a month', 'When needed'],
+          [
+            'Protection from falling objects',
+            'Protection from overhead hazards',
+            'Hearing protection',
+            'A and B',
+          ],
+          ['Yours', 'The company', 'OSHA', 'B and C'],
+          ['Yours', 'The company', 'OSHA', 'B and C'],
+          ['Safety glasses', 'Ear plugs', 'Gloves', 'All of the above'],
           ['True', 'False'],
-          ['True', 'False'],
+          ['You', 'Your company', 'Your supervisor', 'OSHA'],
           ['True', 'False'],
         ];
 
-        this.answersList = [0, 3, 1, 0, 0, 0, 1, 0];
+        this.answersList = [0, 3, 0, 3, 0, 3, 0, 1, 3, 1, 0, 1];
         break;
       case 'Hazardous Materials Labels':
         this.questionList = [
@@ -370,32 +378,42 @@ export class ExamsComponent implements OnInit {
 
       case 'Slips, Trips, & Falls':
         this.questionList = [
-          'Which is an example of “best practices” which can help prevent slips, trips, and falls?',
-          'A key to preventing injuries caused by slips, trips and falls is recognizing and respecting potential hazards in your work environment.',
-          'Which is a common cause of trips in the work environment?',
-          'Good housekeeping is an important element of safe work practices for preventing slips, trips and falls.',
+          'How many points of contact should you maintain when climbing or descending a ladder?',
+          'All slips and falls can be tracked back to five basic causes.',
+          'Which of the following can cause a slip and fall injury?',
+          'Shoes that are appropriate in summer may not be appropriate in winter months.',
+          'Which of the following should a good work shoe have?',
+          'There are no slip and fall hazards in the leasing office.',
+          'Preventing slips and falls takes commitment from _________.',
+          'Traction is irrelevant when walking on snow and ice and overshoes are ineffective.',
+          'Carrying items can impact your balance and cause you to lose footing.',
+          'You should always use the handrail when using stairs.',
         ];
 
         this.choicesList = [
+          ['1', '2', '3', '4'],
+          ['True', 'False'],
           [
-            'Good housekeeping',
-            'Closing all drawers and cabinet doors',
-            'Cleaning up spills immediately',
-            'Wearing proper shoes',
+            'Stepping off a curb',
+            'Grease on concrete or blacktop',
+            'Loose carpeting',
             'All of the above',
           ],
           ['True', 'False'],
           [
-            'Uneven surfaces',
-            'Non-secured cables and cords',
-            'Obstructed views',
-            'Changes in surface elevations',
+            'Covered toes',
+            'Firm but comfortable fit',
+            'Slip-resistant sole',
             'All of the above',
           ],
+          ['True', 'False'],
+          ['You', 'Co-workers', 'Everyone', 'None of the above'],
+          ['True', 'False'],
+          ['True', 'False'],
           ['True', 'False'],
         ];
 
-        this.answersList = [4, 0, 4, 0];
+        this.answersList = [2, 0, 3, 0, 3, 1, 2, 1, 0, 0];
         break;
       case 'Trenching & Excavation':
         this.questionList = [
@@ -473,6 +491,159 @@ export class ExamsComponent implements OnInit {
         this.answersList = [3, 0, 3, 2, 1, 1, 0, 1, 0, 0];
         break;
 
+      case 'Confined Space':
+        this.questionList = [
+          'A confined space is not primarily designed or intended for continuous human occupancy and has limited or restricted entrance or exit.',
+          'Which of these are hazards in a Confined Space?',
+          'Confined Spaces have special hazards not normally present in other work environments.',
+          'Risk Assessments are required before entering any Confined Space.',
+          'A permit is required to enter every confined space.',
+          'Confined Spaces must be marked with proper signage.',
+          'Poor air quality is the most common hazard in a Confined Space.',
+          'People who enter confined spaces for rescue purposes can become a victim themselves.',
+          'Air Testing is only required for Permit Required spaces.',
+          'Ventilation of a confined space can help improve air quality.',
+        ];
+
+        this.choicesList = [
+          ['True', 'False'],
+          ['Poor air quality', 'Collapse', 'Slips & Falls', 'All of the above'],
+          ['True', 'False'],
+          ['True', 'False'],
+          ['True', 'False'],
+          ['True', 'False'],
+          ['True', 'False'],
+          ['True', 'False'],
+          ['True', 'False'],
+          ['True', 'False'],
+        ];
+
+        this.answersList = [0, 3, 0, 0, 1, 0, 0, 0, 1, 0];
+        break;
+
+      case 'Hand & Power Tool Safety':
+        this.questionList = [
+          'Which of these are considered hand tools?',
+          "If you don't have a chisel, a screwdriver may be used safely.",
+          'How often should you inspect your hand or power tools.',
+          'Frayed electrical cords should be taped over and used.',
+          'Loose clothing can get caught in moving parts of tools.',
+          'Never carry a power tool by its cord.',
+          'To unplug a powered tool from an outlet, you should pull on the ____________.',
+          'You should unplug tools before performing any maintenance.',
+          'Good footing and balance can help keep you safe while using hand & power tools.',
+          'Many injuries occur from using tools and getting distracted.',
+        ];
+
+        this.choicesList = [
+          ['Pliers', 'Wrench', 'Screwdriver', 'All of the above'],
+          ['True', 'False'],
+          ['Before each use', 'Weekly', 'Monthly', 'As needed'],
+          ['True', 'False'],
+          ['True', 'False'],
+          ['True', 'False'],
+          ['Cord', 'Plug'],
+          ['True', 'False'],
+          ['True', 'False'],
+          ['True', 'False'],
+        ];
+
+        this.answersList = [3, 1, 0, 1, 0, 0, 1, 0, 0, 0];
+        break;
+      case 'Crystalline Silica Safety':
+        this.questionList = [
+          'OSHA states that a _________ person must be head of this program.',
+          'Any worker exposed to silica for 30 or more days per year must be offered a medical exam at least once every ______.',
+          'Respirable crystalline silica are the small particles created when',
+          'You should always',
+          'What are the four engineering controls that can be put in place?',
+          'If you are required to use respirators....',
+          'Silicosis is a _______',
+          'Crystalline silica, also referred to as Silicon dioxide, is also know as',
+        ];
+
+        this.choicesList = [
+          ['Boss', 'Employee', 'Geologist', 'Competent'],
+          ['Two years', 'Three years', 'Five years', 'Four years'],
+          ['Eating', 'Running', 'Cutting and crushing stone', 'Sleeping'],
+          [
+            'Be sure the respirator you are using is rated for crystalline silica',
+            'Work fast without PPE',
+            'Sleep after inhaling dust',
+            'Check the weathr report for rain',
+          ],
+          [
+            'Substitution, isolation, ventilation, and dust suppression',
+            'Substitution, solutions, mask control, and PPE',
+            'Ventilation, PPE, dust catchers, and lights',
+            'None of the above',
+          ],
+          [
+            "You're going to need an extra strong helmet",
+            'You should ask what brand is good',
+            'You should buy one',
+            'Your company will need to have a written respiratory program in place',
+          ],
+          ['Incurable lung disease', 'Work protocol', 'Type of rock', 'Dust'],
+          ['S100', 's222', 'SiO2', 'E40'],
+        ];
+
+        this.answersList = [3, 1, 2, 0, 0, 3, 0, 2];
+        break;
+      case 'Machine Guarding':
+        this.questionList = [
+          'Electrical interlocks are often used in place of machine guarding to protect employees.',
+          'Long hair, loose clothing and jewelry may be worn around moving machinery as long as you keep these items away from the point of operation.',
+          'Fixed guards are stationary protectors that are easy to remove.',
+          'You should re-check the position of adjustable guarding when the size or shape of the working material changes.',
+          'Pressure-sensitive mats are only used to shut down a machine when a worker steps onto the mat.',
+        ];
+
+        this.choicesList = [
+          ['True', 'False'],
+          ['True', 'False'],
+          ['True', 'False'],
+          ['True', 'False'],
+          ['True', 'False'],
+        ];
+
+        this.answersList = [1, 1, 1, 0, 1];
+        break;
+      case 'Driving Safety':
+        this.questionList = [
+          'In inclement weather, you should increase your following distance.',
+          'What is the minimum safe following distance?',
+          'Who has a responsibility to drive safely?',
+          'How far should you look ahead in traffic to effectively be able to react to changing circumstances?',
+          'Using your turn signal is a good way to inform other drivers of your intentions.',
+          'Intersections are where most accidents occur.',
+          'Every vehicle has a blind spot.',
+          'You should stare and focus your attention straight ahead at all times to avoid distraction.',
+          'Who is responsible for your safety?',
+          "You should be aware of what's going on _________ of your vehicle at all times.",
+        ];
+
+        this.choicesList = [
+          ['True', 'False'],
+          ['2 seconds', '3 seconds', '4 seconds', '6 seconds'],
+          [
+            'You',
+            'Professional  drivers',
+            'People who drive as part of their job',
+            'All of the above',
+            'B and C only',
+          ],
+          ['4 seconds', '6 seconds', '8 seconds', '10 seconds'],
+          ['True', 'False'],
+          ['True', 'False'],
+          ['True', 'False'],
+          ['True', 'False'],
+          ['You', 'The other driver', 'Highway patrol', 'OSHA'],
+          ['In front', 'Behind', 'To the sides', 'All of the above'],
+        ];
+
+        this.answersList = [0, 2, 3, 3, 0, 0, 0, 1, 0, 3];
+        break;
       //case '':
       // this.questionList = [
       //   '',
@@ -502,7 +673,6 @@ export class ExamsComponent implements OnInit {
 
       // this.answersList = [];
       // break;
-
       default:
         alert('Exam Not Found');
         break;

@@ -270,7 +270,6 @@ export class SectionsComponent implements OnInit {
       'Trenching & Excavation',
       'Fall Protection',
       'Confined Space',
-      'Small Tools', // Same as Hand & Power Tools???
       'Crystalline Silica Safety',
       'Machine Guarding',
       'Driving Safety',
@@ -293,7 +292,6 @@ export class SectionsComponent implements OnInit {
       'https://safetysourceonline.com/video/13592/',
       'https://safetysourceonline.com/video/fall-protection/',
       'https://safetysourceonline.com/video/confined-space-entry-ss1055he-10-min/',
-      'https://safetysourceonline.com/video/hand-power-tool-safety-ss1094ie-10-min/', // small tools same link as Power & Hand tools
       'https://safetysourceonline.com/video/crystalline-silica-safety/',
       'https://safetysourceonline.com/video/machine-guarding-operatorsafety-m4757e/',
       'https://safetysourceonline.com/video/10-4-defensive-driving-ss1087i-11-min/',
@@ -316,7 +314,6 @@ export class SectionsComponent implements OnInit {
       'https://safetysourceonline.com/video/trenching-and-shoring-excavation-safety-ssc003e-13-min-spanish/',
       'https://safetysourceonline.com/video/fall-protection-ssc0023as-10-min-spanish/',
       'https://safetysourceonline.com/video/confined-space-entry-ss1055hs-10-min-spanish/',
-      'https://safetysourceonline.com/video/hand-power-tool-safety-ss1094is-10-min-spanish/',
       'https://safetysourceonline.com/video/crystalline-silica-safety-spanish/',
       'https://safetysourceonline.com/video/httpssafetysourceonline-commachine-guarding-operator-safety-4757-spanish/',
       'https://safetysourceonline.com/video/10-4-defensive-driving-ss1087is-11-min-spanish/',
