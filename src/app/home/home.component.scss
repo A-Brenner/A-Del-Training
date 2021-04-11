@@ -15,8 +15,11 @@ body {
 
 h1 {
   padding: 0.5em;
+  margin-bottom: 0px;
   font-size: xx-large;
   font-weight: bold;
+  text-decoration: underline;
+  text-decoration-color: $primary;
   text-align: center;
   color: $primary;
   font-family: fantasy, Georgia, "Times New Roman", Times, serif;
@@ -25,11 +28,14 @@ h1 {
 h5 {
   color: $primary;
   font-family: fantasy, Georgia, "Times New Roman", Times, serif;
+  padding: 0.5em;
+  margin-bottom: 0px;
 }
 
 p {
   color: $primary;
-  margin-top: 1em;
+  padding: 0.5em;
+  margin-bottom: 0px;
 }
 
 input {

@@ -31,31 +31,55 @@ export class AppComponent {
     });
   }
 
-  resizeNavBar(): void {
-    console.log('resizing... width:: ' + window.innerWidth);
-  }
-
   // Calculates the distance between the nav-bar links and the Logo
   // Returns that distance
-  calculateDistance(): number {
-    let navLinks = document.getElementById('nav-links');
-    let navLogo = document.getElementById('nav-logo');
-    let windowWidth = window.innerWidth;
-    let navLinksWidth = navLinks?.offsetWidth;
-    let logoWidth = navLogo?.offsetWidth;
-    let distanceLogotoLinks: number = 0;
 
-    if (navLinksWidth && logoWidth) {
-      distanceLogotoLinks = windowWidth - (navLinksWidth + logoWidth);
+  resizeNavBar(): void {
+    console.log('resizing... width:: ' + window.innerWidth);
+    let navLinks: HTMLElement = document.getElementById(
+      'nav-links'
+    ) as HTMLElement;
+    let homeLink: HTMLElement = document.getElementById(
+      'nav-training-programs'
+    ) as HTMLElement;
+    let trainingProgramsLink: HTMLElement = document.getElementById(
+      'nav-home'
+    ) as HTMLElement;
+    let navLogo: HTMLInputElement = document.getElementById(
+      'nav-logo'
+    ) as HTMLInputElement;
+    let windowWidth: number = window.innerWidth;
+    let navLinksWidth: number = navLinks?.offsetWidth;
+    let logoWidth: number = navLogo?.offsetWidth;
+    // Calculates the distance between the nav-bar links and the Logo
+    let distanceLogotoLinks: number = windowWidth - (navLinksWidth + logoWidth);
+
+    let currentSize: string = homeLink.style.fontSize;
+    console.log(currentSize);
+    let style = window
+      .getComputedStyle(homeLink, null)
+      .getPropertyValue('font-size');
+    let currentFontSize = parseFloat(style);
+    console.log('Font-size: ' + currentFontSize);
+
+    console.log('Distance: ' + distanceLogotoLinks);
+
+    if (distanceLogotoLinks <= 10) {
+      homeLink.style.fontSize = currentFontSize - 0.5 + 'px';
+      trainingProgramsLink.style.fontSize = currentFontSize - 0.5 + 'px';
+    } else {
+      if (currentFontSize < 16) {
+        homeLink.style.fontSize = currentFontSize + 0.5 + 'px';
+        trainingProgramsLink.style.fontSize = currentFontSize + 0.5 + 'px';
+      }
     }
-
-    return distanceLogotoLinks;
   }
 
   // component start-up
   ngOnInit(): void {
     this.setUpTrainingProgramsBtn();
-    //this.checkLanguage();
     window.addEventListener('resize', this.resizeNavBar);
   }
+
+  ngAfterViewInit(): void {}
 }

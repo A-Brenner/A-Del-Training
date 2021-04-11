@@ -55,36 +55,36 @@ header {
     }
   }
 
-  // Adjusts nav-links font size for small screen widths
-  @media screen and (max-width: 360px) {
-    a {
-      font-size: smaller;
-    }
-  }
+  // // Adjusts nav-links font size for small screen widths
+  // @media screen and (max-width: 335px) {
+  //   a {
+  //     font-size: smaller;
+  //   }
+  // }
 
-  @media screen and (max-width: 305px) {
-    a {
-      font-size: x-small;
-    }
-  }
+  // @media screen and (max-width: 305px) {
+  //   a {
+  //     font-size: x-small;
+  //   }
+  // }
 
-  @media screen and (max-width: 260px) {
-    a {
-      font-size: xx-small;
-    }
-  }
+  // @media screen and (max-width: 260px) {
+  //   a {
+  //     font-size: xx-small;
+  //   }
+  // }
 
-  @media screen and (max-width: 245px) {
-    a {
-      font-size: 7px;
-    }
-  }
+  // @media screen and (max-width: 245px) {
+  //   a {
+  //     font-size: 7px;
+  //   }
+  // }
 
-  @media screen and (max-width: 215px) {
-    a {
-      font-size: 0px;
-    }
-  }
+  // @media screen and (max-width: 215px) {
+  //   a {
+  //     font-size: 0px;
+  //   }
+  // }
 
   nav {
     float: right;
