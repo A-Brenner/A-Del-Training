@@ -55,7 +55,5 @@ export class IndustriesComponent implements OnInit {
     window.localStorage.setItem('latestProgram', this.trainingProgram);
   }
 
-  ngOnInit(): void {
-    console.log('industries...');
-  }
+  ngOnInit(): void {}
 }

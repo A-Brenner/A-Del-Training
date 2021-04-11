@@ -173,6 +173,7 @@ export class ExamsComponent implements OnInit {
 
         this.answersList = [0, 3, 0, 3, 0, 3, 0, 1, 3, 1, 0, 1];
         break;
+
       case 'Hazardous Materials Labels':
         this.questionList = [
           'The label contains information about the chemical inside the container.',
@@ -198,6 +199,7 @@ export class ExamsComponent implements OnInit {
 
         this.answersList = [0, 0, 1, 0, 0, 1, 0, 0];
         break;
+
       case 'GHS: Safety Data Sheets':
         this.questionList = [
           'What does SDS stand for?',
@@ -238,6 +240,7 @@ export class ExamsComponent implements OnInit {
 
         this.answersList = [2, 0, 4, 0, 0, 1, 3, 0, 0, 1];
         break;
+
       case 'Ladder Safety':
         this.questionList = [
           'Falls from ladders usually result in only minor injuries.',
@@ -278,6 +281,7 @@ export class ExamsComponent implements OnInit {
 
         this.answersList = [1, 1, 0, 3, 0, 1, 2, 2];
         break;
+
       case 'Fire Prevention':
         this.questionList = [
           'Which of the following conditions must be met before using a fire extinguisher to put out a fire?',
@@ -309,6 +313,7 @@ export class ExamsComponent implements OnInit {
 
         this.answersList = [];
         break;
+
       case 'First Aid':
         this.questionList = [
           'The definition of a "compound" fracture is one that _________.',
@@ -340,6 +345,7 @@ export class ExamsComponent implements OnInit {
 
         this.answersList = [0, 0, 1, 1, 0, 1, 0];
         break;
+
       case 'Basic Electrical Safety':
         this.questionList = [
           'Insulators like wood can become conductors when they become wet.',
@@ -415,6 +421,7 @@ export class ExamsComponent implements OnInit {
 
         this.answersList = [2, 0, 3, 0, 3, 1, 2, 1, 0, 0];
         break;
+
       case 'Trenching & Excavation':
         this.questionList = [
           'Trench cave-ins are predictable and preventable.',
@@ -521,35 +528,6 @@ export class ExamsComponent implements OnInit {
         this.answersList = [0, 3, 0, 0, 1, 0, 0, 0, 1, 0];
         break;
 
-      case 'Hand & Power Tool Safety':
-        this.questionList = [
-          'Which of these are considered hand tools?',
-          "If you don't have a chisel, a screwdriver may be used safely.",
-          'How often should you inspect your hand or power tools.',
-          'Frayed electrical cords should be taped over and used.',
-          'Loose clothing can get caught in moving parts of tools.',
-          'Never carry a power tool by its cord.',
-          'To unplug a powered tool from an outlet, you should pull on the ____________.',
-          'You should unplug tools before performing any maintenance.',
-          'Good footing and balance can help keep you safe while using hand & power tools.',
-          'Many injuries occur from using tools and getting distracted.',
-        ];
-
-        this.choicesList = [
-          ['Pliers', 'Wrench', 'Screwdriver', 'All of the above'],
-          ['True', 'False'],
-          ['Before each use', 'Weekly', 'Monthly', 'As needed'],
-          ['True', 'False'],
-          ['True', 'False'],
-          ['True', 'False'],
-          ['Cord', 'Plug'],
-          ['True', 'False'],
-          ['True', 'False'],
-          ['True', 'False'],
-        ];
-
-        this.answersList = [3, 1, 0, 1, 0, 0, 1, 0, 0, 0];
-        break;
       case 'Crystalline Silica Safety':
         this.questionList = [
           'OSHA states that a _________ person must be head of this program.',
@@ -590,6 +568,7 @@ export class ExamsComponent implements OnInit {
 
         this.answersList = [3, 1, 2, 0, 0, 3, 0, 2];
         break;
+
       case 'Machine Guarding':
         this.questionList = [
           'Electrical interlocks are often used in place of machine guarding to protect employees.',
@@ -609,6 +588,7 @@ export class ExamsComponent implements OnInit {
 
         this.answersList = [1, 1, 1, 0, 1];
         break;
+
       case 'Driving Safety':
         this.questionList = [
           'In inclement weather, you should increase your following distance.',
@@ -644,35 +624,295 @@ export class ExamsComponent implements OnInit {
 
         this.answersList = [0, 2, 3, 3, 0, 0, 0, 1, 0, 3];
         break;
-      //case '':
-      // this.questionList = [
-      //   '',
-      //   '',
-      //   '',
-      //   '',
-      //   '',
-      //   '',
-      //   '',
-      //   '',
-      //   '',
-      //   '',
-      // ];
 
-      // this.choicesList = [
-      //   [''],
-      //   [''],
-      //   [''],
-      //   [''],
-      //   [''],
-      //   [''],
-      //   [''],
-      //   [''],
-      //   [''],
-      //   ['']
-      // ];
+      case 'Rigging & Load Securement':
+        this.questionList = [
+          'Never leave a suspended load unattended.',
+          'To signal an emergency stop, extend both arms out with palms down, and move your arms horizontally.',
+          'It is safe to use a hook with a bent safety latch.',
+          'Which of the following is not a type of hitch used in rigging operations',
+          'The most common hazard that a rigger faces is electrocution',
+          'Slings are made of which of the following materials?',
+          'A chain sling should never be used to lift heavy loads.',
+        ];
 
-      // this.answersList = [];
-      // break;
+        this.choicesList = [
+          ['True', 'False'],
+          ['True', 'False'],
+          ['True', 'False'],
+          ['Basket', 'Choker', 'Horizontal', 'Vertical'],
+          ['True', 'False'],
+          [
+            'Wire rope',
+            'Chain',
+            'Metal mesh',
+            'Synthetic fabric',
+            'All of the above',
+          ],
+          ['True', 'False'],
+        ];
+
+        this.answersList = [0, 0, 1, 2, 0, 4, 1];
+        break;
+
+      case 'Hand & Power Tool Safety':
+        this.questionList = [
+          'Which of these are considered hand tools?',
+          "If you don't have a chisel, a screwdriver may be used safely.",
+          'How often should you inspect your hand or power tools.',
+          'Frayed electrical cords should be taped over and used.',
+          'Loose clothing can get caught in moving parts of tools.',
+          'Never carry a power tool by its cord.',
+          'To unplug a powered tool from an outlet, you should pull on the ____________.',
+          'You should unplug tools before performing any maintenance.',
+          'Good footing and balance can help keep you safe while using hand & power tools.',
+          'Many injuries occur from using tools and getting distracted.',
+        ];
+
+        this.choicesList = [
+          ['Pliers', 'Wrench', 'Screwdriver', 'All of the above'],
+          ['True', 'False'],
+          ['Before each use', 'Weekly', 'Monthly', 'As needed'],
+          ['True', 'False'],
+          ['True', 'False'],
+          ['True', 'False'],
+          ['Cord', 'Plug'],
+          ['True', 'False'],
+          ['True', 'False'],
+          ['True', 'False'],
+        ];
+
+        this.answersList = [3, 1, 0, 1, 0, 0, 1, 0, 0, 0];
+        break;
+
+      case 'Heat Stress':
+        this.questionList = ['', '', '', '', '', '', '', '', '', ''];
+
+        this.choicesList = [
+          [''],
+          [''],
+          [''],
+          [''],
+          [''],
+          [''],
+          [''],
+          [''],
+          [''],
+          [''],
+        ];
+
+        this.answersList = [];
+        break;
+
+      case '':
+        this.questionList = ['', '', '', '', '', '', '', '', '', ''];
+
+        this.choicesList = [
+          [''],
+          [''],
+          [''],
+          [''],
+          [''],
+          [''],
+          [''],
+          [''],
+          [''],
+          [''],
+        ];
+
+        this.answersList = [];
+        break;
+
+      case '':
+        this.questionList = ['', '', '', '', '', '', '', '', '', ''];
+
+        this.choicesList = [
+          [''],
+          [''],
+          [''],
+          [''],
+          [''],
+          [''],
+          [''],
+          [''],
+          [''],
+          [''],
+        ];
+
+        this.answersList = [];
+        break;
+
+      case '':
+        this.questionList = ['', '', '', '', '', '', '', '', '', ''];
+
+        this.choicesList = [
+          [''],
+          [''],
+          [''],
+          [''],
+          [''],
+          [''],
+          [''],
+          [''],
+          [''],
+          [''],
+        ];
+
+        this.answersList = [];
+        break;
+
+      case '':
+        this.questionList = ['', '', '', '', '', '', '', '', '', ''];
+
+        this.choicesList = [
+          [''],
+          [''],
+          [''],
+          [''],
+          [''],
+          [''],
+          [''],
+          [''],
+          [''],
+          [''],
+        ];
+
+        this.answersList = [];
+        break;
+
+      case '':
+        this.questionList = ['', '', '', '', '', '', '', '', '', ''];
+
+        this.choicesList = [
+          [''],
+          [''],
+          [''],
+          [''],
+          [''],
+          [''],
+          [''],
+          [''],
+          [''],
+          [''],
+        ];
+
+        this.answersList = [];
+        break;
+
+      case '':
+        this.questionList = ['', '', '', '', '', '', '', '', '', ''];
+
+        this.choicesList = [
+          [''],
+          [''],
+          [''],
+          [''],
+          [''],
+          [''],
+          [''],
+          [''],
+          [''],
+          [''],
+        ];
+
+        this.answersList = [];
+        break;
+
+      case '':
+        this.questionList = ['', '', '', '', '', '', '', '', '', ''];
+
+        this.choicesList = [
+          [''],
+          [''],
+          [''],
+          [''],
+          [''],
+          [''],
+          [''],
+          [''],
+          [''],
+          [''],
+        ];
+
+        this.answersList = [];
+        break;
+
+      case '':
+        this.questionList = ['', '', '', '', '', '', '', '', '', ''];
+
+        this.choicesList = [
+          [''],
+          [''],
+          [''],
+          [''],
+          [''],
+          [''],
+          [''],
+          [''],
+          [''],
+          [''],
+        ];
+
+        this.answersList = [];
+        break;
+
+      case '':
+        this.questionList = ['', '', '', '', '', '', '', '', '', ''];
+
+        this.choicesList = [
+          [''],
+          [''],
+          [''],
+          [''],
+          [''],
+          [''],
+          [''],
+          [''],
+          [''],
+          [''],
+        ];
+
+        this.answersList = [];
+        break;
+
+      case '':
+        this.questionList = ['', '', '', '', '', '', '', '', '', ''];
+
+        this.choicesList = [
+          [''],
+          [''],
+          [''],
+          [''],
+          [''],
+          [''],
+          [''],
+          [''],
+          [''],
+          [''],
+        ];
+
+        this.answersList = [];
+        break;
+
+      case '':
+        this.questionList = ['', '', '', '', '', '', '', '', '', ''];
+
+        this.choicesList = [
+          [''],
+          [''],
+          [''],
+          [''],
+          [''],
+          [''],
+          [''],
+          [''],
+          [''],
+          [''],
+        ];
+
+        this.answersList = [];
+        break;
+
       default:
         alert('Exam Not Found');
         break;

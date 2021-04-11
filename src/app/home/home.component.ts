@@ -8,11 +8,12 @@ import { Router } from '@angular/router';
   styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent implements OnInit {
+  constructor(private router: Router) {}
+
   title: string = 'A-Del Training';
   fName: any = '';
   lName: any = '';
   hasName: boolean = false;
-  constructor(private router: Router) {}
 
   // onClick Method
   // Takes user to the Industries page
@@ -75,6 +76,5 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
     //window.localStorage.clear();
     this.hasName = this.doesNameExist();
-    console.log(document.getElementById('nav-training-programs'));
   }
 }
