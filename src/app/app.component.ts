@@ -64,15 +64,15 @@ export class AppComponent {
 
     console.log('Distance: ' + distanceLogotoLinks);
 
-    if (distanceLogotoLinks <= 5) {
-      homeLink.style.fontSize = currentFontSize - 1 + 'px';
-      trainingProgramsLink.style.fontSize = currentFontSize - 1 + 'px';
-    } else if (distanceLogotoLinks >= 20) {
-      if (currentFontSize < 16) {
-        homeLink.style.fontSize = currentFontSize + 1 + 'px';
-        trainingProgramsLink.style.fontSize = currentFontSize + 1 + 'px';
-      }
-    }
+    // if (distanceLogotoLinks <= 5) {
+    //   homeLink.style.fontSize = currentFontSize - 1 + 'px';
+    //   trainingProgramsLink.style.fontSize = currentFontSize - 1 + 'px';
+    // } else if (distanceLogotoLinks >= 20) {
+    //   if (currentFontSize < 16) {
+    //     homeLink.style.fontSize = currentFontSize + 1 + 'px';
+    //     trainingProgramsLink.style.fontSize = currentFontSize + 1 + 'px';
+    //   }
+    // }
   }
 
   // component start-up
