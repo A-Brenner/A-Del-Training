@@ -686,24 +686,39 @@ export class ExamsComponent implements OnInit {
         break;
 
       case 'Heat Stress':
-        this.questionList = ['', '', '', '', '', '', '', '', '', ''];
-
-        this.choicesList = [
-          [''],
-          [''],
-          [''],
-          [''],
-          [''],
-          [''],
-          [''],
-          [''],
-          [''],
-          [''],
+        this.questionList = [
+          'How much water should you drink per hour?',
+          'Your body has way of remembering heat illness and is easily affected by the heat the next day.',
+          'You should drink water after you drink a sports drink.',
+          'When will water be provided for you?',
+          'What should you do to prevent heat stress?',
+          'How can you prevent heat stress?',
+          'How long does it take to get acclimated to the heat?',
         ];
 
-        this.answersList = [];
+        this.choicesList = [
+          ['1 gallon', '1 quart', '1 half gallon', '1 cup'],
+          ['True', 'False'],
+          ['True', 'False'],
+          [
+            "When it's over 80 degrees",
+            'Between April 1st & October 1',
+            'All year around',
+          ],
+          [
+            'Avoid Caffeine',
+            'Avoid sugary / salty foods',
+            'Avoid Alchohol',
+            'All of the above',
+          ],
+          ['Get in the shade', 'Rest', 'Drink water', 'All of the above'],
+          ['1 day', '2 to 4 hours', '4 days to 2 weeks', '1 month'],
+        ];
+
+        this.answersList = [1, 0, 0, 2, 3, 3, 2];
         break;
 
+      // ** SHOP WORKERS & MECHANICS **
       case '':
         this.questionList = ['', '', '', '', '', '', '', '', '', ''];
 

@@ -372,7 +372,7 @@ export class SectionsComponent implements OnInit {
       'First Aid',
       'Basic Electrical Safety',
       'Machine Guarding',
-      'Hand & Power Tools',
+      'Hand & Power Tool Safety',
       'Aerial Lift Safety',
       'Forklift Safety',
       'Welding & Cutting',
