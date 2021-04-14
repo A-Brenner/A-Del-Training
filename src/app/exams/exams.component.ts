@@ -719,80 +719,170 @@ export class ExamsComponent implements OnInit {
         break;
 
       // ** SHOP WORKERS & MECHANICS **
-      case '':
-        this.questionList = ['', '', '', '', '', '', '', '', '', ''];
-
-        this.choicesList = [
-          [''],
-          [''],
-          [''],
-          [''],
-          [''],
-          [''],
-          [''],
-          [''],
-          [''],
-          [''],
+      case 'Aerial Lift Safety':
+        this.questionList = [
+          'The operating controls on the ground unit are to assist the operator _______________.',
+          'When operating around other equipment take the necessary precautions to prevent a collision by use of warnings such as:',
+          'With the side covers removed, check the hydraulic and fuel systems for ______________ and any other components your company may require.',
+          'While each type of lift has several safety precautions, basic safe operating procedures should be followed ______________ operation on any aerial platform.',
+          'If any of the controls do not work properly or there is any other malfunction:',
+          'If you have a history of dizziness, seizures or are uncomfortable working above ground you should:',
+          'M.S.A.D. stands for:',
+          'If you discover any problems while operating the lift:',
+          'To use the platform you must first make sure that the operator manual for the model and type of lift is ______________.',
+          'The Aerial Lift should be inspected ______________.',
         ];
 
-        this.answersList = [];
+        this.choicesList = [
+          [
+            'In case of an emergency',
+            'If they need to take a break',
+            'If they need assistance from a co-worker',
+            'If they need a better view from the ground',
+          ],
+          ['Flags', 'Flashing lights', 'Barricades', 'All of the above'],
+          [
+            'Leaks',
+            'Cables and wiring harness',
+            'Fan belts',
+            'All of the above',
+          ],
+          ['During', 'Before', 'After', 'All of the above'],
+          [
+            'Try to fix the problem yourself',
+            'Ask a co-worker for help',
+            'Tag out the machine and report the problem',
+            'Find a new machine to use',
+          ],
+          [
+            'Ask a co-worker for help',
+            "Get a doctor's note",
+            'Not operate aerial lifts',
+            'Have someone supervise you while operating',
+          ],
+          [
+            'Minimum Safe Approach Distance',
+            'Maximum Safe Approach Distance',
+            'Maximum Safe Approval Distance',
+            'Majority Safe Approach Distance',
+          ],
+          [
+            'Look in your manual',
+            'Report them to your supervisor',
+            'Ask your co-workers',
+            'Figure out the problem yourself',
+          ],
+          [
+            'On the equipment',
+            'Up to date',
+            'Passed around to each employee',
+            'None of the above',
+          ],
+          [
+            'Once a week',
+            'Before use each day',
+            'At the beginning of each shift',
+            'B and C',
+          ],
+        ];
+
+        this.answersList = [0, 3, 3, 3, 2, 2, 0, 1, 0, 3];
         break;
 
-      case '':
-        this.questionList = ['', '', '', '', '', '', '', '', '', ''];
-
-        this.choicesList = [
-          [''],
-          [''],
-          [''],
-          [''],
-          [''],
-          [''],
-          [''],
-          [''],
-          [''],
-          [''],
+      case 'Forklift Safety':
+        this.questionList = [
+          'When the combined center of gravity shifts outside of the stability triangle, the forklift will be unstable and may tip over.',
+          'You should back down a ramp when carrying a load on a lift truck.',
+          'When traveling in areas frequented by pedestrians, the pedestrians always have the right of way.',
+          'A forklift weighs ___________ a typical car.',
+          'What should you do before lifting a load?',
+          'Forklift operators must be trained on the specific type of powered industrial they will be certified to operate.',
+          'The distance from the mast to the center of gravity of the load is called the __________.',
+          'When following another vehicle, you should maintain a _______ truck distance between you and the other vehicle.',
+          'The pre-operational inspection of a forklift should be performed once a week.',
         ];
 
-        this.answersList = [];
+        this.choicesList = [
+          ['True', 'False'],
+          ['True', 'False'],
+          ['True', 'False'],
+          ['The same as', 'More than', 'Less than'],
+          [
+            'Make sure the load is secure',
+            "Make sure the load doesn't exceed the forklift's lifting capacity",
+            'Both A and B',
+          ],
+          ['True', 'False'],
+          ['Load midpoint', 'Load interior', 'Load center'],
+          ['One', 'Two', 'Three'],
+          ['True', 'False'],
+        ];
+
+        this.answersList = [0, 0, 0, 1, 2, 0, 2, 2, 1];
         break;
 
-      case '':
-        this.questionList = ['', '', '', '', '', '', '', '', '', ''];
-
-        this.choicesList = [
-          [''],
-          [''],
-          [''],
-          [''],
-          [''],
-          [''],
-          [''],
-          [''],
-          [''],
-          [''],
+      case 'Welding & Cutting':
+        this.questionList = [
+          'When working in tight quarters, you should work and move a little __________ than normal.',
+          'Welding jobs that must be performed on objects outside the designated area require a hot work permit.',
+          'You only need to make sure you have adequate ventilation when welding in confined areas where fumes may accumulate.',
+          'Prior to a hot work operation, all ignitable debris within a _______ radius of the worksite should be swept up.',
+          'Before using the welding machine, you should make sure it is properly grounded and in good working order.',
+          'High-top leather safety boots offer the best foot protection while welding.',
+          'Most welding gloves are effective in preventing burns when handling extremely hot materials.',
+          'Safety glasses with side shields should always be worn under your welding helmet.',
+          'Part of good housekeeping is returning supplies and equipment to their proper storage area when the job is complete.',
         ];
 
-        this.answersList = [];
+        this.choicesList = [
+          ['Faster', 'Slower'],
+          ['True', 'False'],
+          ['True', 'False'],
+          ['10', '15', '35'],
+          ['True', 'False'],
+          ['True', 'False'],
+          ['True', 'False'],
+          ['True', 'False'],
+          ['True', 'False'],
+        ];
+
+        this.answersList = [1, 0, 1, 2, 0, 0, 1, 0, 0];
         break;
 
-      case '':
-        this.questionList = ['', '', '', '', '', '', '', '', '', ''];
-
-        this.choicesList = [
-          [''],
-          [''],
-          [''],
-          [''],
-          [''],
-          [''],
-          [''],
-          [''],
-          [''],
-          [''],
+      case 'Arc Flash':
+        this.questionList = [
+          'Arc flash is caused by an uncontrolled current passing through the air',
+          'Exposures to arc flash can be fatal.',
+          'Which of these can cause arc flash?',
+          'When a conductive object gets too close to an exposed source of current, arc flash can occur.',
+          'Arc flash only happens outdoors.',
+          'Arc flash can damage which parts of your body?',
+          'There is no personal protective equipment that can protect you from arc flash.',
+          'Insulated tools can help reduce the risk of arc flash.',
+          'Each area with a potential for arc flash needs to have a risk assessment performed.',
+          'There is nothing that can be done to reduce the risk of arc flash.',
         ];
 
-        this.answersList = [];
+        this.choicesList = [
+          ['True', 'False'],
+          ['True', 'False'],
+          [
+            'Accidental contact',
+            'Mishandling of tools',
+            'Dust',
+            'All of the above',
+            'A and B only',
+          ],
+          ['True', 'False'],
+          ['True', 'False'],
+          ['Ears', 'Eyes', 'Lungs', 'All of the above', 'A and B only'],
+          ['True', 'False'],
+          ['True', 'False'],
+          ['True', 'False'],
+          ['True', 'False'],
+        ];
+
+        this.answersList = [0, 0, 3, 0, 1, 3, 1, 0, 0, 1];
         break;
 
       case '':
