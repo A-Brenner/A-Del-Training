@@ -129,6 +129,70 @@ export class ExamsComponent implements OnInit {
   // Sets all question, choices, and answer data into arrays for the exam
   setExamData(): void {
     switch (this.examName) {
+      // NEW EMPLOYEES SECTIONS
+      case 'Safety Orientation':
+        this.questionList = [
+          'Hardhats and safety glasses should be worn at all times on the jobsite regardless of the task at hand.',
+          'When climbing a ladder, you must maintain four points of contact at all times.',
+          'Which soil type is the least stable?',
+          'What is the most common type of accident suffered by operators of heavy equipment?',
+          'Only electrical workers and supervisory workers are allowed to enter site electrical rooms.',
+          'How much does an average cubic yard of dirt weigh?',
+          'More than eight of every 10 construction site accidents is the fault of _______________.',
+          'Tie-off points used for fall protection must be able to hold ____________ pounds per employee.',
+        ];
+
+        this.choicesList = [
+          ['True', 'False'],
+          ['True', 'False'],
+          ['Type A', 'Type B', 'Type C'],
+          [
+            'Collisions with other vehicles',
+            'Injuries that occur when climbing on and off the equipment',
+            'Striking pedestrians not visible in their paths',
+          ],
+          ['True', 'False'],
+          ['250 pounds', '1,000 pounds', '2,500 pounds'],
+          [
+            'Equipment failure',
+            'Employee error',
+            'Lack of employee supervisor',
+          ],
+          ['500', '1,000', '5,000'],
+        ];
+
+        this.answersList = [0, 1, 2, 1, 0, 2, 1, 2];
+        break;
+      case 'Drugs & Alcohol':
+        this.questionList = [
+          'The "residual effect" of a substance that an employee abuses can last hours or even days after they used it.',
+          'The term "substance abuse" should be applied only to the use of drugs that are illegal.',
+          'Nearly half of all workplace accidents are caused by workers who are drinking on the job.',
+          'Alcohol impairment starts with the first drink.',
+          'Prescription drugs are never as physically addictive as illegal drugs.',
+          'Heroin users often experience persistent drowsiness and "fuzzy" thinking, which can expose them and their coworkers to the risk of accidents and injuries.',
+          'Many people find that using drugs or alcohol helps them to solve their problems.',
+          'People who become addicted to medications may consider themselves to be "teetotalers" because they don\'t use alcohol or illegal drugs.',
+          'What a substance abuser does under the influence of drugs or alcohol can endanger them, their coworkers and anyone else they come into contact with.',
+          'People are more likely to develop a psychological drug dependence when they abuse "hard" drugs like cocaine or heroin rather than alcohol or prescription drugs.',
+        ];
+
+        this.choicesList = [
+          ['True', 'False'],
+          ['True', 'False'],
+          ['True', 'False'],
+          ['True', 'False'],
+          ['True', 'False'],
+          ['True', 'False'],
+          ['True', 'False'],
+          ['True', 'False'],
+          ['True', 'False'],
+          ['True', 'False'],
+        ];
+
+        this.answersList = [];
+        break;
+
       // FIELD WORKER SECTIONS
       case "PPE: It's Your Call":
         this.questionList = [
@@ -589,7 +653,7 @@ export class ExamsComponent implements OnInit {
         this.answersList = [1, 1, 1, 0, 1];
         break;
 
-      case 'Driving Safety':
+      case 'Driver Safety':
         this.questionList = [
           'In inclement weather, you should increase your following distance.',
           'What is the minimum safe following distance?',
@@ -885,134 +949,164 @@ export class ExamsComponent implements OnInit {
         this.answersList = [0, 0, 3, 0, 1, 3, 1, 0, 0, 1];
         break;
 
-      case '':
-        this.questionList = ['', '', '', '', '', '', '', '', '', ''];
-
-        this.choicesList = [
-          [''],
-          [''],
-          [''],
-          [''],
-          [''],
-          [''],
-          [''],
-          [''],
-          [''],
-          [''],
+      case 'Compressed Gas Cylinders':
+        this.questionList = [
+          'If compressed gas cylinders are stored in direct sunlight, the _________ of the gases inside them is likely to rise.',
+          'A "pressure relief device" (PRD) is a valve that provides a steady flow of gas from the cylinder through the delivery system to the user.',
+          'Because of the extremely low temperatures of cryogenic liquids, the cylinders that contain them require special treatment when they are being handled',
+          'Any gas that is leaking from a compressed gas cylinder can push breathable air out of a space, and could cause the people in the space to suffocate.',
+          '"Standard compression" is used to squeeze substances such as hydrogen, helium or oxygen into a cylinder in the form of...',
+          'Which of the following gases must be dissolved in a solvent in order to be stored safely in a cylinder?',
         ];
 
-        this.answersList = [];
-        break;
-
-      case '':
-        this.questionList = ['', '', '', '', '', '', '', '', '', ''];
-
         this.choicesList = [
-          [''],
-          [''],
-          [''],
-          [''],
-          [''],
-          [''],
-          [''],
-          [''],
-          [''],
-          [''],
+          ['Temperature', 'Toxicity', 'Pressure', 'A and B', 'A and C'],
+          ['True', 'False'],
+          ['True', 'False'],
+          ['True', 'False'],
+          ['a liquid', 'a gas', 'a solid'],
+          ['Oxygen', 'Propane', 'Acetylene'],
         ];
 
-        this.answersList = [];
+        this.answersList = [4, 1, 0, 0, 1, 2];
         break;
 
-      case '':
-        this.questionList = ['', '', '', '', '', '', '', '', '', ''];
-
-        this.choicesList = [
-          [''],
-          [''],
-          [''],
-          [''],
-          [''],
-          [''],
-          [''],
-          [''],
-          [''],
-          [''],
+      case 'Lock Out Tag Out':
+        this.questionList = [
+          "You don't have to place all controls and switches in the off position before LOTO.",
+          "50% of workers who didn't tell other workers they locked out equipment were injured when another employee activated the machinery being worked on.",
+          'All energy sources should be isolated before LOTO is performed.',
+          'Workers injured on the job from exposure and hazardous energy lose an average days per incident:',
+          'Which of the following are considered hazardous energy?',
+          'The department of labor estimates the proper use of LOTO procedures prevents:',
+          'Once Equipment is ready to be restored and more than one lock is on the tag the supervisor can remove all locks',
+          'Steam, air and hydraulic lines should be bled, drained and cleaned out and verified that zero energy state has been achieved.',
+          "You don't need to tell other affected workers that machinery is being lock and tagged out.",
+          'If there are 3 employees working on machinery how many locks should be placed on the tagout device?',
         ];
 
-        this.answersList = [];
-        break;
-
-      case '':
-        this.questionList = ['', '', '', '', '', '', '', '', '', ''];
-
         this.choicesList = [
-          [''],
-          [''],
-          [''],
-          [''],
-          [''],
-          [''],
-          [''],
-          [''],
-          [''],
-          [''],
+          ['True', 'False'],
+          ['True', 'False'],
+          ['True', 'False'],
+          ['7 days', '14 days', '24 days', '48 days'],
+          ['Electircal', 'Kinetic', 'Potential', 'Thermal', 'All of the above'],
+          [
+            '120 deaths and 50,000 injuries each year',
+            '150 deaths and 5,000 injuries each year',
+            '180 deaths and 50,000 injuries each year',
+            '220 deaths and 5,000 injuries each year',
+          ],
+          ['True', 'False'],
+          ['True', 'False'],
+          ['True', 'False'],
+          ['1', '2', '3', '4'],
         ];
 
-        this.answersList = [];
+        this.answersList = [1, 0, 0, 2, 4, 0, 1, 0, 1, 2];
         break;
 
-      case '':
-        this.questionList = ['', '', '', '', '', '', '', '', '', ''];
-
-        this.choicesList = [
-          [''],
-          [''],
-          [''],
-          [''],
-          [''],
-          [''],
-          [''],
-          [''],
-          [''],
-          [''],
+      case 'Take Time for Safety':
+        this.questionList = [
+          'When you rush through a job, the mistakes caused by rushing often negate any possible time savings.',
+          'Which of the following is NOT a risk of moving faster?',
+          "If you frequently find yourself running out of time while performing a task, it's probably because you're spending too much time doing the job.",
+          'Many workers make poor safety choices even when they are not in a hurry.',
+          'While rushing to get all the files scanned and put away in the filing cabinet, Mandy tripped over a cabinet drawer and spilled her coffee.',
+          'Which of the following is an example of risky behavior people engage in when trying to:',
+          'Being in a hurry is not a legitimate cause of an incident, but rather a symptom of poor planning and poor time management.',
+          'In the first incident in the video, Scotty and Robert were rushing to clean up an area of the warehouse before lunch. What was the result of their rushing?',
         ];
 
-        this.answersList = [];
-        break;
-
-      case '':
-        this.questionList = ['', '', '', '', '', '', '', '', '', ''];
-
         this.choicesList = [
-          [''],
-          [''],
-          [''],
-          [''],
-          [''],
-          [''],
-          [''],
-          [''],
-          [''],
-          [''],
+          ['True', 'False'],
+          [
+            'Less time to scan your path of travel',
+            'Less time to react to changing conditions',
+            'Less time to be aware of our surroundings',
+            'Striking objects with less force',
+            'Carrying more momentum',
+          ],
+          ['True', 'False'],
+          ['True', 'False'],
+          ['True', 'False'],
+          [
+            'Changing lanes any time they perceive one lane may be moving faster',
+            'Running through yellow lights rather than stopping',
+            'Pushing the speed limit',
+            'All of the above',
+          ],
+          ['True', 'False'],
+          [
+            'In the first incident in the video, Scotty and Robert were rushing to clean up an area of the warehouse before lunch. What was the result of their rushing?',
+            'Robert lost focus on safe forklift driving practices and knocked over a cart and pedestrian',
+            'Their supervisor commended them for finishing their work so quickly',
+          ],
         ];
 
-        this.answersList = [];
+        this.answersList = [0, 3, 1, 0, 1, 3, 0, 1];
         break;
 
-      case '':
-        this.questionList = ['', '', '', '', '', '', '', '', '', ''];
+      // TRUCK DRIVER SECTIONS
+      case 'Cell Phones':
+        this.questionList = [
+          'If you are texting and driving, your reaction time is reduced by approximately _______ percent.',
+          'Texting does not cause distractions from driving.',
+          'Texting is okay if you are only using one hand.',
+          'Texting and driving is more dangerous than talking on the phone while driving.',
+          'Texting and driving is a lot safer than drinking and driving.',
+          'Texting while driving puts you and others at risk for a possible accident or even death.',
+          'You should pull over and stop to receive or respond to a text message.',
+          'The choices we make only has an impact on ourselves.',
+          'Texting and driving distracts the drive in what way?',
+          'Many states in the USA have banned texting and driving.',
+        ];
 
         this.choicesList = [
-          [''],
-          [''],
-          [''],
-          [''],
-          [''],
-          [''],
-          [''],
-          [''],
-          [''],
-          [''],
+          ['25', '30', '35', '40'],
+          ['True', 'False'],
+          ['True', 'False'],
+          ['True', 'False'],
+          ['True', 'False'],
+          ['True', 'False'],
+          ['True', 'False'],
+          ['True', 'False'],
+          [
+            'It takes your eyes off the road',
+            'You are likely to take your hands off the wheel',
+            "It diverts the driver's attention away from the primary task, driving",
+            'All of the above',
+          ],
+          ['True', 'False'],
+        ];
+
+        this.answersList = [2, 1, 1, 0, 1, 0, 0, 1, 3, 0];
+        break;
+
+      case 'Dump Truck Safety':
+        this.questionList = [
+          'Pre-Trip Inspections are the key to a well-maintained vehicle.',
+          'You should never sit in the cab while receiving a load.',
+          'If you notice unusual noises in the motor, you should keep driving until the end of your shift.',
+          'You should climb under the raised dump bed at least once a week to clean components.',
+          'You should get out of the truck and check for overhead power lines before raising the bed.',
+          'Exceeding the maximum gross weight rating of the truck is unsafe.',
+          'You should always test the brakes before you start the trucks engine.',
+          'A loaded truck takes longer to stop than an empty truck.',
+          'Fuel can be a fire hazard and a slip and fall hazard.',
+        ];
+
+        this.choicesList = [
+          ['True', 'False'],
+          ['True', 'False'],
+          ['True', 'False'],
+          ['True', 'False'],
+          ['True', 'False'],
+          ['True', 'False'],
+          ['True', 'False'],
+          ['True', 'False'],
+          ['True', 'False'],
+          ['True', 'False'],
         ];
 
         this.answersList = [];

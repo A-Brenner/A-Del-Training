@@ -272,7 +272,7 @@ export class SectionsComponent implements OnInit {
       'Confined Space',
       'Crystalline Silica Safety',
       'Machine Guarding',
-      'Driving Safety',
+      'Driver Safety',
       'Rigging & Load Securement',
       'Hand & Power Tool Safety',
       'Heat Stress',
