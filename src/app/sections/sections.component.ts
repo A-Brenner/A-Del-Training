@@ -46,19 +46,31 @@ export class SectionsComponent implements OnInit {
 
   // Checks to see if ALL sections have been completed
   // If so, submit button is unlocked
-  isReadytoSubmit(): boolean {
+  isReadytoSubmit(): void {
     for (let i = 0; i < this.sectionsArr.length; i++) {
       console.log(
         this.sectionsArr[i].sectionName + ': ' + this.sectionsArr[i].completed
       );
       if (!this.sectionsArr[i].completed) {
         // a section has NOT been completed
-        return false;
+        return;
       }
     }
     // No incomplete sections found, Ready to Submit
-    console.log('Ready to Submit');
-    return true;
+    this.setUpSubmitBtn();
+  }
+
+  // Makes submit button visible and clickable
+  // Sets up onClick method
+  setUpSubmitBtn(): void {
+    let submitBtn: HTMLButtonElement = document.getElementById(
+      'submit-btn'
+    ) as HTMLButtonElement;
+    submitBtn.style.pointerEvents = 'initial';
+    submitBtn.style.opacity = '1.0';
+
+    // Set up email form template and send for submition
+    submitBtn.addEventListener('click', function (): void {});
   }
 
   // Add onClick method for translation input switch
