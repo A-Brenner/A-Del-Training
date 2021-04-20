@@ -82,9 +82,23 @@ button {
   min-width: 75px;
 }
 
-.examBtn {
+.exam-btn {
   padding-right: 14.6px;
   padding-left: 14.6px;
+}
+
+#submit-btn {
+  display: block;
+  margin: auto;
+  margin-bottom: 20px;
+  font-size: larger;
+  padding: 0.75em;
+  background-color: $primary;
+  color: $secondary;
+  opacity: 0.5;
+  pointer-events: none;
+
+  //border-radius: 5px;
 }
 
 .info-container {

@@ -41,6 +41,24 @@ export class SectionsComponent implements OnInit {
     this.setExamBtnMethods();
     this.setUpModal();
     this.setUpSpanishVideoSwitch();
+    this.isReadytoSubmit();
+  }
+
+  // Checks to see if ALL sections have been completed
+  // If so, submit button is unlocked
+  isReadytoSubmit(): boolean {
+    for (let i = 0; i < this.sectionsArr.length; i++) {
+      console.log(
+        this.sectionsArr[i].sectionName + ': ' + this.sectionsArr[i].completed
+      );
+      if (!this.sectionsArr[i].completed) {
+        // a section has NOT been completed
+        return false;
+      }
+    }
+    // No incomplete sections found, Ready to Submit
+    console.log('Ready to Submit');
+    return true;
   }
 
   // Add onClick method for translation input switch
@@ -80,7 +98,7 @@ export class SectionsComponent implements OnInit {
     let sections: sectionModule.Section[] = this.sectionsArr;
     for (let i = 0; i < this.sectionsArr.length; i++) {
       document
-        .getElementById('videoBtn' + i.toString())
+        .getElementById('video-btn' + i.toString())
         ?.addEventListener('click', function (): void {
           if (sections[i].link === '') {
             alert('Video Link Not Found.');
@@ -99,9 +117,9 @@ export class SectionsComponent implements OnInit {
       let examName = this.sectionsArr[i].sectionName;
       let router = this.router;
       document
-        .getElementById('examBtn' + i.toString())
+        .getElementById('exam-btn' + i.toString())
         ?.addEventListener('click', function (): void {
-          console.log('examBtn clicked :)');
+          console.log('exam-btn clicked :)');
           sessionStorage.setItem('examName', examName);
           router.navigateByUrl('/training-programs/sections/exam');
         });
