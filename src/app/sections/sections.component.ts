@@ -333,13 +333,13 @@ export class SectionsComponent implements OnInit {
 
     // array of SPANISH video links
     this.linksSpanish = [
-      'https://safetysourceonline.com/video/ppe-its-your-call-1021b-12-min/',
-      'https://safetysourceonline.com/video/ghs-labels-ss2001fe/',
-      'https://safetysourceonline.com/video/ghs-safety-data-sheets-the-basics-ss2002fe/',
-      'https://safetysourceonline.com/video/ladder-safety-8019a-10-min/',
-      'https://safetysourceonline.com/video/to-the-point-about-fire-prevention-response-tp07/',
-      'https://safetysourceonline.com/video/first-aid-m209/',
-      'https://safetysourceonline.com/video/basic-electrical-safety-1085i-11-min/',
+      'https://safetysourceonline.com/video/ppe-its-your-call-spanish-1021bs/',
+      'https://safetysourceonline.com/video/ghs-hazardous-materials-labels-ss2001fs-8-min-spanish/',
+      'https://safetysourceonline.com/video/ghs-safety-data-sheets-the-basics-ss2002fs-5-min-spanish/',
+      'https://safetysourceonline.com/video/ladder-safety-8019a-10-min-spanish/',
+      'https://safetysourceonline.com/video/to-the-point-about-fire-prevention-response-tp07-spanish/',
+      'https://safetysourceonline.com/video/first-aid-m209-spanish/',
+      'https://safetysourceonline.com/video/basic-electrical-safety-ss1085is-11-min-spanish/',
       'https://safetysourceonline.com/video/employee-slips-trips-and-falls-ss1018ds-10-min/',
       'https://safetysourceonline.com/video/trenching-and-shoring-excavation-safety-ssc003e-13-min-spanish/',
       'https://safetysourceonline.com/video/fall-protection-ssc0023as-10-min-spanish/',
