@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { IndustriesToSectionsService } from '../shared/industries-to-sections.service';
 import { sectionModule } from './section';
 
 @Component({
@@ -9,10 +8,7 @@ import { sectionModule } from './section';
   styleUrls: ['./sections.component.scss'],
 })
 export class SectionsComponent implements OnInit {
-  constructor(
-    private shared: IndustriesToSectionsService,
-    private router: Router
-  ) {}
+  constructor(private router: Router) {}
 
   // ** GLOBAL VARIABLES **
   // array for holding Section objects
@@ -199,10 +195,10 @@ export class SectionsComponent implements OnInit {
         break;
       }
       case 'foreman': {
-        // Foreman must complete all Field Worker sections along with their own sections
+        // Foreman must complete all Field Worker sections
+        // will complete their other training in person
         this.trainingProgram = 'Foreman';
         this.setSectionDataFW();
-        this.setSectionDataFM();
         console.log(this.sectionsArr);
         break;
       }
@@ -233,7 +229,6 @@ export class SectionsComponent implements OnInit {
     this.titles = [
       'EEO',
       'Safety Orientation',
-      'Sexual Harassment',
       'Cell Phones',
       'Drugs & Alcohol',
     ];
@@ -241,7 +236,6 @@ export class SectionsComponent implements OnInit {
     this.links = [
       '', // EEO (Chuck Recorded Video)
       'https://safetysourceonline.com/video/safety-bobs-comprehensive-construction-orientation-e1316e-24-min-2/',
-      '', // sexual harassment
       'https://safetysourceonline.com/video/texting-and-driving-the-facts-1072i-11-min/',
       'https://safetysourceonline.com/video/dealing-with-drug-and-alcohol-abuse-for-employees-052/',
     ];
@@ -250,7 +244,6 @@ export class SectionsComponent implements OnInit {
     this.linksSpanish = [
       '', // EEO
       'https://safetysourceonline.com/video/safety-bobs-comprehensive-construction-orientation-e1316s-24-min-spanish-2/',
-      '', // Sexual Harassment
       'https://safetysourceonline.com/video/texting-and-driving-the-facts-spanish-ss1072is/',
       'https://safetysourceonline.com/video/dealing-with-drug-and-alcohol-abuse-for-employees-052-spanish/',
     ];
@@ -264,7 +257,6 @@ export class SectionsComponent implements OnInit {
       'Emergency Action Plan',
       'Surviving an Active Shooter',
       'First Aid',
-      'Sexual Harassment',
     ];
 
     // array of video links
@@ -272,14 +264,12 @@ export class SectionsComponent implements OnInit {
       '', // (Chuck) Emergency Action Plan
       'https://www.youtube.com/watch?v=DFQ-oxhdFjE',
       'https://safetysourceonline.com/video/first-aid-m209/',
-      '', // sexual harassment
     ];
 
     // array of SPANISH video links
     this.linksSpanish = [
       '', // (Chuck) Emergency Action Plan
       'https://www.youtube.com/watch?v=DFQ-oxhdFjE',
-      '', // Sexual Harassment
       'https://safetysourceonline.com/video/first-aid-m209-spanish/',
     ];
   }
@@ -306,7 +296,6 @@ export class SectionsComponent implements OnInit {
       'Rigging & Load Securement',
       'Hand & Power Tool Safety',
       'Heat Stress',
-      'Sexual Harassment',
     ];
 
     // array of video links
@@ -328,7 +317,6 @@ export class SectionsComponent implements OnInit {
       'https://safetysourceonline.com/video/rigging-safety-ss123ae/',
       'https://safetysourceonline.com/video/hand-power-tool-safety-ss1094ie-10-min/',
       'https://safetysourceonline.com/video/heat-stress-facts-and-prevention/',
-      '', // sexual harassment
     ];
 
     // array of SPANISH video links
@@ -350,43 +338,7 @@ export class SectionsComponent implements OnInit {
       'https://safetysourceonline.com/video/rigging-safety-ss123ae/',
       'https://safetysourceonline.com/video/hand-power-tool-safety-ss1094is-10-min-spanish/',
       'https://safetysourceonline.com/video/heat-stress-the-facts-1007i-12-min-spanish/',
-      '', // Sexual Harassment
     ];
-  }
-
-  // FOREMAN
-  // Adds Foreman Section data to beginning of arrays
-  // Arrays will already contain all section data from Field Workers
-  setSectionDataFM(): void {
-    // array of section titles
-    this.titles.unshift(
-      'Equipment',
-      'Accident Investigation',
-      'Lock Out Tag Out',
-      'Drug & Alcohol - Supervisors',
-      'Near Miss Reporting',
-      'HCSS Reporting'
-    );
-
-    // array of video links
-    this.links.unshift(
-      '',
-      '',
-      'https://safetysourceonline.com/video/lockouttagout-procedures-1036a-14-min/',
-      '',
-      '',
-      ''
-    );
-
-    // array of SPANISH video links
-    this.linksSpanish.unshift(
-      '',
-      '',
-      'https://safetysourceonline.com/video/lockouttagout-1036a-14-min-spanish/',
-      '',
-      '',
-      ''
-    );
   }
 
   // SHOP WORKERS & MECHANICS
@@ -411,7 +363,6 @@ export class SectionsComponent implements OnInit {
       'Lock Out Tag Out',
       'Take Time for Safety',
       'Heat Stress',
-      'Sexual Harassment',
     ];
 
     // array of video links
@@ -433,7 +384,6 @@ export class SectionsComponent implements OnInit {
       'https://safetysourceonline.com/video/lockouttagout-procedures-1036a-14-min/', // Lock out tag out
       'https://safetysourceonline.com/video/take-time-for-safety-2950-16-min/',
       'https://safetysourceonline.com/video/heat-stress-facts-and-prevention/',
-      '', // sexual harassment
     ];
 
     // array of SPANISH video links
@@ -455,7 +405,6 @@ export class SectionsComponent implements OnInit {
       'https://safetysourceonline.com/video/lockouttagout-1036a-14-min-spanish/',
       'https://safetysourceonline.com/video/take-time-for-safety-2950-16-min-spanish/',
       'https://safetysourceonline.com/video/heat-stress-the-facts-1007i-12-min-spanish/',
-      '', // SEXUAL HARASSMENT
     ];
   }
 
@@ -471,10 +420,8 @@ export class SectionsComponent implements OnInit {
       'First Aid',
       'Slips, Trips, & Falls',
       'Cell Phones',
-      'Drugs & Alcohol',
       'Dump Truck Safety',
       'Driver Safety',
-      'Sexual Harassment',
     ];
 
     // array of video links
@@ -486,10 +433,8 @@ export class SectionsComponent implements OnInit {
       'https://safetysourceonline.com/video/first-aid-m209/',
       'https://safetysourceonline.com/video/employee-slips-trips-and-falls-1018d-10-min/',
       'https://safetysourceonline.com/video/texting-and-driving-the-facts-1072i-11-min/',
-      '', // DOT - Drugs & Alcohol (JJ KELLER) 'https://safetysourceonline.com/video/dot-drugs-alcohol-what-employees-need-to-know-ss17041ae/',
       'https://safetysourceonline.com/video/construction-series-dump-truck-safety/',
       'https://safetysourceonline.com/video/10-4-defensive-driving-ss1087i-11-min/',
-      '', // sexual harassment
     ];
 
     // array of SPANISH video links
@@ -501,10 +446,8 @@ export class SectionsComponent implements OnInit {
       'https://safetysourceonline.com/video/first-aid-m209-spanish/',
       'https://safetysourceonline.com/video/employee-slips-trips-and-falls-ss1018ds-10-min/',
       'https://safetysourceonline.com/video/texting-and-driving-the-facts-spanish-ss1072is/',
-      '', // DOT - Drugs & Alcohol (JJ KELLER)
       'https://safetysourceonline.com/video/dump-truck-safety-ssc020ps-8-mins-spanish/',
       'https://safetysourceonline.com/video/10-4-defensive-driving-ss1087is-11-min-spanish/',
-      '', // sexual harassment
     ];
   }
 }
