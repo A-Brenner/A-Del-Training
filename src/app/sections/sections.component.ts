@@ -24,7 +24,7 @@ export class SectionsComponent implements OnInit {
   latestTrainingProgram: any = '';
 
   // Displayed within modal
-  loginInfo: string = 'Username: cfairer@a-del.com\nPassword: AdelSafety#1';
+  loginInfo: string = 'Username:  ADel\nPassword:  AdelSafety#1';
 
   ngOnInit(): void {
     this.latestTrainingProgram = window.localStorage.getItem('latestProgram');
@@ -252,23 +252,13 @@ export class SectionsComponent implements OnInit {
   // Adds section data to arrays
   setSectionDataOE(): void {
     // array of section titles
-    this.titles = [
-      'Emergency Action Plan',
-      'Surviving an Active Shooter',
-      'First Aid',
-    ];
+    this.titles = ['First Aid'];
 
     // array of video links
-    this.links = [
-      '', // (Chuck) Emergency Action Plan
-      'https://www.youtube.com/watch?v=DFQ-oxhdFjE',
-      'https://safetysourceonline.com/video/first-aid-m209/',
-    ];
+    this.links = ['https://safetysourceonline.com/video/first-aid-m209/'];
 
     // array of SPANISH video links
     this.linksSpanish = [
-      '', // (Chuck) Emergency Action Plan
-      'https://www.youtube.com/watch?v=DFQ-oxhdFjE',
       'https://safetysourceonline.com/video/first-aid-m209-spanish/',
     ];
   }
@@ -288,6 +278,7 @@ export class SectionsComponent implements OnInit {
       'Slips, Trips, & Falls',
       'Trenching & Excavation',
       'Fall Protection',
+      'Lock Out Tag Out',
       'Confined Space',
       'Crystalline Silica Safety',
       'Machine Guarding',
@@ -309,6 +300,7 @@ export class SectionsComponent implements OnInit {
       'https://safetysourceonline.com/video/employee-slips-trips-and-falls-1018d-10-min/',
       'https://safetysourceonline.com/video/13592/',
       'https://safetysourceonline.com/video/fall-protection/',
+      'https://safetysourceonline.com/video/lockouttagout-procedures-1036a-14-min/',
       'https://safetysourceonline.com/video/confined-space-entry-ss1055he-10-min/',
       'https://safetysourceonline.com/video/crystalline-silica-safety/',
       'https://safetysourceonline.com/video/machine-guarding-operatorsafety-m4757e/',
@@ -330,6 +322,7 @@ export class SectionsComponent implements OnInit {
       'https://safetysourceonline.com/video/employee-slips-trips-and-falls-ss1018ds-10-min/',
       'https://safetysourceonline.com/video/trenching-and-shoring-excavation-safety-ssc003e-13-min-spanish/',
       'https://safetysourceonline.com/video/fall-protection-ssc0023as-10-min-spanish/',
+      'https://safetysourceonline.com/video/lockouttagout-1036a-14-min-spanish/',
       'https://safetysourceonline.com/video/confined-space-entry-ss1055hs-10-min-spanish/',
       'https://safetysourceonline.com/video/crystalline-silica-safety-spanish/',
       'https://safetysourceonline.com/video/httpssafetysourceonline-commachine-guarding-operator-safety-4757-spanish/',
