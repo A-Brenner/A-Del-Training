@@ -111,7 +111,6 @@ export class SectionsComponent implements OnInit {
           if (sections[i].link === '') {
             alert('Video Link Not Found.');
           } else {
-            console.log('OG method ' + sections[i].link);
             // open a new tab (or window depending on user's browser settings)
             // goes directly to the video
             window.open(sections[i].link);
