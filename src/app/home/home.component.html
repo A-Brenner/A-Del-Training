@@ -28,19 +28,28 @@
       <div class="column right">
         <ng-template [ngIf]="!hasName">
           <h5>Register</h5>
-          <form>
+          <form class="login-form">
             <input
               type="text"
+              class="form-control"
               id="fname"
               name="fname"
-              value="First Name"
+              placeholder="First Name"
+              required
             /><br />
             <input
               type="text"
+              class="form-control"
               id="lname"
               name="lname"
-              value="Last Name"
+              placeholder="Last Name"
+              required
             /><br />
+            <input
+              type="submit"
+              class="form-control login-btn"
+              value="Begin Training"
+            />
           </form>
           <button
             id="beginTrainingBtn"

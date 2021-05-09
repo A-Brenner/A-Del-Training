@@ -59,6 +59,31 @@ input {
   padding: 7px;
 }
 
+.login-form {
+  display: table;
+  margin: auto;
+  padding: auto;
+  vertical-align: middle;
+}
+
+.form-control {
+  margin: auto;
+}
+
+.login-btn {
+  background-color: $primary;
+  color: $secondary;
+  font-family: fantasy, Georgia, "Times New Roman", Times, serif;
+  border-radius: 5px;
+  height: 65px;
+  padding: 7px;
+}
+
+.loginBtn:active {
+  color: $primary;
+  border-color: $primary;
+}
+
 video {
   display: block;
   margin: 0 auto;
@@ -79,6 +104,7 @@ video {
 }
 
 .right {
+  text-align: center;
   padding-right: 15px;
 }
 
@@ -112,5 +138,9 @@ make the columns stack on top of each other
   }
   .column {
     width: 100%;
+  }
+  .login-form {
+    margin: auto;
+    vertical-align: middle;
   }
 }
