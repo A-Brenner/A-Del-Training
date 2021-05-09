@@ -327,7 +327,7 @@ export class SectionsComponent implements OnInit {
       'https://safetysourceonline.com/video/crystalline-silica-safety-spanish/',
       'https://safetysourceonline.com/video/httpssafetysourceonline-commachine-guarding-operator-safety-4757-spanish/',
       'https://safetysourceonline.com/video/10-4-defensive-driving-ss1087is-11-min-spanish/',
-      'https://safetysourceonline.com/video/rigging-safety-ss123ae/',
+      'https://safetysourceonline.com/video/rigging-safety-123-spanish/',
       'https://safetysourceonline.com/video/hand-power-tool-safety-ss1094is-10-min-spanish/',
       'https://safetysourceonline.com/video/heat-stress-the-facts-1007i-12-min-spanish/',
     ];
