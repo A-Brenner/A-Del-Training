@@ -17,18 +17,23 @@
       </div>
       <div class="column middle">
         <video
-          src="../assets/videos/construction-vid.mp4"
-          type="video/mp4"
+          id="vid"
           controls="true"
-          autoplay="true"
+          onloadedmetadata="this.muted=true"
+          autoplay
+          loop
         >
+          <source
+            src="../assets/videos/construction-vid.mp4"
+            type="video/mp4"
+          />
           Orientation Video Not Supported by Browser
         </video>
       </div>
       <div class="column right">
         <ng-template [ngIf]="!hasName">
-          <h5>Register</h5>
-          <form class="login-form">
+          <h5 class="rightHeader">Register</h5>
+          <form class="login-form" action="#">
             <input
               type="text"
               class="form-control"
@@ -36,7 +41,7 @@
               name="fname"
               placeholder="First Name"
               required
-            /><br />
+            />
             <input
               type="text"
               class="form-control"
@@ -44,28 +49,13 @@
               name="lname"
               placeholder="Last Name"
               required
-            /><br />
-            <input
-              type="submit"
-              class="form-control login-btn"
-              value="Begin Training"
             />
+            <button class="form-control login-btn">Begin Training</button>
           </form>
-          <button
-            id="beginTrainingBtn"
-            class="trainingBtn"
-            (click)="beginTrainingClick()"
-          >
-            Begin Training
-          </button>
         </ng-template>
         <ng-template [ngIf]="hasName">
-          <h5>Welcome Back {{ fName }}</h5>
-          <button
-            id="continueTrainingBtn"
-            class="trainingBtn"
-            (click)="continueTraining()"
-          >
+          <h5 class="rightHeader">Welcome Back {{ fName }}</h5>
+          <button id="continueBtn" class="form-control login-btn">
             Continue Training
           </button>
         </ng-template>

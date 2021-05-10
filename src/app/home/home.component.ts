@@ -12,51 +12,7 @@ export class HomeComponent implements OnInit {
 
   title: string = 'A-Del Training';
   fName: any = '';
-  lName: any = '';
   hasName: boolean = false;
-
-  // onClick Method
-  // Takes user to the Industries page
-  beginTrainingClick(): void {
-    this.saveName();
-    console.log(window.localStorage.getItem('fName'));
-    console.log(window.localStorage.getItem('lName'));
-    this.hasName = this.doesNameExist();
-
-    if (this.hasName) {
-      this.router.navigateByUrl('/training-programs');
-    } else {
-      alert('Please enter your name before beginning.');
-    }
-  }
-
-  // take user to the training program they last visited if found in local storage
-  // otherwise, take user to the training programs page
-  continueTraining(): void {
-    if (window.localStorage.getItem('latestProgram')) {
-      this.router.navigateByUrl('/training-programs/sections');
-    } else {
-      this.router.navigateByUrl('/training-programs');
-    }
-  }
-
-  // Save user's name to local storage
-  // Only if inout is NOT blank && NOT default values
-  saveName(): void {
-    this.fName = (<HTMLInputElement>document.getElementById('fname')).value;
-    this.lName = (<HTMLInputElement>document.getElementById('lname')).value;
-
-    // Makes sure the user actually entered their name before saving to local storage
-    if (
-      this.fName !== 'First Name' &&
-      this.fName !== '' &&
-      this.lName !== 'Last Name' &&
-      this.lName !== ''
-    ) {
-      window.localStorage.setItem('fName', this.fName);
-      window.localStorage.setItem('lName', this.lName);
-    }
-  }
 
   // Checks to see if name has already been saved in local storage
   doesNameExist(): boolean {
@@ -65,10 +21,49 @@ export class HomeComponent implements OnInit {
       window.localStorage.getItem('lName')
     ) {
       this.fName = window.localStorage.getItem('fName');
-      this.lName = window.localStorage.getItem('lName');
       return true;
     } else {
       return false;
+    }
+  }
+
+  setLoginBtnMethod(): void {
+    console.log('User has name? ' + this.hasName);
+    let router = this.router;
+
+    if (this.hasName) {
+      // Continue Training (User is already registered)
+
+      let continueBtn: HTMLButtonElement = document.querySelector(
+        '.login-btn'
+      ) as HTMLButtonElement;
+      continueBtn.addEventListener('click', function (): void {
+        if (window.localStorage.getItem('latestProgram')) {
+          // Go directly to the section user last visited if possible
+          router.navigateByUrl('/training-programs/sections');
+        } else {
+          // Go to training programs page
+          router.navigateByUrl('/training-programs');
+        }
+      });
+    } else {
+      // Register to Begin Training (New User)
+
+      let loginForm: HTMLFormElement = document.querySelector(
+        '.login-form'
+      ) as HTMLFormElement;
+      loginForm.onsubmit = function () {
+        console.log('Logging in........');
+
+        // Save name to local storage
+        let fName = (<HTMLInputElement>document.getElementById('fname')).value;
+        let lName = (<HTMLInputElement>document.getElementById('lname')).value;
+        window.localStorage.setItem('fName', fName);
+        window.localStorage.setItem('lName', lName);
+
+        // Go to training programs page
+        router.navigateByUrl('/training-programs');
+      };
     }
   }
 
@@ -76,5 +71,9 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
     //window.localStorage.clear();
     this.hasName = this.doesNameExist();
+  }
+
+  ngAfterViewInit(): void {
+    this.setLoginBtnMethod();
   }
 }

@@ -47,6 +47,11 @@ input {
   margin: 5px;
   border-radius: 4px;
   text-align: center;
+  color: $primary;
+}
+
+input[type="text"] {
+  color: $primary;
 }
 
 .trainingBtn {
@@ -64,10 +69,19 @@ input {
   margin: auto;
   padding: auto;
   vertical-align: middle;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 .form-control {
-  margin: auto;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10px;
+}
+
+.form-control::placeholder {
+  color: $primary;
+  opacity: 0.5;
 }
 
 .login-btn {
@@ -77,11 +91,19 @@ input {
   border-radius: 5px;
   height: 65px;
   padding: 7px;
+  margin-top: 25px;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .loginBtn:active {
   color: $primary;
   border-color: $primary;
+}
+
+#continueBtn {
+  width: 80%;
+  max-width: 250px;
 }
 
 video {
@@ -94,13 +116,13 @@ video {
 
 .column {
   float: left;
-  padding: 10px;
+  //padding: 10px;
   padding-top: 0px;
   text-align: center;
 }
 
 .left {
-  padding-left: 25px;
+  padding-left: 15px;
 }
 
 .right {
@@ -142,5 +164,12 @@ make the columns stack on top of each other
   .login-form {
     margin: auto;
     vertical-align: middle;
+  }
+  .rightHeader {
+    margin-top: 15px;
+  }
+  .login-btn {
+    margin-top: 10px;
+    margin-bottom: 20px;
   }
 }
