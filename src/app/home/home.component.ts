@@ -12,7 +12,7 @@ export class HomeComponent implements OnInit {
 
   title: string = 'A-Del Training';
   fName: any = '';
-  hasName: boolean = false;
+  hasName: boolean = this.doesNameExist();
 
   // Checks to see if name has already been saved in local storage
   doesNameExist(): boolean {
@@ -69,8 +69,7 @@ export class HomeComponent implements OnInit {
 
   // component start-up
   ngOnInit(): void {
-    //window.localStorage.clear();
-    this.hasName = this.doesNameExist();
+    window.localStorage.clear();
   }
 
   ngAfterViewInit(): void {
