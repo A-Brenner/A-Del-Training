@@ -69,7 +69,7 @@ export class HomeComponent implements OnInit {
 
   // component start-up
   ngOnInit(): void {
-    window.localStorage.clear();
+    //window.localStorage.clear();
   }
 
   ngAfterViewInit(): void {

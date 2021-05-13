@@ -37,12 +37,12 @@ export class SectionsComponent implements OnInit {
     this.setExamBtnMethods();
     this.setUpModal();
     this.setUpSpanishVideoSwitch();
-    this.isReadytoSubmit();
+    this.checkForCompletion();
   }
 
   // Checks to see if ALL sections have been completed
   // If so, submit button is unlocked
-  isReadytoSubmit(): void {
+  checkForCompletion(): void {
     for (let i = 0; i < this.sectionsArr.length; i++) {
       console.log(
         this.sectionsArr[i].sectionName + ': ' + this.sectionsArr[i].completed
@@ -64,9 +64,12 @@ export class SectionsComponent implements OnInit {
     ) as HTMLButtonElement;
     submitBtn.style.pointerEvents = 'initial';
     submitBtn.style.opacity = '1.0';
+    let router: Router = this.router;
 
     // Set up email form template and send for submition
-    submitBtn.addEventListener('click', function (): void {});
+    submitBtn.addEventListener('click', function (): void {
+      router.navigateByUrl('/training-programs/sections/submission');
+    });
   }
 
   // Add onClick method for translation input switch
