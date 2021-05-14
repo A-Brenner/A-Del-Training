@@ -8,6 +8,7 @@ import { IndustriesComponent } from './industries/industries.component';
 import { SectionsComponent } from './sections/sections.component';
 import { ExamsComponent } from './exams/exams.component';
 import { SubmissionComponent } from './submission/submission.component';
+import { CongratsComponent } from './congrats/congrats.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { SubmissionComponent } from './submission/submission.component';
     IndustriesComponent,
     SectionsComponent,
     ExamsComponent,
-    SubmissionComponent
+    SubmissionComponent,
+    CongratsComponent
   ],
   imports: [
     BrowserModule,

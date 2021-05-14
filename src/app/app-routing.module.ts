@@ -5,6 +5,7 @@ import { IndustriesComponent } from './industries/industries.component';
 import { SectionsComponent } from './sections/sections.component';
 import { ExamsComponent } from './exams/exams.component';
 import { SubmissionComponent } from './submission/submission.component';
+import { CongratsComponent } from './congrats/congrats.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -14,6 +15,10 @@ const routes: Routes = [
   {
     path: 'training-programs/sections/submission',
     component: SubmissionComponent,
+  },
+  {
+    path: 'training-programs/sections/submission/congratulations',
+    component: CongratsComponent,
   },
 ];
 
