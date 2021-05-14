@@ -1,0 +1,30 @@
+$primary: rgb(87, 3, 24);
+$secondary: rgb(250, 171, 52);
+
+body {
+  color: $secondary;
+  background-image: url("/assets/images/confetti.gif");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-color: $primary;
+  height: 90vh;
+  width: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  text-align: center;
+  position: relative;
+  font-family: fantasy, Georgia, "Times New Roman", Times, serif;
+}
+
+.center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.title {
+  font-size: 60px;
+}
