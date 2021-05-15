@@ -5,6 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>A-Del Safety Submission</title>
+    *** EmailJS ***
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init("user_NZvL7kVGCJeEl7XwEVdFH");
+      })();
+    </script>
   </head>
   <body>
     <div class="title">
@@ -16,38 +26,39 @@
 
     <form class="email-form">
       <input
+        id="fname"
         name="fname"
         type="text"
         class="form-control"
         placeholder="First Name"
-        autocomplete="new-password"
         required
       /><br />
       <input
+        id="lname"
         name="lname"
         type="text"
         class="form-control"
         placeholder="Last Name"
-        autocomplete="new-password"
         required
       /><br />
       <input
+        id="email"
         name="email"
         type="text"
         class="form-control"
         placeholder="Email"
-        autocomplete="new-password"
         required
       /><br />
       <input
+        id="emp-id"
         name="id"
         type="text"
         class="form-control"
         placeholder="Employee ID"
-        autocomplete="new-password"
         required
       /><br />
       <textarea
+        id="message"
         name="message"
         class="form-control"
         placeholder="Please provide some feedback about any good or bad experiences during your online training"
