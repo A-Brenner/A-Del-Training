@@ -19,7 +19,9 @@ export class SubmissionComponent implements OnInit {
       '.email-form'
     ) as HTMLFormElement;
     let router: Router = this.router;
-    //submissionForm.onsubmit = this.sendEmail;
+    let getCurDate = this.getCurrentDate;
+    let getTrainingProgram = this.getTrainingProgram;
+
     submissionForm.onsubmit = function (e: Event) {
       let fnameEl: HTMLInputElement = document.getElementById(
         'fname'
@@ -34,19 +36,12 @@ export class SubmissionComponent implements OnInit {
         'message'
       ) as HTMLTextAreaElement;
 
-      // returns the current date using local time
-      let today: Date = new Date();
-      let dd: string = today.getDate().toString();
-      let mm: string = (today.getMonth() + 1).toString(); //As January is 0.
-      let yyyy: string = today.getFullYear().toString();
-      let curDate = mm + '/' + dd + '/' + yyyy;
-
       let tempParams = {
         fname: fnameEl.value,
         lname: lnameEl.value,
-        trainingProgram: localStorage.getItem('latestProgram'),
+        trainingProgram: getTrainingProgram(),
         id: empIdEl.value,
-        date: curDate,
+        date: getCurDate(),
         message: messageEl.value,
       };
 
@@ -55,76 +50,59 @@ export class SubmissionComponent implements OnInit {
       );
 
       e.preventDefault();
-      emailjs
-        .send(
-          'service_fogijma',
-          'template_r090tb8',
-          tempParams,
-          'user_NZvL7kVGCJeEl7XwEVdFH'
-        )
-        .then(
-          function (response) {
-            console.log('SUCCESS!', response.status, response.text);
-            router.navigateByUrl(
-              '/training-programs/sections/submission/congratulations'
-            );
-          },
-          function (error) {
-            console.log('FAILED...', error);
-          }
-        );
+      //   emailjs
+      //     .send(
+      //       'service_fogijma',
+      //       'template_r090tb8',
+      //       tempParams,
+      //       'user_NZvL7kVGCJeEl7XwEVdFH'
+      //     )
+      //     .then(
+      //       function (response) {
+      //         console.log('SUCCESS!', response.status, response.text);
+      //         router.navigateByUrl(
+      //           '/training-programs/sections/submission/congratulations'
+      //         );
+      //       },
+      //       function (error) {
+      //         console.log('FAILED...', error);
+      //       }
+      //     );
     };
   }
 
-  public sendEmail(e: Event) {
-    let fnameEl: HTMLInputElement = document.getElementById(
-      'fname'
-    ) as HTMLInputElement;
-    let lnameEl: HTMLInputElement = document.getElementById(
-      'lname'
-    ) as HTMLInputElement;
-    let empIdEl: HTMLInputElement = document.getElementById(
-      'emp-id'
-    ) as HTMLInputElement;
-    let messageEl: HTMLTextAreaElement = document.getElementById(
-      'message'
-    ) as HTMLTextAreaElement;
-
-    // returns the current date using local time
+  // returns the current date using local time
+  getCurrentDate(): string {
     let today: Date = new Date();
     let dd: string = today.getDate().toString();
     let mm: string = (today.getMonth() + 1).toString(); //As January is 0.
     let yyyy: string = today.getFullYear().toString();
-    let curDate = mm + '/' + dd + '/' + yyyy;
+    return mm + '/' + dd + '/' + yyyy;
+  }
 
-    let tempParams = {
-      fname: fnameEl.value,
-      lname: lnameEl.value,
-      trainingProgram: localStorage.getItem('latestProgram'),
-      id: empIdEl.value,
-      date: curDate,
-      message: messageEl.value,
-    };
-
-    console.log(
-      `tempParams: \n${tempParams.fname} \n${tempParams.lname} \n${tempParams.trainingProgram} \n${tempParams.id} \n${tempParams.date} \n${tempParams.message}`
-    );
-
-    e.preventDefault();
-    emailjs
-      .send(
-        'service_fogijma',
-        'template_r090tb8',
-        tempParams,
-        'user_NZvL7kVGCJeEl7XwEVdFH'
-      )
-      .then(
-        function (response) {
-          console.log('SUCCESS!', response.status, response.text);
-        },
-        function (error) {
-          console.log('FAILED...', error);
-        }
-      );
+  getTrainingProgram(): string {
+    switch (localStorage.getItem('latestProgram')) {
+      case 'newEmployees': {
+        return 'New Employees';
+      }
+      case 'officeEmployees': {
+        return 'Office Employees';
+      }
+      case 'fieldWorkers': {
+        return 'Field Workers';
+      }
+      case 'foreman': {
+        return 'Foreman';
+      }
+      case 'shopWorkers': {
+        return 'Shop Workers';
+      }
+      case 'truckDrivers': {
+        return 'Truck Drivers';
+      }
+      default: {
+        return 'Training Program Unknown';
+      }
+    }
   }
 }
