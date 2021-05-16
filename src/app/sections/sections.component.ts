@@ -108,17 +108,29 @@ export class SectionsComponent implements OnInit {
   setVideoBtnMethods(): void {
     let sections: sectionModule.Section[] = this.sectionsArr;
     for (let i = 0; i < this.sectionsArr.length; i++) {
-      document
-        .getElementById('video-btn' + i.toString())
-        ?.addEventListener('click', function (): void {
-          if (sections[i].link === '') {
-            alert('Video Link Not Found.');
-          } else {
-            // open a new tab (or window depending on user's browser settings)
-            // goes directly to the video
-            window.open(sections[i].link);
-          }
-        });
+      let videoBtn: HTMLButtonElement = document.getElementById(
+        'video-btn' + i.toString()
+      ) as HTMLButtonElement;
+      let examBtn: HTMLButtonElement = document.getElementById(
+        'exam-btn' + i.toString()
+      ) as HTMLButtonElement;
+      videoBtn.addEventListener('click', function (): void {
+        // Unlock exam button
+        localStorage.setItem(sections[i].sectionName + 'Watched', 'true');
+        sections[i].videoWatched = true;
+        examBtn.style.opacity = '1.0';
+        examBtn.style.pointerEvents = 'initial';
+        console.log(sections);
+        console.log(localStorage.getItem(sections[i].sectionName + 'Watched'));
+
+        if (sections[i].link === '') {
+          alert('Video Link Not Found.');
+        } else {
+          // open a new tab (or window depending on user's browser settings)
+          // goes directly to the video
+          window.open(sections[i].link);
+        }
+      });
     }
   }
 
@@ -166,11 +178,20 @@ export class SectionsComponent implements OnInit {
       } else {
         completed = false;
       }
+
+      let videoWatched: boolean;
+      if (localStorage.getItem(this.titles[i] + 'Watched')) {
+        videoWatched = true;
+      } else {
+        videoWatched = false;
+      }
+
       let section: sectionModule.Section = new sectionModule.Section(
         i + 1,
         this.titles[i],
         completed,
-        this.links[i]
+        this.links[i],
+        videoWatched
       );
       this.sectionsArr.push(section);
     }

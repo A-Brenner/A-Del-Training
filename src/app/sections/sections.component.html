@@ -51,7 +51,14 @@
             <button id="{{ 'video-btn' + i }}" class="video-btn">
               Watch Video
             </button>
-            <button id="{{ 'exam-btn' + i }}" class="exam-btn">
+            <button
+              id="{{ 'exam-btn' + i }}"
+              class="exam-btn"
+              [style.opacity]="section.videoWatched ? '1.0' : '0.5'"
+              [style.pointer-events]="
+                section.videoWatched ? 'initital' : 'none'
+              "
+            >
               Take Exam
             </button>
           </div>
