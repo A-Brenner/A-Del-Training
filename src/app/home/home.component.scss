@@ -55,17 +55,6 @@ input[type="text"] {
   color: $primary;
 }
 
-.trainingBtn {
-  background-color: $primary;
-  color: $secondary;
-  font-family: "Anton";
-  font-weight: bold;
-  margin: 5px;
-  border-radius: 5px;
-  height: 65px;
-  padding: 7px;
-}
-
 .login-form {
   display: table;
   margin: auto;
@@ -103,16 +92,13 @@ input[type="text"] {
   margin-top: 25px;
   margin-right: auto;
   margin-left: auto;
+  width: 80%;
+  max-width: 250px;
 }
 
 .login-btn:active {
   color: $primary;
   border-color: $primary;
-}
-
-#continueBtn {
-  width: 80%;
-  max-width: 250px;
 }
 
 video {
