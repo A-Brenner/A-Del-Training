@@ -17,17 +17,18 @@ h1 {
   padding: 0.5em;
   margin-bottom: 0px;
   font-size: xx-large;
-  font-weight: bold;
   text-decoration: underline;
   text-decoration-color: $primary;
   text-align: center;
   color: $primary;
-  font-family: fantasy, Georgia, "Times New Roman", Times, serif;
+  font-family: "Anton";
+  font-weight: bold;
 }
 
 h5 {
   color: $primary;
-  font-family: fantasy, Georgia, "Times New Roman", Times, serif;
+  font-family: "Anton";
+  font-weight: bold;
   padding: 0.5em;
   margin-bottom: 0px;
 }
@@ -57,7 +58,8 @@ input[type="text"] {
 .trainingBtn {
   background-color: $primary;
   color: $secondary;
-  font-family: fantasy, Georgia, "Times New Roman", Times, serif;
+  font-family: "Anton";
+  font-weight: bold;
   margin: 5px;
   border-radius: 5px;
   height: 65px;
@@ -93,7 +95,8 @@ input[type="text"] {
 .login-btn {
   background-color: $primary;
   color: $secondary;
-  font-family: fantasy, Georgia, "Times New Roman", Times, serif;
+  font-family: "Anton";
+  font-weight: bold;
   border-radius: 5px;
   height: 65px;
   padding: 7px;

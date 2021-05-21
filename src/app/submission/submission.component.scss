@@ -10,7 +10,8 @@ body {
 }
 
 .title {
-  font-family: fantasy, Georgia, "Times New Roman", Times, serif;
+  font-family: "Anton";
+  font-weight: bold;
   font-size: xx-large;
   font-weight: bold;
   text-align: center;
@@ -73,7 +74,8 @@ textarea {
 .submit {
   background-color: $primary;
   color: $secondary;
-  font-family: fantasy, Georgia, "Times New Roman", Times, serif;
+  font-family: "Anton";
+  font-weight: bold;
   border-radius: 5px;
   height: 65px;
   padding: 7px;

@@ -1,5 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 /* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
 
 // SCSS Variable
 $primary: rgb(87, 3, 24);
@@ -36,9 +37,6 @@ input {
   margin-top: 0px;
 }
 
-.nav-links {
-}
-
 header {
   background: $primary;
   padding: 1em 0;
@@ -46,8 +44,8 @@ header {
   a {
     color: white;
     text-decoration: none;
-    font-family: fantasy, Georgia, "Times New Roman", Times, serif;
-    text-size-adjust: auto;
+    font-family: "Anton";
+    font-weight: bold;
     font-size: medium;
   }
 
