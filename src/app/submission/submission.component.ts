@@ -11,7 +11,15 @@ export class SubmissionComponent implements OnInit {
   constructor(private router: Router) {}
 
   ngOnInit(): void {
-    this.setUpFormSubmission();
+    let trainingProgram: any = localStorage.getItem('latestProgram');
+    console.log(localStorage.getItem(trainingProgram + 'EmailSent'));
+    if (localStorage.getItem(trainingProgram + 'EmailSent')) {
+      this.router.navigateByUrl(
+        '/training-programs/sections/submission/congratulations'
+      );
+    } else {
+      this.setUpFormSubmission();
+    }
   }
 
   setUpFormSubmission(): void {
@@ -50,24 +58,28 @@ export class SubmissionComponent implements OnInit {
       );
 
       e.preventDefault();
-      //   emailjs
-      //     .send(
-      //       'service_fogijma',
-      //       'template_r090tb8',
-      //       tempParams,
-      //       'user_NZvL7kVGCJeEl7XwEVdFH'
-      //     )
-      //     .then(
-      //       function (response) {
-      //         console.log('SUCCESS!', response.status, response.text);
-      //         router.navigateByUrl(
-      //           '/training-programs/sections/submission/congratulations'
-      //         );
-      //       },
-      //       function (error) {
-      //         console.log('FAILED...', error);
-      //       }
-      //     );
+      emailjs
+        .send(
+          'service_fogijma',
+          'template_r090tb8',
+          tempParams,
+          'user_NZvL7kVGCJeEl7XwEVdFH'
+        )
+        .then(
+          function (response) {
+            console.log('SUCCESS!', response.status, response.text);
+            localStorage.setItem(
+              localStorage.getItem('latestProgram') + 'EmailSent',
+              'true'
+            );
+            router.navigateByUrl(
+              '/training-programs/sections/submission/congratulations'
+            );
+          },
+          function (error) {
+            console.log('FAILED...', error);
+          }
+        );
     };
   }
 
