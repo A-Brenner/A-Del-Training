@@ -12,13 +12,15 @@ export class SubmissionComponent implements OnInit {
 
   ngOnInit(): void {
     let trainingProgram: any = localStorage.getItem('latestProgram');
-    console.log(localStorage.getItem(trainingProgram + 'EmailSent'));
+
     if (localStorage.getItem(trainingProgram + 'EmailSent')) {
       this.router.navigateByUrl(
         '/training-programs/sections/submission/congratulations'
       );
-    } else {
+    } else if (localStorage.getItem(trainingProgram + 'Completed')) {
       this.setUpFormSubmission();
+    } else {
+      this.router.navigateByUrl('/training-programs/sections');
     }
   }
 

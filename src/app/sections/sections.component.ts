@@ -68,6 +68,10 @@ export class SectionsComponent implements OnInit {
 
     // Set up email form template and send for submition
     submitBtn.addEventListener('click', function (): void {
+      localStorage.setItem(
+        localStorage.getItem('latestProgram') + 'Completed',
+        'true'
+      );
       router.navigateByUrl('/training-programs/sections/submission');
     });
   }
