@@ -21,13 +21,13 @@ h1 {
   text-decoration-color: $primary;
   text-align: center;
   color: $primary;
-  font-family: "Anton";
+  font-family: "Anton", Impact, Haettenschweiler, "Gill Sans MT";
   font-weight: bold;
 }
 
 h5 {
   color: $primary;
-  font-family: "Anton";
+  font-family: "Anton", Impact, Haettenschweiler, "Gill Sans MT";
   font-weight: bold;
   padding: 0.5em;
   margin-bottom: 0px;
@@ -84,7 +84,7 @@ input[type="text"] {
 .login-btn {
   background-color: $primary;
   color: $secondary;
-  font-family: "Anton";
+  font-family: "Anton", Impact, Haettenschweiler, "Gill Sans MT";
   font-weight: bold;
   border-radius: 5px;
   height: 65px;
