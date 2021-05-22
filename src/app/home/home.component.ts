@@ -60,7 +60,6 @@ export class HomeComponent implements OnInit {
         let lName = (<HTMLInputElement>document.getElementById('lname')).value;
         window.localStorage.setItem('fName', fName);
         window.localStorage.setItem('lName', lName);
-
         // Go to training programs page
         router.navigateByUrl('/training-programs');
       };

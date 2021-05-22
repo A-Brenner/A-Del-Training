@@ -9,6 +9,8 @@ export class IndustriesComponent implements OnInit {
   constructor() {}
 
   trainingProgram: string = '';
+  modalInfo: string =
+    'Make sure this is the device you will be using for the entire training experience.\nYour progress will be saved to your current device.';
 
   // OnCLick methods for images and labels
   newEmployeesClicked(): void {
@@ -47,5 +49,29 @@ export class IndustriesComponent implements OnInit {
     window.localStorage.setItem('latestProgram', this.trainingProgram);
   }
 
+  setUpModal(): void {
+    let modal: HTMLElement = document.querySelector('.modal') as HTMLElement;
+    modal.style.display = 'block';
+
+    document
+      .querySelector('.close')
+      ?.addEventListener('click', function (): void {
+        modal.style.display = 'none';
+      });
+
+    window.addEventListener('click', function (event): void {
+      if (event.target == modal) {
+        modal.style.display = 'none';
+      }
+    });
+  }
+
   ngOnInit(): void {}
+
+  ngAfterViewInit(): void {
+    if (!localStorage.getItem('loggedIn')) {
+      this.setUpModal();
+      localStorage.setItem('loggedIn', 'true');
+    }
+  }
 }
