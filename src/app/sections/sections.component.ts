@@ -253,15 +253,9 @@ export class SectionsComponent implements OnInit {
   // Adds section data to arrays
   setSectionDataNE(): void {
     // array of section titles
-    this.titles = [
-      'EEO',
-      'Safety Orientation',
-      'Cell Phones',
-      'Drugs & Alcohol',
-    ];
+    this.titles = ['Safety Orientation', 'Cell Phones', 'Drugs & Alcohol'];
     // array of video links
     this.links = [
-      '', // EEO (Chuck Recorded Video)
       'https://safetysourceonline.com/video/safety-bobs-comprehensive-construction-orientation-e1316e-24-min-2/',
       'https://safetysourceonline.com/video/texting-and-driving-the-facts-1072i-11-min/',
       'https://safetysourceonline.com/video/dealing-with-drug-and-alcohol-abuse-for-employees-052/',
@@ -269,7 +263,6 @@ export class SectionsComponent implements OnInit {
 
     // array of SPANISH video links
     this.linksSpanish = [
-      '', // EEO
       'https://safetysourceonline.com/video/safety-bobs-comprehensive-construction-orientation-e1316s-24-min-spanish-2/',
       'https://safetysourceonline.com/video/texting-and-driving-the-facts-spanish-ss1072is/',
       'https://safetysourceonline.com/video/dealing-with-drug-and-alcohol-abuse-for-employees-052-spanish/',
