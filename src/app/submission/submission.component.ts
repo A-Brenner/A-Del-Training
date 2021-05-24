@@ -39,9 +39,6 @@ export class SubmissionComponent implements OnInit {
       let lnameEl: HTMLInputElement = document.getElementById(
         'lname'
       ) as HTMLInputElement;
-      let empIdEl: HTMLInputElement = document.getElementById(
-        'emp-id'
-      ) as HTMLInputElement;
       let messageEl: HTMLTextAreaElement = document.getElementById(
         'message'
       ) as HTMLTextAreaElement;
@@ -50,13 +47,12 @@ export class SubmissionComponent implements OnInit {
         fname: fnameEl.value,
         lname: lnameEl.value,
         trainingProgram: getTrainingProgram(),
-        id: empIdEl.value,
         date: getCurDate(),
         message: messageEl.value,
       };
 
       console.log(
-        `tempParams: \n${tempParams.fname} \n${tempParams.lname} \n${tempParams.trainingProgram} \n${tempParams.id} \n${tempParams.date} \n${tempParams.message}`
+        `tempParams: \n${tempParams.fname} \n${tempParams.lname} \n${tempParams.trainingProgram} \n${tempParams.date} \n${tempParams.message}`
       );
 
       e.preventDefault();
