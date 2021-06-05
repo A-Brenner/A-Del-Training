@@ -51,10 +51,6 @@ export class SubmissionComponent implements OnInit {
         message: messageEl.value,
       };
 
-      console.log(
-        `tempParams: \n${tempParams.fname} \n${tempParams.lname} \n${tempParams.trainingProgram} \n${tempParams.date} \n${tempParams.message}`
-      );
-
       e.preventDefault();
       emailjs
         .send(

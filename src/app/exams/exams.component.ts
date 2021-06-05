@@ -17,11 +17,9 @@ export class ExamsComponent implements OnInit {
   results: string = '';
 
   ngOnInit(): void {
-    console.log(sessionStorage.getItem('examName'));
     this.examName = sessionStorage.getItem('examName');
     this.setExamData();
     this.createExam();
-    console.log(this.questionsArr);
   }
 
   ngAfterViewInit(): void {
@@ -40,7 +38,6 @@ export class ExamsComponent implements OnInit {
       ?.addEventListener('click', function (): void {
         // Checks for corect answer for each question
         // returns boolean dependant on whether the user got ALL answers correct
-        console.log('Checking Answers...');
         let correctAnswers = 0;
         for (let i = 0; i < questionsArr.length; i++) {
           let currentChoices = document.getElementsByName(
@@ -50,14 +47,7 @@ export class ExamsComponent implements OnInit {
             let currChoice = currentChoices[j] as HTMLInputElement;
             if (currChoice.checked) {
               if (currChoice.value === questionsArr[i].answer.toString()) {
-                console.log(
-                  'Q' + questionsArr[i].questionNo.toString() + ' is Correct!'
-                );
                 correctAnswers += 1;
-              } else {
-                console.log(
-                  questionsArr[i].questionNo.toString() + ' is Wrong!'
-                );
               }
             }
           } // end choices for loop
@@ -77,17 +67,13 @@ export class ExamsComponent implements OnInit {
     examName: string
   ): void {
     let threshold = 1; // 100% Correct
-    console.log('Number of correct answers: ' + correctAnswers);
     let percentage = correctAnswers / questionsArr.length;
-    console.log(percentage + '% correct');
 
     if (correctAnswers / questionsArr.length >= threshold) {
-      console.log('You passed the exam!');
       localStorage.setItem(examName, 'true');
       router.navigateByUrl('/training-programs/sections');
       // router back to sections page
     } else {
-      console.log('You FAILED the exam :(');
       let modal = document.querySelector('.modal') as HTMLElement;
       modal.style.display = 'block';
       let results = document.querySelector('.results') as HTMLElement;

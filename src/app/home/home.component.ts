@@ -28,7 +28,6 @@ export class HomeComponent implements OnInit {
   }
 
   setLoginBtnMethod(): void {
-    console.log('User has name? ' + this.hasName);
     let router = this.router;
 
     if (this.hasName) {
@@ -53,8 +52,6 @@ export class HomeComponent implements OnInit {
         '.login-form'
       ) as HTMLFormElement;
       loginForm.onsubmit = function () {
-        console.log('Logging in........');
-
         // Save name to local storage
         let fName = (<HTMLInputElement>document.getElementById('fname')).value;
         let lName = (<HTMLInputElement>document.getElementById('lname')).value;

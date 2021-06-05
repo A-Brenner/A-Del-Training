@@ -30,10 +30,12 @@
         </div>
       </div>
       <div class="bottom">
-        <div *ngFor="let choice of question.choices; let i = index">
+        <div
+          *ngFor="let choice of question.choices; let i = index"
+          class="choices"
+        >
           <input
             id="{{ 'Q' + question.questionNo + 'choice' + i }}"
-            class="choice"
             name="{{ question.questionNo }}"
             type="radio"
             value="{{ i }}"

@@ -44,9 +44,6 @@ export class SectionsComponent implements OnInit {
   // If so, submit button is unlocked
   checkForCompletion(): void {
     for (let i = 0; i < this.sectionsArr.length; i++) {
-      console.log(
-        this.sectionsArr[i].sectionName + ': ' + this.sectionsArr[i].completed
-      );
       if (!this.sectionsArr[i].completed) {
         // a section has NOT been completed
         return;
@@ -124,8 +121,6 @@ export class SectionsComponent implements OnInit {
         sections[i].videoWatched = true;
         examBtn.style.opacity = '1.0';
         examBtn.style.pointerEvents = 'initial';
-        console.log(sections);
-        console.log(localStorage.getItem(sections[i].sectionName + 'Watched'));
 
         if (sections[i].link === '') {
           alert('Video Link Not Found.');
@@ -145,7 +140,6 @@ export class SectionsComponent implements OnInit {
       document
         .getElementById('exam-btn' + i.toString())
         ?.addEventListener('click', function (): void {
-          console.log('exam-btn clicked :)');
           sessionStorage.setItem('examName', examName);
           router.navigateByUrl('/training-programs/sections/exam');
         });
@@ -206,19 +200,16 @@ export class SectionsComponent implements OnInit {
       case 'newEmployees': {
         this.trainingProgram = 'New Employees';
         this.setSectionDataNE();
-        console.log(this.sectionsArr);
         break;
       }
       case 'officeEmployees': {
         this.trainingProgram = 'Office Employees';
         this.setSectionDataOE();
-        console.log(this.sectionsArr);
         break;
       }
       case 'fieldWorkers': {
         this.trainingProgram = 'Field Workers';
         this.setSectionDataFW();
-        console.log(this.sectionsArr);
         break;
       }
       case 'foreman': {
@@ -226,19 +217,16 @@ export class SectionsComponent implements OnInit {
         // will complete their other training in person
         this.trainingProgram = 'Foreman';
         this.setSectionDataFW();
-        console.log(this.sectionsArr);
         break;
       }
       case 'shopWorkers': {
         this.trainingProgram = 'Shop Workers & Mechanics';
         this.setSectionDataSW();
-        console.log(this.sectionsArr);
         break;
       }
       case 'truckDrivers': {
         this.trainingProgram = 'Truck Drivers';
         this.setSectionDataTD();
-        console.log(this.sectionsArr);
         break;
       }
       default: {
