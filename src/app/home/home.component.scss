@@ -111,7 +111,6 @@ video {
 
 .column {
   float: left;
-  //padding: 10px;
   padding-top: 0px;
   text-align: center;
 }
@@ -121,7 +120,6 @@ video {
 }
 
 .right {
-  text-align: center;
   padding-right: 15px;
 }
 
@@ -155,6 +153,12 @@ make the columns stack on top of each other
   }
   .column {
     width: 100%;
+  }
+  .left {
+    padding-left: 0px;
+  }
+  .right {
+    padding-right: 0px;
   }
   .login-form {
     margin: auto;
