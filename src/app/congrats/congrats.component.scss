@@ -80,3 +80,12 @@ body {
     font-size: 10px;
   }
 }
+
+@media screen and (max-width: 170px) {
+  .title {
+    font-size: 20px;
+  }
+  .sub-header {
+    font-size: 8px;
+  }
+}
