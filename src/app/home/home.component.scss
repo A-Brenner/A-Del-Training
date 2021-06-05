@@ -29,6 +29,7 @@ h5 {
   color: $primary;
   font-family: "Anton", Impact, Haettenschweiler, "Gill Sans MT";
   font-weight: bold;
+  font-size: 22px;
   padding: 0.5em;
   margin-bottom: 0px;
 }
@@ -86,6 +87,8 @@ input[type="text"] {
   color: $secondary;
   font-family: "Anton", Impact, Haettenschweiler, "Gill Sans MT";
   font-weight: bold;
+  font-size: 18px;
+  letter-spacing: 0.5px;
   border-radius: 5px;
   height: 65px;
   padding: 7px;
