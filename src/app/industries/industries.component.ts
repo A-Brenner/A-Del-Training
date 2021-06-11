@@ -60,6 +60,8 @@ export class IndustriesComponent implements OnInit {
     });
   }
 
+  // TODO set up event listeners for training programs
+  // Remove html click functions
   ngOnInit(): void {}
 
   ngAfterViewInit(): void {
