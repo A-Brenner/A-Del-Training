@@ -23,9 +23,6 @@ export class SectionsComponent implements OnInit {
   trainingProgram: string = '';
   latestTrainingProgram: any = '';
 
-  // Displayed within modal
-  loginInfo: string = 'Username:  ADel\nPassword:  AdelSafety#1';
-
   ngOnInit(): void {
     this.latestTrainingProgram = window.localStorage.getItem('latestProgram');
     this.createSections();
