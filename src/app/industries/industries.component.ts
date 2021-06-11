@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-industries',
@@ -6,42 +7,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./industries.component.scss'],
 })
 export class IndustriesComponent implements OnInit {
-  constructor() {}
+  constructor(private router: Router) {}
 
   trainingProgram: string = '';
   modalInfo: string =
     'Make sure this is the device you will be using for the entire training experience.\nYour progress will be saved to your current device.';
-
-  // OnCLick methods for images and labels
-  newEmployeesClicked(): void {
-    this.trainingProgram = 'newEmployees';
-    window.localStorage.setItem('latestProgram', this.trainingProgram);
-  }
-
-  fieldWorkersClicked(): void {
-    this.trainingProgram = 'fieldWorkers';
-    window.localStorage.setItem('latestProgram', this.trainingProgram);
-  }
-
-  shopWorkersClicked(): void {
-    this.trainingProgram = 'shopWorkers';
-    window.localStorage.setItem('latestProgram', this.trainingProgram);
-  }
-
-  officeEmployeesClicked(): void {
-    this.trainingProgram = 'officeEmployees';
-    window.localStorage.setItem('latestProgram', this.trainingProgram);
-  }
-
-  foremanClicked(): void {
-    this.trainingProgram = 'foreman';
-    window.localStorage.setItem('latestProgram', this.trainingProgram);
-  }
-
-  truckDriversClicked(): void {
-    this.trainingProgram = 'truckDrivers';
-    window.localStorage.setItem('latestProgram', this.trainingProgram);
-  }
 
   setUpModal(): void {
     let modal: HTMLElement = document.querySelector('.modal') as HTMLElement;
@@ -60,8 +30,90 @@ export class IndustriesComponent implements OnInit {
     });
   }
 
-  // TODO set up event listeners for training programs
-  // Remove html click functions
+  // Sets up the onClick methods for all images and labels
+  // Routes user to the appropriate training section once clicked
+  setUpBtns(): void {
+    let router: Router = this.router;
+
+    let goToProgram = function (trainingProgram: string): void {
+      window.localStorage.setItem('latestProgram', trainingProgram);
+      router.navigateByUrl('/training-programs/sections');
+    };
+
+    // New Employees Label & Image
+    document
+      .getElementById('ne-label')
+      ?.addEventListener('click', function (): void {
+        goToProgram('newEmployees');
+      });
+
+    document
+      .getElementById('new-employees')
+      ?.addEventListener('click', function (): void {
+        goToProgram('newEmployees');
+      });
+
+    // Field Workers Label & Image
+    document
+      .getElementById('fw-label')
+      ?.addEventListener('click', function (): void {
+        goToProgram('fieldWorkers');
+      });
+    document
+      .getElementById('field-workers')
+      ?.addEventListener('click', function (): void {
+        goToProgram('fieldWorkers');
+      });
+
+    // Shop Workers & Mechanics Label & Image
+    document
+      .getElementById('sw-label')
+      ?.addEventListener('click', function (): void {
+        goToProgram('shopWorkers');
+      });
+    document
+      .getElementById('shop-workers')
+      ?.addEventListener('click', function (): void {
+        goToProgram('shopWorkers');
+      });
+
+    // Office Employees Label & Image
+    document
+      .getElementById('oe-label')
+      ?.addEventListener('click', function (): void {
+        goToProgram('officeEmployees');
+      });
+    document
+      .getElementById('office-employees')
+      ?.addEventListener('click', function (): void {
+        goToProgram('officeEmployees');
+      });
+
+    // Foreman Label & Image
+    document
+      .getElementById('fm-label')
+      ?.addEventListener('click', function (): void {
+        goToProgram('foreman');
+      });
+    document
+      .getElementById('foreman')
+      ?.addEventListener('click', function (): void {
+        goToProgram('foreman');
+      });
+
+    // Truck Driver Label & Image
+    document
+      .getElementById('td-label')
+      ?.addEventListener('click', function (): void {
+        goToProgram('truckDrivers');
+      });
+    document
+      .getElementById('truck-drivers')
+      ?.addEventListener('click', function (): void {
+        goToProgram('truckDrivers');
+      });
+  }
+
   ngOnInit(): void {}
 
   ngAfterViewInit(): void {
@@ -69,5 +121,6 @@ export class IndustriesComponent implements OnInit {
       this.setUpModal();
       localStorage.setItem('loggedIn', 'true');
     }
+    this.setUpBtns();
   }
 }

@@ -20,62 +20,40 @@
     </div>
     <div class="row">
       <div class="column column-left">
-        <div
-          class="label-container"
-          routerLink="/training-programs/sections"
-          (click)="newEmployeesClicked()"
-        >
+        <div id="ne-label" class="label-container">
           <h5 class="centered">New Employees</h5>
         </div>
         <div class="img-container">
           <input
-            id="newEmployees"
+            id="new-employees"
             type="image"
             src="../assets/images/handshake.jpg"
-            routerLink="/training-programs/sections"
-            (click)="newEmployeesClicked()"
           />
         </div>
-        <div
-          class="label-container"
-          routerLink="/training-programs/sections"
-          (click)="fieldWorkersClicked()"
-        >
+        <div id="fw-label" class="label-container">
           <h5 class="centered">Field Workers</h5>
         </div>
         <div class="img-container">
           <input
-            id="field-worker"
+            id="field-workers"
             type="image"
             src="../assets/images/field-workers.jpg"
-            routerLink="/training-programs/sections"
-            (click)="fieldWorkersClicked()"
           />
         </div>
-        <div
-          class="label-container"
-          routerLink="/training-programs/sections"
-          (click)="shopWorkersClicked()"
-        >
-          <h5 class="centered" id="sw-label">Shop Workers & Mechanics</h5>
+        <div id="sw-label" class="label-container">
+          <h5 class="centered" id="sw-text">Shop Workers & Mechanics</h5>
         </div>
 
         <div class="img-container">
           <input
-            id="shop-worker"
+            id="shop-workers"
             type="image"
             src="../assets/images/shop-worker.jpg"
-            routerLink="/training-programs/sections"
-            (click)="shopWorkersClicked()"
           />
         </div>
       </div>
       <div class="column column-right">
-        <div
-          class="label-container"
-          routerLink="/training-programs/sections"
-          (click)="officeEmployeesClicked()"
-        >
+        <div id="oe-label" class="label-container">
           <h5 class="centered">Office Employees</h5>
         </div>
 
@@ -84,15 +62,9 @@
             id="office-employees"
             type="image"
             src="../assets/images/office-employees.jpg"
-            routerLink="/training-programs/sections"
-            (click)="officeEmployeesClicked()"
           />
         </div>
-        <div
-          class="label-container"
-          routerLink="/training-programs/sections"
-          (click)="foremanClicked()"
-        >
+        <div id="fm-label" class="label-container">
           <h5 class="centered">Foreman</h5>
         </div>
 
@@ -101,15 +73,9 @@
             id="foreman"
             type="image"
             src="../assets/images/A-Del-Foreman.jpg"
-            routerLink="/training-programs/sections"
-            (click)="foremanClicked()"
           />
         </div>
-        <div
-          class="label-container"
-          routerLink="/training-programs/sections"
-          (click)="truckDriversClicked()"
-        >
+        <div id="td-label" class="label-container">
           <h5 class="centered">Truck Drivers</h5>
         </div>
 
@@ -118,8 +84,6 @@
             id="truck-drivers"
             type="image"
             src="../assets/images/A-Del-Truck-Drivers.jpg"
-            routerLink="/training-programs/sections"
-            (click)="truckDriversClicked()"
           />
         </div>
       </div>
