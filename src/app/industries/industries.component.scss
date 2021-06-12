@@ -51,6 +51,21 @@ body {
   cursor: pointer;
 }
 
+.column {
+  float: left;
+  width: 50%;
+  text-align: center;
+  //padding: 5px;
+  margin-bottom: 50px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
 .label-container {
   background-color: $primary;
   height: 2.5em;
@@ -63,14 +78,6 @@ body {
   cursor: pointer;
 }
 
-.img-container {
-  position: relative;
-  text-align: center;
-  height: 30%;
-  //max-height: 30%;
-  margin-bottom: 5px;
-}
-
 /* Centered text */
 .centered {
   position: absolute;
@@ -78,26 +85,6 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   //font-weight: bold;
-}
-
-.column {
-  float: left;
-  width: 50%;
-  text-align: center;
-  //padding: 5px;
-  margin-bottom: 50px;
-}
-
-// left column only
-.column-left {
-  padding-left: 5px;
-}
-
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
 }
 
 // page heading
@@ -109,6 +96,15 @@ h1 {
   font-weight: bold;
 }
 
+.img-container {
+  position: relative;
+  text-align: center;
+  height: 30%;
+  //max-height: 30%;
+  margin-bottom: 5px;
+}
+
+// images
 input {
   width: 90%;
   height: 100%;
