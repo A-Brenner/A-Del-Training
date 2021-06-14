@@ -54,7 +54,7 @@ export class SubmissionComponent implements OnInit {
       e.preventDefault();
       emailjs
         .send(
-          'service_fogijma',
+          'service_a-del-safety',
           'template_r090tb8',
           tempParams,
           'user_NZvL7kVGCJeEl7XwEVdFH'

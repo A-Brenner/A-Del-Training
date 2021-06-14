@@ -65,7 +65,7 @@ export class HomeComponent implements OnInit {
 
   // component start-up
   ngOnInit(): void {
-    //window.localStorage.clear();
+    //window.localStorage.clear(); // Reset All User progress
   }
 
   ngAfterViewInit(): void {
