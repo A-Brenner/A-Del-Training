@@ -258,14 +258,39 @@ export class SectionsComponent implements OnInit {
   // Adds section data to arrays
   setSectionDataOE(): void {
     // array of section titles
-    this.titles = ['First Aid'];
+    this.titles = [
+      'First Aid',
+      'Workplace Violence',
+      'Emergency Preparedness & Safe Evacuation',
+      'Drugs & Alcohol',
+      'Harassment',
+      'Fire Extinguisers',
+      'IT Management',
+      'Active Shooter Awareness',
+    ];
 
     // array of video links
-    this.links = ['https://safetysourceonline.com/video/first-aid-m209/'];
+    this.links = [
+      'https://safetysourceonline.com/video/first-aid-m209/',
+      'https://safetysourceonline.com/video/workplace-violence-facts-prevention-ss1081ie/',
+      'https://safetysourceonline.com/video/emergency-evacuation-procedures/',
+      'https://safetysourceonline.com/video/reasonable-suspicion-training-the-effects-of-drug-alcohol-on-the-workplace/',
+      'https://safetysourceonline.com/video/harassment-in-the-workplace-ss1080ie/',
+      'https://safetysourceonline.com/video/fire-extinguisher-training-ss5072ae/',
+      'https://safetysourceonline.com/video/it-management-dont-click-that-link-ss1020ee/',
+      'https://safetysourceonline.com/video/active-shooter-awareness-video-helping-prevent-tragedy-1075i-9-min/',
+    ];
 
     // array of SPANISH video links
     this.linksSpanish = [
       'https://safetysourceonline.com/video/first-aid-m209-spanish/',
+      'https://safetysourceonline.com/video/workplace-violence-facts-prevention-ss1081is-spanish/',
+      'https://safetysourceonline.com/video/emergency-evacuation-procedures/', // No spanish link (Emergency Preparedness & Safe Evacuation)
+      'https://safetysourceonline.com/video/reasonable-suspicion-training-the-effects-of-drug-alcohol-on-the-workplace/', // No spanish link (Drugs & Alcohol)
+      'https://safetysourceonline.com/video/harassment-in-the-workplace-1080is/',
+      'https://safetysourceonline.com/video/fire-extinguisher-training-ss5072as-5-mins-spanish/',
+      'https://safetysourceonline.com/video/it-management-dont-click-that-link-ss1020ee/', // No spanish link (IT Management)
+      'https://safetysourceonline.com/video/active-shooter-awareness-video-helping-prevent-tragedy-ss1075is-9-min/',
     ];
   }
 
