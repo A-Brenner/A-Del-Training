@@ -238,7 +238,7 @@ export class SectionsComponent implements OnInit {
   // Adds section data to arrays
   setSectionDataNE(): void {
     // array of section titles
-    this.titles = ['Safety Orientation', 'Cell Phones', 'Drugs & Alcohol'];
+    this.titles = ['Safety Orientation', 'Cell Phones', 'Drug & Alcohol Abuse'];
     // array of video links
     this.links = [
       'https://safetysourceonline.com/video/safety-bobs-comprehensive-construction-orientation-e1316e-24-min-2/',
@@ -263,8 +263,8 @@ export class SectionsComponent implements OnInit {
       'Workplace Violence',
       'Emergency Preparedness & Safe Evacuation',
       'Drugs & Alcohol',
-      'Harassment',
-      'Fire Extinguisers',
+      'Harassment in the Workplace',
+      'Fire Extinguishers',
       'IT Management',
       'Active Shooter Awareness',
     ];
