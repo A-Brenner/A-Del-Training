@@ -149,7 +149,7 @@ export class ExamsComponent implements OnInit {
 
         this.answersList = [0, 1, 2, 1, 0, 2, 1, 2];
         break;
-      case 'Drugs & Alcohol':
+      case 'Drug & Alcohol Abuse':
         this.questionList = [
           'The "residual effect" of a substance that an employee abuses can last hours or even days after they used it.',
           'The term "substance abuse" should be applied only to the use of drugs that are illegal.',
@@ -1094,6 +1094,95 @@ export class ExamsComponent implements OnInit {
           ['True', 'False'],
           ['True', 'False'],
         ];
+
+        this.answersList = [0, 0, 1, 1, 0, 0, 1, 0, 0];
+        break;
+
+      // ** OFFICE EMPLOYEES SECTIONS **
+      case 'Workplace Violence':
+        this.questionList = [
+          'Which of the following are considered Tier 1 behavior?',
+          'Supervisor’s should avoid direct confrontation about threatening behavior.',
+          'The supervisor’s primary role is to gather the facts.',
+          'A member of the security department should be present when ___________.',
+          'All threats should be investigated immediately.',
+          'Night Retail Establishments are in no more danger than any other establishment.',
+          'If two employees are having a conflict, the supervisor should speak to each of them individually and in a non-threatening manner.',
+          'Your odds of being in an incident of workplace violence are large.',
+          'Which of the following are considered to be contributors to workplace violence?',
+          'No business is immune from the possibility of workplace violence.',
+        ];
+
+        this.choicesList = [
+          [
+            'Refusal to Cooperate',
+            'Acting Belligerent',
+            'Arguing with others',
+            'All of the above',
+          ],
+          ['True', 'False'],
+          ['True', 'False'],
+          [
+            'Interviewing Employees',
+            'Counseling Employees',
+            'Terminating Employees',
+            'All of the above',
+          ],
+          ['True', 'False'],
+          ['True', 'False'],
+          ['True', 'False'],
+          ['True', 'False'],
+          [
+            'Prevelance of guns',
+            'Layoffs in the workplace',
+            'Use of drugs and alcohol in society',
+            'All of the above',
+          ],
+          ['True', 'False'],
+        ];
+
+        this.answersList = [3, 1, 0, 3, 0, 1, 0, 1, 3, 0];
+        break;
+
+      case '':
+        this.questionList = ['', '', '', '', '', '', '', '', '', ''];
+
+        this.choicesList = [[], [], [], [], [], [], [], [], [], []];
+
+        this.answersList = [];
+        break;
+      case '':
+        this.questionList = ['', '', '', '', '', '', '', '', '', ''];
+
+        this.choicesList = [[], [], [], [], [], [], [], [], [], []];
+
+        this.answersList = [];
+        break;
+      case '':
+        this.questionList = ['', '', '', '', '', '', '', '', '', ''];
+
+        this.choicesList = [[], [], [], [], [], [], [], [], [], []];
+
+        this.answersList = [];
+        break;
+      case '':
+        this.questionList = ['', '', '', '', '', '', '', '', '', ''];
+
+        this.choicesList = [[], [], [], [], [], [], [], [], [], []];
+
+        this.answersList = [];
+        break;
+      case '':
+        this.questionList = ['', '', '', '', '', '', '', '', '', ''];
+
+        this.choicesList = [[], [], [], [], [], [], [], [], [], []];
+
+        this.answersList = [];
+        break;
+      case '':
+        this.questionList = ['', '', '', '', '', '', '', '', '', ''];
+
+        this.choicesList = [[], [], [], [], [], [], [], [], [], []];
 
         this.answersList = [];
         break;
