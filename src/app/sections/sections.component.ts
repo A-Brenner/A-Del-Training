@@ -261,7 +261,7 @@ export class SectionsComponent implements OnInit {
     this.titles = [
       'First Aid',
       'Workplace Violence',
-      'Emergency Preparedness & Safe Evacuation',
+      'Emergency Preparedness',
       'Drugs & Alcohol',
       'Harassment in the Workplace',
       'Fire Extinguishers',

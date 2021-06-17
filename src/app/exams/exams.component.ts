@@ -1115,17 +1115,17 @@ export class ExamsComponent implements OnInit {
 
         this.choicesList = [
           [
-            'Refusal to Cooperate',
-            'Acting Belligerent',
+            'Refusal to cooperate',
+            'Acting belligerent',
             'Arguing with others',
             'All of the above',
           ],
           ['True', 'False'],
           ['True', 'False'],
           [
-            'Interviewing Employees',
-            'Counseling Employees',
-            'Terminating Employees',
+            'Interviewing employees',
+            'Counseling employees',
+            'Terminating employees',
             'All of the above',
           ],
           ['True', 'False'],
@@ -1144,12 +1144,44 @@ export class ExamsComponent implements OnInit {
         this.answersList = [3, 1, 0, 3, 0, 1, 0, 1, 3, 0];
         break;
 
-      case '':
-        this.questionList = ['', '', '', '', '', '', '', '', '', ''];
+      case 'Emergency Preparedness':
+        this.questionList = [
+          'The best advice regarding emergencies is _______________.',
+          'Understanding your buildings layout and emergency escape routes could save your life.',
+          'When must emergency exits must be kept clear?',
+          'In the event of a fire, and you are above the first floor, what should you use to exit?',
+          'Remaining calm can help you make better decisions in the event of an emergency.',
+          'In case of an earthquake, what should you do?',
+          'In an active shooter situation, you should make as much noise as possible to startle the shooter.',
+          'You can survive an Active Shooter incident.',
+          'Hiding may your best way to avoid an Active Shooter.',
+          'The odds of a fire or other emergency occurring in your workplace are very small.',
+        ];
 
-        this.choicesList = [[], [], [], [], [], [], [], [], [], []];
+        this.choicesList = [
+          ['Run', 'Be prepared', 'Listen closely', 'None of the above'],
+          ['True', 'False'],
+          [
+            'During business hours',
+            'During fire drills',
+            'When people are present',
+            'At all times',
+          ],
+          ['Elevators', 'Stairs'],
+          ['True', 'False'],
+          [
+            'Go outside immediately',
+            'Stay inside near windows',
+            'Take cover under a sturdy desk or doorway',
+            'Proceed to your emergency evacuation route',
+          ],
+          ['True', 'False'],
+          ['True', 'False'],
+          ['True', 'False'],
+          ['True', 'False'],
+        ];
 
-        this.answersList = [];
+        this.answersList = [1, 0, 3, 1, 0, 2, 1, 0, 0, 0];
         break;
       case '':
         this.questionList = ['', '', '', '', '', '', '', '', '', ''];
