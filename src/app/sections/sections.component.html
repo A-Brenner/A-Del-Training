@@ -24,19 +24,32 @@
         </div>
       </div>
     </div>
+
     <!-- Modal -->
     <div id="modal" class="modal">
       <div class="modal-content">
         <span class="close">&times;</span>
-        <p>Username: &nbsp;&nbsp;ADel</p>
-        <p>
-          Password: &nbsp;&nbsp;<span class="login-caps">A</span>del<span
-            class="login-caps"
-            >S</span
-          >afety#1
-        </p>
+        <div class="login-info">
+          <p>Username: &nbsp;&nbsp;ADel</p>
+          <p>
+            Password: &nbsp;&nbsp;<span class="underlined">A</span>del<span
+              class="underlined"
+              >S</span
+            >afety#1
+          </p>
+        </div>
+        <div class="warning-info">
+          <h2>First Time?</h2>
+          <p>
+            Click the
+            <span class="underlined">Login Info button</span> before clicking
+            'Watch Video'
+          </p>
+          <p>Once you click 'Watch Video' you will need to log in</p>
+        </div>
       </div>
     </div>
+    <!-- End Modal-->
     <div
       class="section-container"
       *ngFor="let section of sectionsArr; let i = index"

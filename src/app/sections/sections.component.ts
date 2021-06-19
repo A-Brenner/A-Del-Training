@@ -143,21 +143,53 @@ export class SectionsComponent implements OnInit {
     }
   }
 
+  // Creates all logic needed to open & close the modal
   setUpModal(): void {
-    let modal: HTMLElement = document.querySelector('.modal') as HTMLElement;
+    let modal: HTMLElement = document.getElementById('modal') as HTMLElement;
+    let loginInfo: HTMLElement = document.querySelector(
+      '.login-info'
+    ) as HTMLElement;
+    let warning: HTMLElement = document.querySelector(
+      '.warning-info'
+    ) as HTMLElement;
 
+    // 1st time user should see warning modal popup
+    console.log(
+      localStorage.getItem(localStorage.getItem('latestProgram') + 'Warning')
+    );
+    if (
+      localStorage.getItem(localStorage.getItem('latestProgram') + 'Warning')
+    ) {
+      // user has already seen warning modal
+      modal.style.display = 'none';
+      // loginInfo.style.display = 'block';
+      // warning.style.display = 'none';
+    } else {
+      // user is now seeing warning modal for first time
+      // make sure user doesn't see it again
+      localStorage.setItem(
+        localStorage.getItem('latestProgram') + 'Warning',
+        'true'
+      );
+    }
+
+    // Open modal by clicking btn
     document
       .getElementById('login-info-btn')
       ?.addEventListener('click', function (): void {
         modal.style.display = 'block';
+        loginInfo.style.display = 'block';
+        warning.style.display = 'none';
       });
 
+    // Exit modal by clicking the X
     document
       .querySelector('.close')
       ?.addEventListener('click', function (): void {
         modal.style.display = 'none';
       });
 
+    // Exit modal by clicking anywhere outside
     window.addEventListener('click', function (event): void {
       if (event.target == modal) {
         modal.style.display = 'none';
