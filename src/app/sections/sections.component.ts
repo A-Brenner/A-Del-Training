@@ -290,16 +290,18 @@ export class SectionsComponent implements OnInit {
   // Adds section data to arrays
   setSectionDataOE(): void {
     // array of section titles
-    this.titles = [
-      'First Aid',
-      'Workplace Violence',
-      'Emergency Preparedness',
-      'Drugs & Alcohol',
-      'Harassment in the Workplace',
-      'Fire Extinguishers',
-      'IT Management',
-      'Active Shooter Awareness',
-    ];
+    // this.titles = [
+    //   'First Aid',
+    //   'Workplace Violence',
+    //   'Emergency Preparedness',
+    //   'Drugs & Alcohol',
+    //   'Harassment in the Workplace',
+    //   'Fire Extinguishers',
+    //   'IT Management',
+    //   'Active Shooter Awareness',
+    // ];
+
+    this.titles = ['First Aid'];
 
     // array of video links
     this.links = [

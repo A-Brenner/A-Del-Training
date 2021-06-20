@@ -28,6 +28,9 @@ export class SubmissionComponent implements OnInit {
     let submissionForm: HTMLFormElement = document.querySelector(
       '.email-form'
     ) as HTMLFormElement;
+    let submitBtn: HTMLInputElement = document.getElementById(
+      'submit-btn'
+    ) as HTMLInputElement;
     let router: Router = this.router;
     let getCurDate = this.getCurrentDate;
     let getTrainingProgram = this.getTrainingProgram;
@@ -42,6 +45,10 @@ export class SubmissionComponent implements OnInit {
       let messageEl: HTMLTextAreaElement = document.getElementById(
         'message'
       ) as HTMLTextAreaElement;
+
+      // disable submit button to prevent multiple emails from being sent
+      submitBtn.style.opacity = '0.5';
+      submitBtn.style.pointerEvents = 'none';
 
       let tempParams = {
         fname: fnameEl.value,
@@ -72,6 +79,8 @@ export class SubmissionComponent implements OnInit {
           },
           function (error) {
             console.log('FAILED...', error);
+            submitBtn.style.opacity = '1.0';
+            submitBtn.style.pointerEvents = 'initial';
           }
         );
     };
