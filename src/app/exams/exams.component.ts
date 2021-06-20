@@ -321,7 +321,7 @@ export class ExamsComponent implements OnInit {
           ['True', 'False'],
           ['True', 'False'],
           [
-            'Keep your belt buck;e touching the ladder at all times',
+            'Keep your belt buckle touching the ladder at all times',
             'Never wear a belt buckle when workong on a ladder',
             "Don't lean where your belt buckle is outside the ladder rails",
             'None of the above',
@@ -383,7 +383,7 @@ export class ExamsComponent implements OnInit {
           ],
           ['True', 'False'],
           ['Choking', 'Cardiac arrest', 'Shock'],
-          ['Heart-lung Maneuver', 'Heimlich Manuever', 'Hug-of-Life'],
+          ['Heart-lung maneuver', 'Heimlich manuever', 'Hug-of-life'],
           ['True', 'False'],
           ['True', 'False'],
           [
@@ -564,7 +564,7 @@ export class ExamsComponent implements OnInit {
 
         this.choicesList = [
           ['True', 'False'],
-          ['Poor air quality', 'Collapse', 'Slips & Falls', 'All of the above'],
+          ['Poor air quality', 'Collapse', 'Slips & falls', 'All of the above'],
           ['True', 'False'],
           ['True', 'False'],
           ['True', 'False'],
@@ -756,9 +756,9 @@ export class ExamsComponent implements OnInit {
             'All year around',
           ],
           [
-            'Avoid Caffeine',
+            'Avoid caffeine',
             'Avoid sugary / salty foods',
-            'Avoid Alchohol',
+            'Avoid alchohol',
             'All of the above',
           ],
           ['Get in the shade', 'Rest', 'Drink water', 'All of the above'],
@@ -1206,7 +1206,7 @@ export class ExamsComponent implements OnInit {
             'All of the above',
             'A & B only',
           ],
-          ['10 Billion', '20 Billion', '50 Billion', '100 Billion'],
+          ['10 billion', '20 billion', '50 billion', '100 billion'],
           ['10%', '30%', '50%', '70%'],
           ['True', 'False'],
           ['True', 'False'],
@@ -1240,7 +1240,7 @@ export class ExamsComponent implements OnInit {
           ['True', 'False'],
           ['True', 'False'],
           ['Polite', 'Professional', 'Both A & B', 'None of the above'],
-          ['Maintenance', 'Mail', 'Human Resource', 'None of the above'],
+          ['Maintenance', 'Mail', 'Human resource', 'None of the above'],
           ['True', 'False'],
           ['True', 'False'],
         ];
