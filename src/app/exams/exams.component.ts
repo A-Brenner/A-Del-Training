@@ -585,7 +585,7 @@ export class ExamsComponent implements OnInit {
           'Respirable crystalline silica are the small particles created when',
           'You should always',
           'What are the four engineering controls that can be put in place?',
-          'If you are required to use respirators....',
+          'If you are required to use respirators, _________________.',
           'Silicosis is a _______',
           'Crystalline silica, also referred to as Silicon dioxide, is also know as',
         ];
@@ -772,13 +772,13 @@ export class ExamsComponent implements OnInit {
       case 'Aerial Lift Safety':
         this.questionList = [
           'The operating controls on the ground unit are to assist the operator _______________.',
-          'When operating around other equipment take the necessary precautions to prevent a collision by use of warnings such as:',
+          'When operating around other equipment take the necessary precautions to prevent a collision by use of warnings such as _____________.',
           'With the side covers removed, check the hydraulic and fuel systems for ______________ and any other components your company may require.',
           'While each type of lift has several safety precautions, basic safe operating procedures should be followed ______________ operation on any aerial platform.',
-          'If any of the controls do not work properly or there is any other malfunction:',
-          'If you have a history of dizziness, seizures or are uncomfortable working above ground you should:',
-          'M.S.A.D. stands for:',
-          'If you discover any problems while operating the lift:',
+          'If any of the controls do not work properly or there is any other malfunction, ______________.',
+          'If you have a history of dizziness, seizures or are uncomfortable working above ground you should ______________.',
+          'M.S.A.D. stands for ____________.',
+          'If you discover any problems while operating the lift, _______________.',
           'To use the platform you must first make sure that the operator manual for the model and type of lift is ______________.',
           'The Aerial Lift should be inspected ______________.',
         ];
@@ -941,7 +941,7 @@ export class ExamsComponent implements OnInit {
           'A "pressure relief device" (PRD) is a valve that provides a steady flow of gas from the cylinder through the delivery system to the user.',
           'Because of the extremely low temperatures of cryogenic liquids, the cylinders that contain them require special treatment when they are being handled',
           'Any gas that is leaking from a compressed gas cylinder can push breathable air out of a space, and could cause the people in the space to suffocate.',
-          '"Standard compression" is used to squeeze substances such as hydrogen, helium or oxygen into a cylinder in the form of...',
+          '"Standard compression" is used to squeeze substances such as hydrogen, helium or oxygen into a cylinder in the form of __________.',
           'Which of the following gases must be dissolved in a solvent in order to be stored safely in a cylinder?',
         ];
 
@@ -962,10 +962,10 @@ export class ExamsComponent implements OnInit {
           "You don't have to place all controls and switches in the off position before LOTO.",
           "50% of workers who didn't tell other workers they locked out equipment were injured when another employee activated the machinery being worked on.",
           'All energy sources should be isolated before LOTO is performed.',
-          'Workers injured on the job from exposure and hazardous energy lose an average days per incident:',
+          'Workers injured on the job from exposure and hazardous energy lose an average ___________ per incident.',
           'Which of the following are considered hazardous energy?',
-          'The department of labor estimates the proper use of LOTO procedures prevents:',
-          'Once Equipment is ready to be restored and more than one lock is on the tag the supervisor can remove all locks',
+          'The department of labor estimates the proper use of LOTO procedures prevents ________________.',
+          'Once Equipment is ready to be restored and more than one lock is on the tag the supervisor can remove all locks.',
           'Steam, air and hydraulic lines should be bled, drained and cleaned out and verified that zero energy state has been achieved.',
           "You don't need to tell other affected workers that machinery is being lock and tagged out.",
           'If there are 3 employees working on machinery how many locks should be placed on the tagout device?',
@@ -999,7 +999,7 @@ export class ExamsComponent implements OnInit {
           "If you frequently find yourself running out of time while performing a task, it's probably because you're spending too much time doing the job.",
           'Many workers make poor safety choices even when they are not in a hurry.',
           'While rushing to get all the files scanned and put away in the filing cabinet, Mandy tripped over a cabinet drawer and spilled her coffee.',
-          'Which of the following is an example of risky behavior people engage in when trying to:',
+          'Which of the following is an example of risky behavior people engage in when trying to ____________.',
           'Being in a hurry is not a legitimate cause of an incident, but rather a symptom of poor planning and poor time management.',
           'In the first incident in the video, Scotty and Robert were rushing to clean up an area of the warehouse before lunch. What was the result of their rushing?',
         ];
@@ -1250,12 +1250,12 @@ export class ExamsComponent implements OnInit {
       case 'Fire Extinguishers':
         this.questionList = [
           'In which direction should you shoot the extinguisher in?',
-          'Point the fire extinguishers hose at the ____ of the fire.',
+          'Point the fire extinguishers hose at the ________ of the fire.',
           'If the fire is small enough for you to put out using an extinguisher, you do not have to pull the fire alarm.',
-          'If there is a fire the number one rule to remember is:',
+          'If there is a fire the number one rule to remember is _____________.',
           'When using a fire extinguisher you should stand about _____ feet away from the fire.',
           'In case of a fire, you should always know where the buildings closest exit is.',
-          'P.A.S.S. stands for __________.',
+          'P.A.S.S. stands for _____________.',
           'Extinguishers should be inspected _________.',
           'If you spray the extinguisher standing too close to the fire, you can cause the fire to spread.',
           'Always call the fire department first when there is a fire.',
@@ -1291,10 +1291,38 @@ export class ExamsComponent implements OnInit {
 
         this.answersList = [2, 1, 1, 0, 2, 0, 2, 2, 0, 0];
         break;
-      case '':
-        this.questionList = ['', '', '', '', '', '', '', '', '', ''];
+      case 'IT Management':
+        this.questionList = [
+          'The government, your bank, and other trusted establishments will not email or text you to ask for confidential information.',
+          'Sites, where you need to key-in confidential information, should start with https, not http.',
+          'You do not need to be wary of emails with a sense of urgency.',
+          'If you get an email or text that family or friends are in trouble and need money you should ____________.',
+          'If you think that your information has been hijacked, you can still use that same login information again on other services.',
+          "If it seems too good to be true, it's probably a scam.",
+          'If you are concerned that you may have been hacked you should ____________.',
+          "Higher than normal battery usage or a machine running hotter than usual can also good indicators that something isn't quite right.",
+        ];
 
-        this.choicesList = [[], [], [], [], [], [], [], [], [], []];
+        this.choicesList = [
+          ['True', 'False'],
+          ['True', 'False'],
+          ['True', 'False'],
+          [
+            'Do nothing',
+            'Send money',
+            'Always check with friends & family',
+            'Give them credit card information',
+          ],
+          ['True', 'False'],
+          ['True', 'False'],
+          [
+            'Do nothing',
+            'Always call customer service or your account administrator',
+            'Call your doctor',
+            'Smash device',
+          ],
+          ['True', 'False'],
+        ];
 
         this.answersList = [];
         break;
