@@ -1324,14 +1324,48 @@ export class ExamsComponent implements OnInit {
           ['True', 'False'],
         ];
 
-        this.answersList = [];
+        this.answersList = [0, 0, 1, 2, 1, 0, 1, 0];
         break;
-      case '':
-        this.questionList = ['', '', '', '', '', '', '', '', '', ''];
+      case 'Active Shooter Awareness':
+        this.questionList = [
+          'Don’t be scared to call 911. Just make sure you are not bringing any attention to yourself while you do it.',
+          'You should report any signs of potential violence as soon as possible to management.',
+          'You should only take action as a last resort and only when your life is in immediate danger.',
+          'Usually, Active Shooters have a pattern or method planned out to their selection of victims.',
+          'Planning and training are key to make sure you are prepared if you are ever in a Active Shooter situation.',
+          'It is important to learn the signs of potential violence including ____________.',
+          'Active Shooter situations are unpredictable and evolve quickly.',
+          'Even though your chances of being involved in an active shooter situation are small, you should always be prepared and have a plan.',
+          'When taking measures to avoid becoming a victim in an Active Shooter attack you can do things to distract them by ___________.',
+          'The U.S. Department of Homeland Security suggests measures in an Active Shooter scenario which are _________',
+        ];
 
-        this.choicesList = [[], [], [], [], [], [], [], [], [], []];
+        this.choicesList = [
+          ['True', 'False'],
+          ['True', 'False'],
+          ['True', 'False'],
+          ['True', 'False'],
+          ['True', 'False'],
+          [
+            'Stress',
+            'Workplace Violence',
+            'Terrorist Attack',
+            'Armed Robbery',
+            'All of the above',
+          ],
+          ['True', 'False'],
+          ['True', 'False'],
+          [
+            'Throwing objects',
+            'Attack him with objects',
+            'Try and disable him with anything you find in your surroundings',
+            'Do nothing',
+            'A, B, and C',
+          ],
+          ['Evacuate', 'Hide out', 'Take action', 'All of the above'],
+        ];
 
-        this.answersList = [];
+        this.answersList = [0, 0, 0, 1, 0, 4, 0, 0, 4, 3];
         break;
 
       default:
