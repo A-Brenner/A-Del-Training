@@ -1183,26 +1183,113 @@ export class ExamsComponent implements OnInit {
 
         this.answersList = [1, 0, 3, 1, 0, 2, 1, 0, 0, 0];
         break;
-      case '':
-        this.questionList = ['', '', '', '', '', '', '', '', '', ''];
+      case 'Drugs & Alcohol':
+        this.questionList = [
+          'Many employees suffer and struggle to perform to their full potential due to the effects of substance abuse.',
+          'Which of these describe employees with substance abuse issues?',
+          'What are the estimated losses for companies in the US due to drug and alcohol related issues?',
+          'Approximately, what percentage of drug abusers are employed?',
+          'When a person is impaired, it can lead to accidents, inefficiency and reduced productivity.',
+          'Job-related stress may encourage some to turn to substances to cope.',
+          'Drug and alcohol abuse only affects the person using them.',
+          'Signs of drug and alcohol abuse are hard to spot.',
+          'The first step in combating drug and alcohol issues is ____________.',
+          'Everyone can play a part in reducing the effects of drugs and alcohol in the workplace.',
+        ];
 
-        this.choicesList = [[], [], [], [], [], [], [], [], [], []];
+        this.choicesList = [
+          ['True', 'False'],
+          [
+            'Less productive',
+            'Use more sick days',
+            'More likely to get injured',
+            'All of the above',
+            'A & B only',
+          ],
+          ['10 Billion', '20 Billion', '50 Billion', '100 Billion'],
+          ['10%', '30%', '50%', '70%'],
+          ['True', 'False'],
+          ['True', 'False'],
+          ['True', 'False'],
+          ['True', 'False'],
+          ['Disciple', 'Communication', 'Termination', 'Law enforcement'],
+          ['True', 'False'],
+        ];
 
-        this.answersList = [];
+        this.answersList = [0, 3, 3, 3, 0, 0, 1, 1, 1, 0];
         break;
-      case '':
-        this.questionList = ['', '', '', '', '', '', '', '', '', ''];
+      case 'Harassment in the Workplace':
+        this.questionList = [
+          'If you are uncomfortable with the harasser, it is okay to report the incident to HR.',
+          'Harassment can target almost any personal characteristic, and occur between any two people.',
+          'Everyone deserves to feel comfortable in his or her work environment.',
+          'With social media you can harass people by simply logging into a website and repetitively badgering someone online.',
+          'Regardless of the type or nature of the harassment, documenting the event is not recommended.',
+          'Harassment must be identified and reported in order for anything to be done.',
+          'If you decide to talk to the harasser yourself, make sure you are _______ when talking about the issue.',
+          'If your supervisor is the one harassing you, you should report the misconduct to your company’s ___________________ department.',
+          'Some employees do not feel comfortable confronting the harasser on their own.',
+          'If the behavior continues, then it is time to report the issue to your supervisor.',
+        ];
 
-        this.choicesList = [[], [], [], [], [], [], [], [], [], []];
+        this.choicesList = [
+          ['True', 'False'],
+          ['True', 'False'],
+          ['True', 'False'],
+          ['True', 'False'],
+          ['True', 'False'],
+          ['True', 'False'],
+          ['Polite', 'Professional', 'Both A & B', 'None of the above'],
+          ['Maintenance', 'Mail', 'Human Resource', 'None of the above'],
+          ['True', 'False'],
+          ['True', 'False'],
+        ];
 
-        this.answersList = [];
+        this.answersList = [0, 0, 0, 0, 1, 0, 2, 2, 0, 0];
         break;
-      case '':
-        this.questionList = ['', '', '', '', '', '', '', '', '', ''];
+      case 'Fire Extinguishers':
+        this.questionList = [
+          'In which direction should you shoot the extinguisher in?',
+          'Point the fire extinguishers hose at the ____ of the fire.',
+          'If the fire is small enough for you to put out using an extinguisher, you do not have to pull the fire alarm.',
+          'If there is a fire the number one rule to remember is:',
+          'When using a fire extinguisher you should stand about _____ feet away from the fire.',
+          'In case of a fire, you should always know where the buildings closest exit is.',
+          'P.A.S.S. stands for __________.',
+          'Extinguishers should be inspected _________.',
+          'If you spray the extinguisher standing too close to the fire, you can cause the fire to spread.',
+          'Always call the fire department first when there is a fire.',
+        ];
 
-        this.choicesList = [[], [], [], [], [], [], [], [], [], []];
+        this.choicesList = [
+          [
+            'Circular direction',
+            'Up & down direction',
+            'Left to right direction',
+            'Any of the above',
+          ],
+          ['Top', 'Base', 'Middle', 'Cause'],
+          ['True', 'False'],
+          [
+            'Life is more important than property',
+            'Grab as much of your property as you can carry in your arms',
+            'Pack as many things as you can into a suitcase before exiting the building',
+            'None of the above',
+          ],
+          ['5', '20', '10', '15'],
+          ['True', 'False'],
+          [
+            'Pull, Aim, Stand, Shoot',
+            'Pull, Aim, Shoot, Sweep',
+            'Pull, Aim, Squeeze, Sweep',
+            'Pull, Aim, Stand, Squeeze',
+          ],
+          ['Daily', 'Weekly', 'Monthly', 'Yearly'],
+          ['True', 'False'],
+          ['True', 'False'],
+        ];
 
-        this.answersList = [];
+        this.answersList = [2, 1, 1, 0, 2, 0, 2, 2, 0, 0];
         break;
       case '':
         this.questionList = ['', '', '', '', '', '', '', '', '', ''];
