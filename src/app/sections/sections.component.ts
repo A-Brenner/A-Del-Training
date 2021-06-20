@@ -154,16 +154,11 @@ export class SectionsComponent implements OnInit {
     ) as HTMLElement;
 
     // 1st time user should see warning modal popup
-    console.log(
-      localStorage.getItem(localStorage.getItem('latestProgram') + 'Warning')
-    );
     if (
       localStorage.getItem(localStorage.getItem('latestProgram') + 'Warning')
     ) {
       // user has already seen warning modal
       modal.style.display = 'none';
-      // loginInfo.style.display = 'block';
-      // warning.style.display = 'none';
     } else {
       // user is now seeing warning modal for first time
       // make sure user doesn't see it again
