@@ -60,7 +60,7 @@ export class SectionsComponent implements OnInit {
     submitBtn.style.opacity = '1.0';
     let router: Router = this.router;
 
-    // Set up email form template and send for submition
+    // Send user to submission page
     submitBtn.addEventListener('click', function (): void {
       localStorage.setItem(
         localStorage.getItem('latestProgram') + 'Completed',

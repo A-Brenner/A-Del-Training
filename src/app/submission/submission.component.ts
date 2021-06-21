@@ -13,7 +13,7 @@ export class SubmissionComponent implements OnInit {
   ngOnInit(): void {
     let trainingProgram: any = localStorage.getItem('latestProgram');
 
-    if (localStorage.getItem(trainingProgram + 'EmailSent')) {
+    if (localStorage.getItem(trainingProgram + 'Submitted')) {
       this.router.navigateByUrl(
         '/training-programs/sections/submission/congratulations'
       );
@@ -70,7 +70,7 @@ export class SubmissionComponent implements OnInit {
           function (response) {
             console.log('SUCCESS!', response.status, response.text);
             localStorage.setItem(
-              localStorage.getItem('latestProgram') + 'EmailSent',
+              localStorage.getItem('latestProgram') + 'Submitted',
               'true'
             );
             router.navigateByUrl(
