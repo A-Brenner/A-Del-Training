@@ -176,7 +176,7 @@ export class ExamsComponent implements OnInit {
           ['True', 'False'],
         ];
 
-        this.answersList = [];
+        this.answersList = [0, 1, 0, 0, 1, 0, 1, 0, 0, 1];
         break;
 
       // FIELD WORKER SECTIONS
@@ -361,7 +361,7 @@ export class ExamsComponent implements OnInit {
           ['True', 'False'],
         ];
 
-        this.answersList = [];
+        this.answersList = [4, 2, 1, 3, 0, 2, 1, 0];
         break;
 
       case 'First Aid':
