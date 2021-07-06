@@ -1,6 +1,8 @@
 {
   "name": "a-del-training",
-  "version": "0.0.0",
+  "version": "0.0.1",
+  "description": "A-Del Construction Online Safety Training",
+  "license": "A-Del Construction Co., Inc.",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
