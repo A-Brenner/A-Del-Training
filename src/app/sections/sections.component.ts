@@ -40,12 +40,12 @@ export class SectionsComponent implements OnInit {
   // Checks to see if ALL sections have been completed
   // If so, submit button is unlocked
   checkForCompletion(): void {
-    // for (let i = 0; i < this.sectionsArr.length; i++) {
-    //   if (!this.sectionsArr[i].completed) {
-    //     // a section has NOT been completed
-    //     return;
-    //   }
-    // }
+    for (let i = 0; i < this.sectionsArr.length; i++) {
+      if (!this.sectionsArr[i].completed) {
+        // a section has NOT been completed
+        return;
+      }
+    }
     // No incomplete sections found, Ready to Submit
     this.setUpSubmitBtn();
   }
